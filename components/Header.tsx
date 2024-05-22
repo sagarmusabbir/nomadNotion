@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { links } from "@/site";
+import { Logo } from "./icons";
 
 const Header = () => {
   return (
@@ -10,16 +11,20 @@ const Header = () => {
           {/* Logo */}
           <div className="flex flex-row items-center">
             <Link className="" href="/">
-              <Image
+              {/* <Image
                 src="/Logo.svg"
                 width={28}
                 height={28}
                 alt="AnalyticsRoundtable"
-              />
+              /> */}
+              <Logo />
             </Link>
-          <Link className="hidden sm:block ml-1 font-medium text-gray-800" href="/">
-          Analytics Roundtable
-          </Link>
+            <Link
+              className="hidden sm:block ml-1 font-medium text-gray-800"
+              href="/"
+            >
+              Musabbirs Terminal
+            </Link>
           </div>
 
           {/* Navlinks */}
@@ -28,7 +33,7 @@ const Header = () => {
               {links.map((link) => (
                 <li
                   key={link.id}
-                  className="block hover:text-sky-400 text-sm"
+                  className="block hover:text-slate-600 text-sm"
                 >
                   <Link href={link.to}>{link.name}</Link>
                 </li>
