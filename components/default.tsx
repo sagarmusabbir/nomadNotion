@@ -4,10 +4,10 @@ import { links } from "@/site";
 import { Logo } from "./icons";
 import { DarkThemeToggle } from "flowbite-react";
 
-const Header = () => {
+const DefaultHeader = () => {
   return (
     <>
-      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-slate-50 dark:bg-zinc-900 py-4">
+      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-white py-4">
         <div className="max-w-5xl flex flex-row justify-between items-center m-auto px-4">
           {/* Logo */}
           <div className="flex flex-row items-center">
@@ -21,7 +21,7 @@ const Header = () => {
               <Logo />
             </Link>
             <Link
-              className="hidden sm:block ml-1 font-medium text-zinc-800 dark:text-slate-200"
+              className="hidden sm:block ml-1 font-medium text-gray-800"
               href="/"
             >
               Musabbirs Terminal
@@ -31,12 +31,11 @@ const Header = () => {
           {/* Navlinks */}
           <div className="flex-shrink-0">
             <ul className="flex flex-row space-x-4 items-center">
-              <DarkThemeToggle className="ring-0 outline-0 border-0 focus:ring-0 focus:outline-0 " />
+              <DarkThemeToggle />
               {links.map((link) => (
                 <li
                   key={link.id}
-                  className="block hover:transition-all text-sm text-zinc-800 dark:text-slate-200"
-                  // className="transition-shadow ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
+                  className="block hover:text-slate-600 text-sm"
                 >
                   <Link href={link.to}>{link.name}</Link>
                 </li>
@@ -49,4 +48,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default DefaultHeader;

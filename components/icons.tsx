@@ -22,19 +22,13 @@ export const Logo: React.FC<IconSvgProps> = ({
 );
 
 export const LinkedInIcon: React.FC<IconSvgProps> = ({
-  size = 36,
+  size = 32,
   width,
   height,
   ...props
 }) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 256 256"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" {...props}>
       <g
         fill="none"
         strokeMiterlimit="10"
@@ -67,7 +61,7 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
 };
 
 export const GithubIcon: React.FC<IconSvgProps> = ({
-  size = 36,
+  size = 32,
   width,
   height,
   ...props
@@ -75,7 +69,7 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
   return (
     <svg
       height={size || height}
-      viewBox="0 0 24 24"
+      viewBox="0 0 28 28"
       width={size || width}
       {...props}
     >
