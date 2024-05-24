@@ -9,8 +9,8 @@ import DefaultHeader from "@/components/default";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Analytics Roundtable",
-  description: "Open Data Community",
+  title: "Musabbir Sagar",
+  description: "Full Stack Next.Js Developer",
 };
 
 export default function RootLayout({
