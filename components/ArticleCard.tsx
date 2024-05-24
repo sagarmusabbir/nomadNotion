@@ -46,7 +46,7 @@ export default function ArticleCard({ article }: Props) {
             <div className="flex mb-2 space-x-1 text-sm text-zinc-500">
               {article.tags.map((tag) => (
                 <div key={tag}>
-                  <span className="font-semibold text-zinc-600 dark:text-slate-400">
+                  <span className="font-semibold text-zinc-600 dark:text-zinc-400">
                     {tag}{" "}
                   </span>
                   <span aria-hidden="true">&middot;</span>

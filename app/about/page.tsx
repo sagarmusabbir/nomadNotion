@@ -44,7 +44,7 @@ export default async function AboutPage({
           <div className="tracking-tight sm:text-4xl">{postDetails.title}</div>
         </div>
 
-        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t mt-4">
+        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t mt-4 dark:text-zinc-300">
           <NotionRenderer blockMap={blockMap} />
         </div>
       </div>

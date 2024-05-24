@@ -7,7 +7,7 @@ import { DarkThemeToggle } from "flowbite-react";
 const Header = () => {
   return (
     <>
-      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-slate-50 dark:bg-zinc-900 py-4">
+      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-zinc-100 dark:bg-zinc-900 py-4">
         <div className="max-w-5xl flex flex-row justify-between items-center m-auto px-4">
           {/* Logo */}
           <div className="flex flex-row items-center">
@@ -18,10 +18,10 @@ const Header = () => {
                 height={28}
                 alt="AnalyticsRoundtable"
               /> */}
-              <Logo />
+              <Logo className="fill-zinc-400" />
             </Link>
             <Link
-              className="hidden sm:block ml-1 font-medium text-zinc-800 dark:text-slate-200"
+              className="hidden sm:block ml-1 font-semibold text-zinc-800 dark:text-zinc-200"
               href="/"
             >
               Musabbirs Terminal
@@ -31,11 +31,11 @@ const Header = () => {
           {/* Navlinks */}
           <div className="flex-shrink-0">
             <ul className="flex flex-row space-x-4 items-center">
-              <DarkThemeToggle className="ring-0 outline-0 border-0 focus:ring-0 focus:outline-0 " />
+              <DarkThemeToggle className="ring-0 outline-0 border-0 focus:ring-0 focus:outline-0 fill-zinc-700 dark:fill-slate-300" />
               {links.map((link) => (
                 <li
                   key={link.id}
-                  className="block hover:transition-all text-sm text-zinc-800 dark:text-slate-200"
+                  className="block hover:transition-all text-sm text-zinc-800 dark:text-zinc-200 font-semibold"
                   // className="transition-shadow ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   <Link href={link.to}>{link.name}</Link>

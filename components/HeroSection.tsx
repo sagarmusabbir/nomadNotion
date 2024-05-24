@@ -1,9 +1,12 @@
-import { Avatar } from "flowbite-react";
+import { Avatar, Badge } from "flowbite-react";
 import Link from "next/link";
+import { HiClock, HiExternalLink, HiOutlineArrowRight } from "react-icons/hi";
+import { Button } from "flowbite-react";
+import { UpworkInIcon } from "./icons";
 
 const HeroSection = () => {
   return (
-    <div className="py-24 text-center bg-slate-100 dark:bg-zinc-800">
+    <div className="py-24 text-center bg-zinc-200 dark:bg-zinc-800">
       {/* <div className="mt-4 text-3xl font-extrabold text-gray-900">
           Analytics Roundtable
         </div>
@@ -11,12 +14,22 @@ const HeroSection = () => {
           Open Community for Data Professionals
         </div> */}
 
-      <Avatar img="/avatar.svg" size="lg" rounded>
+      <Avatar img="/avatar.svg" size="xl" rounded>
         <div className="space-y-1 text-left">
-          <div className="mt-4 text-2xl font-extrabold text-gray-800 dark:text-slate-200 leading-tight">
+          <Link
+            href="https://www.upwork.com/workwith/smamusabbirs"
+            className="flex flex-row items-center text-sm mt-0"
+          >
+            <UpworkInIcon className="w-16 h-16 mr-2" />
+            &#8599;
+          </Link>
+          {/* <Badge color="gray" icon={HiClock} className="text-xs p-1">
+            Last activity 3 days ago
+          </Badge> */}
+          <div className="mt-4 text-2xl font-bold text-zinc-800 dark:text-zinc-200 leading-tight">
             Musabbir Sagar
           </div>
-          <div className="text-lg mt-2 text-gray-800 leading-tight dark:text-slate-400">
+          <div className="text-md mt-2 text-zinc-700 leading-tight dark:text-zinc-400">
             Full Stack Next.js Developer
           </div>
         </div>
