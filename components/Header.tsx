@@ -31,7 +31,7 @@ const Header = () => {
           {/* Navlinks */}
           <div className="flex-shrink-0">
             <ul className="flex flex-row space-x-4 items-center">
-              <DarkThemeToggle className="ring-0 outline-0 border-0 focus:ring-0 focus:outline-0 fill-zinc-700 dark:fill-slate-300" />
+              <DarkThemeToggle />
               {links.map((link) => (
                 <li
                   key={link.id}

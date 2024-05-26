@@ -24,7 +24,11 @@ export default function RootLayout({
         <ThemeModeScript />
         <link rel="shortcut icon" href="/logo.svg" />
       </head>
-      <body className={inter.className}>
+      <body
+        // className={inter.className}
+
+        className={`${inter.className} antialiased`}
+      >
         <Header />
 
         <main className="">{children}</main>
