@@ -14,15 +14,9 @@ const HeroSection = () => {
           Open Community for Data Professionals
         </div> */}
 
-      <Avatar img="/avatar.svg" size="xl" rounded>
+      <Avatar img="/avatar.svg" size="lg" rounded>
         <div className="space-y-1 text-left">
-          <Link
-            href="https://www.upwork.com/workwith/smamusabbirs"
-            className="flex flex-row items-center text-sm mt-0"
-          >
-            <UpworkInIcon className="w-16 h-16 " />
-            <HiExternalLink className="w-4 h-4 ml-2" />
-          </Link>
+         
 
           <div className="mt-2 text-2xl font-bold text-zinc-800 dark:text-zinc-200 leading-tight">
             Musabbir Sagar
