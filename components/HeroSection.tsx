@@ -1,6 +1,6 @@
 import { Avatar, Badge } from "flowbite-react";
 import Link from "next/link";
-import { HiClock, HiExternalLink, HiOutlineArrowRight } from "react-icons/hi";
+import { HiExternalLink } from "react-icons/hi";
 import { Button } from "flowbite-react";
 import { UpworkInIcon } from "./icons";
 
@@ -20,13 +20,11 @@ const HeroSection = () => {
             href="https://www.upwork.com/workwith/smamusabbirs"
             className="flex flex-row items-center text-sm mt-0"
           >
-            <UpworkInIcon className="w-16 h-16 mr-2" />
-            &#8599;
+            <UpworkInIcon className="w-16 h-16 " />
+            <HiExternalLink className="w-4 h-4 ml-2" />
           </Link>
-          {/* <Badge color="gray" icon={HiClock} className="text-xs p-1">
-            Last activity 3 days ago
-          </Badge> */}
-          <div className="mt-4 text-2xl font-bold text-zinc-800 dark:text-zinc-200 leading-tight">
+
+          <div className="mt-2 text-2xl font-bold text-zinc-800 dark:text-zinc-200 leading-tight">
             Musabbir Sagar
           </div>
           <div className="text-md mt-2 text-zinc-700 leading-tight dark:text-zinc-400">

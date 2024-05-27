@@ -19,7 +19,7 @@ const Tags = ({ tagFrequencyMap }: { tagFrequencyMap: TagFrequencyMap }) => {
 
         return (
           <Link href={selected ? "/search" : `/tag/${name}`} key={index}>
-            <Button className={selected ? "" : ""}>
+            <Button className={selected ? "bg-zinc-500" : ""}>
               {`${name} (${number})`}
             </Button>
           </Link>
