@@ -39,6 +39,7 @@ const Header = () => {
                   // className="transition-shadow ease-in-out delay-150 hover:-translate-y-1 hover:scale-110  duration-300"
                 >
                   <Link href={link.to}>{link.name}</Link>
+                  <Link href="https://github.com/sagarmusabbir?tab=repositories">Projects</Link>
                 </li>
               ))}
             </ul>
