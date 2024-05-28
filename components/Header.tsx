@@ -41,9 +41,6 @@ const Header = () => {
                   <Link href={link.to}>{link.name}</Link>
                  
                 </li>
-                <li className="block hover:transition-all text-sm text-zinc-800 dark:text-zinc-200 font-semibold">
-                    <Link href="https://github.com/sagarmusabbir?tab=repositories" target=”_blank”>Projects</Link>
-                </li>
               ))}
             </ul>
           </div>
