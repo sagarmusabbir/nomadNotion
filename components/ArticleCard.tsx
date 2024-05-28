@@ -43,7 +43,7 @@ export default function ArticleCard({ article }: Props) {
             </p>
           </div>
           <div className="flex items-center mt-4">
-            <div className="flex mb-2 space-x-1 text-sm text-zinc-500">
+            <div className="flex mb-2 space-x-1 text-xs text-zinc-500">
               {article.tags.map((tag) => (
                 <div key={tag}>
                   <span className="font-semibold text-zinc-600 dark:text-zinc-400">
