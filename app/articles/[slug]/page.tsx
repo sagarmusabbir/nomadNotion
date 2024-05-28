@@ -48,7 +48,7 @@ export default async function Page({
 
       <div>
         <div className="text-center space-y-5 text-sm mx-auto mt-3">
-          <div className="tracking-tight sm:text-4xl"><h1>{postDetails.title}</h1></div>
+          <div className="text-4xl font-extrabold leading-none tracking-tight"><h1>{postDetails.title}</h1></div>
           <div className="text-md leading-8 sm:mt-4">
             <div>
               <time dateTime={formattedTime}>{formattedTime}</time>
