@@ -35,18 +35,18 @@ export default function ArticleCard({ article }: Props) {
         </div>
         <div className="flex flex-col justify-between flex-1 py-4 ">
           <div className="flex-1">
-            <p className="text-xl font-semibold text-zinc-800 dark:text-slate-200">
+            <p className="text-xl font-semibold text-gray-800 dark:text-slate-200">
               {article.title}
             </p>
-            <p className="mt-3 text-base text-zinc-600 dark:text-zinc-500 line-clamp-2">
+            <p className="mt-3 text-base text-gray-600 dark:text-gray-500 line-clamp-2">
               {article.summary}
             </p>
           </div>
           <div className="flex items-center mt-4">
-            <div className="flex mb-2 space-x-1 text-xs text-zinc-500">
+            <div className="flex mb-2 space-x-1 text-xs text-gray-500">
               {article.tags.map((tag) => (
                 <div key={tag}>
-                  <span className="font-semibold text-zinc-600 dark:text-zinc-400">
+                  <span className="font-semibold text-gray-600 dark:text-gray-400">
                     {tag}{" "}
                   </span>
                   <span aria-hidden="true">&middot;</span>

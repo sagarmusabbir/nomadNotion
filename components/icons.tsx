@@ -21,7 +21,7 @@ export const Logo: React.FC<IconSvgProps> = ({
   >
     <path
       d="M10 14h4v11h-4V14zm8 11h4V14h-4v11zM2.083 6L2 25h4V10h20.083L26 25h4V6H2.083z"
-      fill="currentColor"
+      // fill="currentColor"
     />
   </svg>
 );

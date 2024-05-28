@@ -6,7 +6,7 @@ import { UpworkInIcon } from "./icons";
 
 const HeroSection = () => {
   return (
-    <div className="py-24 text-center bg-zinc-200 dark:bg-zinc-800">
+    <div className="py-24 text-center bg-slate-200 dark:bg-gray-800">
       {/* <div className="mt-4 text-3xl font-extrabold text-gray-900">
           Analytics Roundtable
         </div>
@@ -14,14 +14,12 @@ const HeroSection = () => {
           Open Community for Data Professionals
         </div> */}
 
-      <Avatar img="/avatar.svg" size="lg" rounded>
+      <Avatar img="/avatar.svg" size="lg">
         <div className="space-y-1 text-left">
-         
-
-          <div className="mt-2 text-2xl font-bold text-zinc-800 dark:text-zinc-200 leading-tight">
+          <div className="mt-2 text-2xl font-semibold text-gray-800 dark:text-slate-200 leading-tight">
             Musabbir Sagar
           </div>
-          <div className="text-md mt-2 text-zinc-700 leading-tight dark:text-zinc-400">
+          <div className="text-md mt-2 text-gray-700 leading-tight dark:text-slate-400">
             Full Stack Next.js Developer
           </div>
         </div>
