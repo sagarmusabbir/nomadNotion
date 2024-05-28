@@ -5,6 +5,7 @@ import { GithubIcon, LinkedInIcon } from "./components/icons";
 export const links: LinkItem[] = [
   { id: 0, name: "Articles", to: "/articles" },
   { id: 1, name: "About", to: "/about" },
+{id:2, name:"Projects", to:"https://github.com/sagarmusabbir?tab=repositories"},
   // { id: 3, name: "Search", to: "/search" },
 ];
 
