@@ -22,8 +22,8 @@ const Tags = ({ tagFrequencyMap }: { tagFrequencyMap: TagFrequencyMap }) => {
             <Button
               className={
                 selected
-                  ? "bg-slate-600 text-slate-50 hover:bg-gray-500"
-                  : "bg-slate-500 text-slate-100 hover:bg-gray-500"
+                  ? "bg-gray-600 text-slate-50 hover:bg-gray-500"
+                  : "bg-gray-500 text-slate-50 hover:bg-slate-500"
               }
             >
               {`${name} (${number})`}

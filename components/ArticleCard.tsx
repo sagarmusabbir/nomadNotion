@@ -19,7 +19,7 @@ export default function ArticleCard({ article }: Props) {
             {article?.tags?.map((tag) => (
               <div
                 key={tag}
-                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-bold text-gray-600 uppercase bg-gray-100 rounded left-3 top-3"
+                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-bold text-zinc-800 uppercase bg-slate-100 rounded left-3 top-3"
               >
                 {tag}
               </div>
@@ -27,7 +27,7 @@ export default function ArticleCard({ article }: Props) {
           </div>
           <div className=" filter contrast-[0.9]">
             <img
-              className="object-cover w-full h-52 transition rounded-lg aspect-video group-hover:opacity-90 bg-gray-50"
+              className="object-cover w-full h-52 transition rounded-xl aspect-video group-hover:opacity-90 bg-slate-50 dark:bg-zinc-900"
               src={article.coverImage}
               alt={"article cover"}
             />

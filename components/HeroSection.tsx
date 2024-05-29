@@ -3,19 +3,14 @@ import Link from "next/link";
 import { HiExternalLink } from "react-icons/hi";
 import { Button } from "flowbite-react";
 import { UpworkInIcon } from "./icons";
+import { Cover } from "./icons";
 
 const HeroSection = () => {
   return (
-    <div className="py-24 text-center bg-slate-200 dark:bg-gray-800">
-      {/* <div className="mt-4 text-3xl font-extrabold text-gray-900">
-          Analytics Roundtable
-        </div>
-        <div className="max-w-2xl mx-auto mt-2 text-xl text-gray-500">
-          Open Community for Data Professionals
-        </div> */}
-
-      <Avatar img="/avatar.svg" size="lg">
-        <div className="space-y-1 text-left">
+    <div className="py-24 text-center bg-slate-100 dark:bg-zinc-900">
+      <div className="flex flex-row items-center space-x-2 justify-center">
+        <Cover className="fill-gray-800 dark:fill-slate-200 w-16 h-16" />
+        <div className="space-y-1 flex flex-col text-left">
           <div className="mt-2 text-2xl font-semibold text-gray-800 dark:text-slate-200 leading-tight">
             Musabbir Sagar
           </div>
@@ -23,7 +18,7 @@ const HeroSection = () => {
             Full Stack Next.js Developer
           </div>
         </div>
-      </Avatar>
+      </div>
     </div>
   );
 };
