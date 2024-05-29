@@ -12,6 +12,7 @@ import { Article } from "@/lib/types";
 import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
+import Image from "next/image";
 
 export default async function Page({
   searchParams,
