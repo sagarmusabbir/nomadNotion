@@ -1,60 +1,57 @@
-import { NotionRenderer } from "react-notion";
-import notion from "@/lib";
-import { convertToPost } from "@/functions/convertToPost";
-import TopScrollButton from "@/components/TopScrollButton";
-import { siteData } from "@/site";
+import DefaultEventSchedule from "@/components/default";
+
+import Image from "next/image";
+import { Badge } from "flowbite-react";
+import {
+  Timeline,
+  TimelineBody,
+  TimelineContent,
+  TimelineItem,
+  TimelinePoint,
+  TimelineTime,
+  TimelineTitle,
+} from "flowbite-react";
+import { Logo } from "@/components/icons";
 import DefaultBreadcrumb from "@/components/BreadCumb";
+import BlockquoteTestimonial from "@/components/blockquote";
+import HeadingGridLayoutCustomerLogos from "@/components/blockquote";
+
 import { HiHome } from "react-icons/hi";
+import CTABanner from "@/components/cta";
 
-export default async function AboutPage({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string };
-}) {
-  const pageid = process.env.ABOUT_PAGE;
+import ComparisonCardsFeatureSection from "@/components/comparison";
+import CustomerLogos from "@/components/heading-grid-layout";
 
-  // Check if pageid is defined before using it
-  if (!pageid) {
-    // Handle the case when pageid is undefined
-    console.error("ABOUT_PAGE is not defined");
-    return null; // or return an error message or redirect, depending on your logic
-  }
-
-  // Fetching blockMap
-  const response = await fetch(
-    `https://notion-api.splitbee.io/v1/page/${pageid}`,
-    {
-      next: { revalidate: 60 },
-    }
-  );
-  const blockMap = await response.json();
-
-  // Fetching pageProperties
-  const pageProperties = await notion.pages.retrieve({ page_id: pageid });
-
-  const postDetails = convertToPost(pageProperties);
-
+export default function PostPage() {
   return (
-    <div className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <img
-        className="object-cover w-full h-52 xl:rounded-[20px] aspect-video"
-        src={postDetails.coverImage}
-      />
-
+    <main className="space-y-5 max-w-7xl m-auto">
+      <div className="relative  w-full h-52 ">
+        <CTABanner />
+        <Image
+          src="/cover.webp"
+          objectFit="cover"
+          alt="musabbirsagar"
+          fill={true}
+          className="xl:rounded-[20px] aspect-video"
+        ></Image>
+      </div>
       <div>
-        <div className="text-center space-y-5 text-sm mx-auto mt-3">
-          <div className="tracking-tight sm:text-4xl">{postDetails.title}</div>
+        <div className="text-center text-sm mx-auto my-3">
+          <div className="tracking-tight sm:text-4xl">
+            <h1>About</h1>
+          </div>
         </div>
 
-        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t mt-4 dark:text-zinc-300">
-          <DefaultBreadcrumb
-            icon={HiHome}
-            route="About"
-            title="Musabbir sagar"
-          />
-          <NotionRenderer blockMap={blockMap} />
+        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t  border-slate-100 dark:text-zinc-300">
+          {/* <DefaultBreadcrumb icon={HiHome} route="Projects" title="..." /> */}
+          <BlockquoteTestimonial />
+          <ComparisonCardsFeatureSection />
+
+          {/* <CustomerLogos /> */}
+
+          {/* <DefaultEventSchedule /> */}
         </div>
       </div>
-    </div>
+    </main>
   );
 }
