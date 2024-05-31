@@ -1,51 +1,91 @@
-import Link from "next/link";
-import Image from "next/image";
-import { links } from "@/site";
+"use client";
+import {
+  Timeline,
+  TimelineContent,
+  TimelineItem,
+  TimelinePoint,
+} from "flowbite-react";
+import { HiCalendar } from "react-icons/hi";
+import type { FC } from "react";
 import { Logo } from "./icons";
-import { DarkThemeToggle } from "flowbite-react";
 
-const DefaultHeader = () => {
+export function Iconn() {
+  return <Logo className="fill-zinc-600  w-5 h-5" />;
+}
+const DefaultEventSchedule: FC = function () {
   return (
-    <>
-      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-white py-4">
-        <div className="max-w-5xl flex flex-row justify-between items-center m-auto px-4">
-          {/* Logo */}
-          <div className="flex flex-row items-center">
-            <Link className="" href="/">
-              {/* <Image
-                src="/Logo.svg"
-                width={28}
-                height={28}
-                alt="AnalyticsRoundtable"
-              /> */}
-              <Logo />
-            </Link>
-            <Link
-              className="hidden sm:block ml-1 font-medium text-gray-800"
-              href="/"
-            >
-              Musabbirs Terminal
-            </Link>
-          </div>
-
-          {/* Navlinks */}
-          <div className="flex-shrink-0">
-            <ul className="flex flex-row space-x-4 items-center">
-              <DarkThemeToggle />
-              {links.map((link) => (
-                <li
-                  key={link.id}
-                  className="block hover:text-slate-600 text-sm"
-                >
-                  <Link href={link.to}>{link.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </>
+    <div className="flow-root max-w-3xl mx-auto mt-8 sm:mt-12 lg:mt-16">
+      <Timeline
+        theme={{
+          item: {
+            point: {
+              marker: {
+                icon: {
+                  wrapper:
+                    "absolute flex items-center justify-center rounded-full bg-gray-100 w-7 h-7 -left-3.5 ring-8 ring-slate-50",
+                },
+              },
+            },
+          },
+        }}
+      >
+        <Timeline.Item>
+          <Timeline.Point icon={Iconn}>
+            <Timeline.Content>
+              <Timeline.Time>June 1990</Timeline.Time>
+              <Timeline.Title>Born</Timeline.Title>
+              <Timeline.Body>
+                Scaling a business means setting the stage to enable and support
+                growth in your company.
+              </Timeline.Body>
+            </Timeline.Content>
+          </Timeline.Point>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={Iconn}>
+            <Timeline.Content>
+              <Timeline.Time>June 1990</Timeline.Time>
+              <Timeline.Title>Born</Timeline.Title>
+              <Timeline.Body>
+                Scaling a business means setting the stage to enable and support
+                growth in your company. Scaling a business means setting the
+                stage to enable and support growth in your company.
+              </Timeline.Body>
+            </Timeline.Content>
+          </Timeline.Point>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={Iconn}>
+            <Timeline.Content>
+              <Timeline.Time>June 1990</Timeline.Time>
+              <Timeline.Title>Born</Timeline.Title>
+              <Timeline.Body>
+                Scaling a business means setting the stage to enable and support
+                growth in your company. Scaling a business means setting the
+                stage to enable and support growth in your company. Scaling a
+                business means setting the stage to enable and support growth in
+                your company. Scaling a business means setting the stage to
+                enable and support growth in your company.
+              </Timeline.Body>
+            </Timeline.Content>
+          </Timeline.Point>
+        </Timeline.Item>
+        <Timeline.Item>
+          <Timeline.Point icon={Iconn}>
+            <Timeline.Content>
+              <Timeline.Time>June 1990</Timeline.Time>
+              <Timeline.Title>Born</Timeline.Title>
+              <Timeline.Body>
+                Scaling a business means setting the stage to enable and support
+                growth in your company. Scaling a business means setting the
+                stage to enable and support growth in your company.
+              </Timeline.Body>
+            </Timeline.Content>
+          </Timeline.Point>
+        </Timeline.Item>
+      </Timeline>
+    </div>
   );
 };
 
-export default DefaultHeader;
+export default DefaultEventSchedule;

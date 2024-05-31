@@ -1,9 +1,17 @@
 import { type } from "os";
+import { BlockMapType } from "react-notion";
+import { usePathname } from "next/navigation";
 
 export interface LinkItem {
   id: number;
   name: string;
   to: string;
+}
+
+export interface BreadcrumbItem {
+  icon: any;
+  route: "About" | "Articles" | "Projects";
+  title: string;
 }
 
 export type FooterNavItem = {

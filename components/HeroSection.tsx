@@ -4,6 +4,8 @@ import { HiExternalLink } from "react-icons/hi";
 import { Button } from "flowbite-react";
 import { UpworkInIcon } from "./icons";
 import { Cover } from "./icons";
+import { Breadcrumb } from "flowbite-react";
+import type { PropsWithChildren } from "react";
 
 const HeroSection = () => {
   return (

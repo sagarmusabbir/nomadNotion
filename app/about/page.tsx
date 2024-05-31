@@ -3,6 +3,8 @@ import notion from "@/lib";
 import { convertToPost } from "@/functions/convertToPost";
 import TopScrollButton from "@/components/TopScrollButton";
 import { siteData } from "@/site";
+import DefaultBreadcrumb from "@/components/BreadCumb";
+import { HiHome } from "react-icons/hi";
 
 export default async function AboutPage({
   searchParams,
@@ -45,6 +47,11 @@ export default async function AboutPage({
         </div>
 
         <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t mt-4 dark:text-zinc-300">
+          <DefaultBreadcrumb
+            icon={HiHome}
+            route="About"
+            title="Musabbir sagar"
+          />
           <NotionRenderer blockMap={blockMap} />
         </div>
       </div>

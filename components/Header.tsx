@@ -38,10 +38,12 @@ const Header = () => {
                 </li>
               ))}
               <li className="block">
-                <Link
+                {/* <Link
                   href="https://github.com/sagarmusabbir?tab=repositories"
                   target="_blanc"
-                >
+                > */}
+
+                <Link href="./post" target="_blanc">
                   Projects
                 </Link>
               </li>
