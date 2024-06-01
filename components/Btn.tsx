@@ -1,9 +1,9 @@
 import { Button, ButtonGroup } from "flowbite-react";
 import { HiAdjustments, HiCloudDownload, HiUserCircle } from "react-icons/hi";
 
-export default function Btn() {
+export default function Btn(props: string) {
   return (
-    <Button outline color="light">
+    <Button outline color="light" size="sm">
       About
     </Button>
   );
@@ -11,18 +11,18 @@ export default function Btn() {
 
 export function BtnGrp() {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-1">
       <ButtonGroup outline>
-        <Button color="light">
-          <HiUserCircle className="mr-3 h-4 w-4" />
+        <Button color="light" size="sm">
+          {/* <HiUserCircle className="mr-3 h-4 w-4" /> */}
           Profile
         </Button>
-        <Button color="light">
-          <HiAdjustments className="mr-3 h-4 w-4" />
+        <Button color="light" size="sm">
+          {/* <HiAdjustments className="mr-3 h-4 w-4" /> */}
           Settings
         </Button>
-        <Button color="light">
-          <HiCloudDownload className="mr-3 h-4 w-4" />
+        <Button color="light" size="sm">
+          {/* <HiCloudDownload className="mr-3 h-4 w-4" /> */}
           Messages
         </Button>
       </ButtonGroup>
