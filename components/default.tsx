@@ -22,7 +22,7 @@ const DefaultEventSchedule: FC = function () {
             marker: {
               icon: {
                 wrapper:
-                  "absolute flex items-center justify-center rounded-full bg-gray-100 w-7 h-7 -left-3.5 ring-8 ring-emerald-50",
+                  "absolute flex items-center justify-center rounded-full bg-gray-100 w-7 h-7 -left-3.5 ring-8 ring-zinc-50",
               },
             },
           },
