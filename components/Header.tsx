@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { links } from "@/site";
 import { Logo } from "./icons";
-import Btn, { BtnGrp } from "./Btn";
+import { BtnGrp } from "./Btn";
 // import { DarkThemeToggle } from "flowbite-react";
 
 const Header = () => {
