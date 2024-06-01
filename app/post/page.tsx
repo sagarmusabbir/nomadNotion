@@ -1,5 +1,5 @@
 import DefaultEventSchedule from "@/components/default";
-import EventScheduleSpeakersSponsors from "@/components/speakers-sponsors";
+
 import Image from "next/image";
 import { Badge } from "flowbite-react";
 import {
@@ -16,10 +16,9 @@ import DefaultBreadcrumb from "@/components/BreadCumb";
 import BlockquoteTestimonial from "@/components/blockquote";
 import HeadingGridLayoutCustomerLogos from "@/components/blockquote";
 
-import MobileAppDownloadCTASection from "@/components/mobile-app";
 import { HiHome } from "react-icons/hi";
 import CTABanner from "@/components/cta";
-import CarouselSliderSocialProof from "@/components/carousel-slider";
+
 import ComparisonCardsFeatureSection from "@/components/comparison";
 
 export default function PostPage() {
@@ -46,10 +45,8 @@ export default function PostPage() {
           <DefaultBreadcrumb icon={HiHome} route="Projects" title="..." />
           <BlockquoteTestimonial />
           <ComparisonCardsFeatureSection />
-          <MobileAppDownloadCTASection />
 
           <DefaultEventSchedule />
-          <CarouselSliderSocialProof />
         </div>
       </div>
     </main>

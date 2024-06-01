@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import DefaultEventSchedule from "./default";
+import { BtnGrp } from "./Btn";
 
 const ComparisonCardsFeatureSection: FC = function () {
   return (
