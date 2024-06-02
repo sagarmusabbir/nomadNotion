@@ -1,4 +1,4 @@
-import DefaultEventSchedule from "@/components/default";
+import DefaultEventSchedule from "@/components/MyTimeline";
 
 import Image from "next/image";
 

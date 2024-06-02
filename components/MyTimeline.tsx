@@ -1,18 +1,13 @@
 "use client";
-import {
-  Timeline,
-  TimelineContent,
-  TimelineItem,
-  TimelinePoint,
-} from "flowbite-react";
-import { HiCalendar } from "react-icons/hi";
+import { Timeline } from "flowbite-react";
+
 import type { FC } from "react";
 import { Logo } from "./icons";
 
 export function Iconn() {
   return <Logo className="fill-gray-600  w-5 h-5" />;
 }
-const DefaultEventSchedule: FC = function () {
+const MyTimeline: FC = function () {
   return (
     // <div className="flow-root max-w-3xl mx-auto mt-8 sm:mt-12 lg:mt-16">
     <Timeline
@@ -76,9 +71,33 @@ const DefaultEventSchedule: FC = function () {
           </Timeline.Content>
         </Timeline.Point>
       </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Point icon={Iconn}>
+          <Timeline.Content>
+            <Timeline.Time>August 2007</Timeline.Time>
+            <Timeline.Title>Finished High School</Timeline.Title>
+            <Timeline.Body>
+              I did not have good grade, really. But I developed few ancient
+              aplication with Visual basic. Really enjoyed VB
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Point>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Point icon={Iconn}>
+          <Timeline.Content>
+            <Timeline.Time>August 2007</Timeline.Time>
+            <Timeline.Title>Finished High School</Timeline.Title>
+            <Timeline.Body>
+              I did not have good grade, really. But I developed few ancient
+              aplication with Visual basic. Really enjoyed VB
+            </Timeline.Body>
+          </Timeline.Content>
+        </Timeline.Point>
+      </Timeline.Item>
     </Timeline>
     // </div>
   );
 };
 
-export default DefaultEventSchedule;
+export default MyTimeline;

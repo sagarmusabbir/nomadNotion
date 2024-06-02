@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import BlockquoteTestimonial from "@/components/blockquote";
 
-import ComparisonCardsFeatureSection from "@/components/comparison";
+import Myself from "@/components/musabbir";
 
 export default function AboutPage() {
   return (
@@ -23,9 +23,9 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t  border-slate-100 dark:text-zinc-300">
+        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-4 md:px-8 pt-4 border-t  border-slate-100 dark:text-zinc-300">
           <BlockquoteTestimonial />
-          <ComparisonCardsFeatureSection />
+          <Myself />
         </div>
       </div>
     </main>
