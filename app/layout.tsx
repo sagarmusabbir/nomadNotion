@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 // import { ThemeModeScript } from "flowbite-react";
-import DefaultHeader from "@/components/MyTimeline";
 
 const inter = Inter({ subsets: ["latin"] });
 

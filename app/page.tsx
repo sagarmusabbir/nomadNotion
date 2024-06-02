@@ -3,9 +3,8 @@ import { Article } from "@/lib/types";
 import { postsPerPage } from "@/site";
 import Feed from "@/components/Feed";
 import HeroSection from "../components/HeroSection";
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosResponse } from "axios";
 import { sendSlackMessage } from "@/functions/sendSlackMessage";
-
 
 const HomePage = async ({
   searchParams,
@@ -24,10 +23,10 @@ const HomePage = async ({
     await sendSlackMessage(message);
   } catch (error: unknown) {
     if (error instanceof Error) {
-      console.error('Error sending Slack message:', error.message);
+      console.error("Error sending Slack message:", error.message);
       // Handle the error as needed
     } else {
-      console.error('An unexpected error occurred:', error);
+      console.error("An unexpected error occurred:", error);
       // Handle other types of errors or log them
     }
   }

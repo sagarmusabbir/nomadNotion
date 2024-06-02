@@ -1,11 +1,6 @@
-import DefaultEventSchedule from "@/components/MyTimeline";
-
 import Image from "next/image";
 
-import BlockquoteTestimonial from "@/components/blockquote";
-
-import ComparisonCardsFeatureSection from "@/components/comparison";
-import GridLayoutImageCTAPreviewProjectPortfolio from "@/components/grid-layout";
+import Portfolio from "@/components/Allprojects";
 
 export default function PostPage() {
   return (
@@ -27,7 +22,7 @@ export default function PostPage() {
         </div>
 
         <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t border-slate-200  dark:text-zinc-300">
-          <GridLayoutImageCTAPreviewProjectPortfolio />
+          <Portfolio />
         </div>
       </div>
     </main>
