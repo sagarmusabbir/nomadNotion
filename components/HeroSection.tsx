@@ -4,7 +4,8 @@ import { Button } from "flowbite-react";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#DAF0EE] dark:bg-gray-900">
+    <section className="bg-[#EDFCF5] dark:bg-gray-900">
+      {/* #EDFCF5 #D3F8E6*/}
       <div
         className="mx-auto grid max-w-screen-md  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
       "
@@ -18,21 +19,16 @@ const HeroSection = () => {
             priority={true}
           ></Image>
         </div>
-        <div className="mr-auto place-self-center  lg:col-span-6">
-          <Cover className="fill-gray-800 dark:fill-slate-200 w-16 h-16 mb-2" />
-          <h1 className="mb-2 max-w-2xl text-xl font-bold leading-none tracking-tight text-gray-800 dark:text-slate-400 md:text-3xl xl:text-4xl">
+        <div className="mr-auto  place-self-center  lg:col-span-6">
+          <Cover className="fill-gray-800 dark:fill-slate-200 w-16 h-16 mb-2 lg:mb-4" />
+          <h1 className="mb-2 max-w-2xl text-2xl font-bold leading-none tracking-tight text-gray-800 dark:text-slate-400 md:text-3xl xl:text-4xl lg:mb-4 ">
             Musabbir Sagar
           </h1>
           <p className="mb-2 max-w-xl text-gray-700 dark:text-slate-400 md:text-lg lg:mb-4 lg:text-xl">
             Full Stack Next.js Developer
           </p>
-          <div className="flex w-fit items-center gap-5 ">
-            <Button
-              color="light"
-              href="/about"
-              size="md"
-              className="[&>span]:items-center"
-            >
+          <div className="flex w-fit items-center gap-4 ">
+            <Button color="light" href="/about" size="md">
               About Me
               <svg
                 className="-mr-1 ml-2 h-5 w-5"

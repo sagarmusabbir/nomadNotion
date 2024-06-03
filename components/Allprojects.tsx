@@ -48,14 +48,14 @@ const Portfolio: FC = function () {
               people who share your interests.
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-between gap-4 leading-none">
             <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="md" className="w-fit">
+            <Button color="light" href="#" size="sm">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 mr-2 -ml-1"
+                className=" mr-2 h-4 w-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -93,22 +93,11 @@ const Portfolio: FC = function () {
               people who share your interests.
             </p>
           </div>
-          <div className="flex items-center gap-4">
-            <Button href="#" size="md" color="dark">
+          <div className="flex items-center gap-4 leading-none">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button
-              color="light"
-              href="#"
-              size="md"
-              theme={{
-                color: {
-                  gray: "text-neon-slatedarker bg-white border border-neon-slatelightmd hover:bg-gray-50 hover:text-primary-600 focus:ring-primary-700 focus:text-primary-700 dark:bg-neon-slatedarker  dark:border-primary-600 dark:text-white dark:hover:bg-slate-700 focus:ring-2",
-                },
-                inner: { base: "flex items-stretch transition-0" },
-              }}
-              className="w-fit"
-            >
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className="w-5 h-5 mr-2 -ml-1"
@@ -149,11 +138,11 @@ const Portfolio: FC = function () {
               people who share your interests.
             </p>
           </div>
-          <div className="flex items-center gap-4">
-            <Button href="#" size="md" color="dark">
+          <div className="flex items-center gap-4 leading-none">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="md" className="w-fit">
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className="w-5 h-5 mr-2 -ml-1"
