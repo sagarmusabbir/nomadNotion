@@ -35,7 +35,7 @@ const HomePage = async ({
     <>
       <div className="">
         <HeroSection />
-        <div className="mt-4 max-w-5xl m-auto p-4 min-h-screen">
+        <div className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
           <Feed articles={publishedPosts} />
         </div>
       </div>
