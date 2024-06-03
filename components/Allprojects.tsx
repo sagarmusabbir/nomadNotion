@@ -49,10 +49,10 @@ const Portfolio: FC = function () {
             </p>
           </div>
           <div className="flex items-center justify-between gap-4 leading-none">
-            <Button href="#" size="sm" color="dark">
+            <Button href="#" size="xs" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="sm">
+            <Button color="light" href="#" size="xs">
               <svg
                 aria-hidden="true"
                 className=" mr-2 h-4 w-4"
@@ -94,13 +94,13 @@ const Portfolio: FC = function () {
             </p>
           </div>
           <div className="flex items-center gap-4 leading-none">
-            <Button href="#" size="sm" color="dark">
+            <Button href="#" size="xs" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="sm" className="w-fit">
+            <Button color="light" href="#" size="xs" className="w-fit">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 mr-2 -ml-1"
+                className="w-4 h-4 mr-2 -ml-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -139,13 +139,13 @@ const Portfolio: FC = function () {
             </p>
           </div>
           <div className="flex items-center gap-4 leading-none">
-            <Button href="#" size="sm" color="dark">
+            <Button href="#" size="xs" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="sm" className="w-fit">
+            <Button color="light" href="#" size="xs" className="w-fit">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 mr-2 -ml-1"
+                className="w-4 h-4 mr-2 -ml-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -184,13 +184,13 @@ const Portfolio: FC = function () {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button href="#" size="md" color="dark">
+            <Button href="#" size="xs" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="md" className="w-fit">
+            <Button color="light" href="#" size="xs" className="w-fit">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 mr-2 -ml-1"
+                className="w-4 h-4 mr-2 -ml-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -229,13 +229,13 @@ const Portfolio: FC = function () {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button href="#" size="md" color="dark">
+            <Button href="#" size="xs" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="md" className="w-fit">
+            <Button color="light" href="#" size="xs" className="w-fit">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 mr-2 -ml-1"
+                className="w-4 h-4 mr-2 -ml-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -274,13 +274,13 @@ const Portfolio: FC = function () {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button href="#" size="md" color="dark">
+            <Button href="#" size="xs" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" className="w-fit">
+            <Button color="light" href="#" size="xs" className="w-fit">
               <svg
                 aria-hidden="true"
-                className="w-5 h-5 mr-2 -ml-1"
+                className="w-4 h-4 mr-2 -ml-1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"

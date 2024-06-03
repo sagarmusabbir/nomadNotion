@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         // className={inter.className}
 
-        className={`${inter.className} antialiased dark:bg-zinc-950 text-gray-800 dark:text-slate-200`}
+        className={`${inter.className} antialiased dark:bg-zinc-950 text-gray-800 bg-slate-50 dark:text-slate-200`}
       >
         <Header />
 

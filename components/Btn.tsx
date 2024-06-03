@@ -12,8 +12,8 @@ export function BtnGrp() {
           as={Link}
           href={link.to}
           outline
-          size="sm"
-          color="light"
+          size="xs"
+          color="dark"
           key={link.id}
         >
           {link.name}

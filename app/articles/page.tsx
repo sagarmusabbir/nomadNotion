@@ -12,7 +12,6 @@ const Articles = async () => {
 
   return (
     <div className="max-w-5xl m-auto p-4 min-h-screen">
-      <DefaultBreadcrumb icon={HiHome} route="Articles" title="All" />
       <Search
         publishedPosts={publishedPosts}
         tagFrequencyMap={tagFrequencyMap}

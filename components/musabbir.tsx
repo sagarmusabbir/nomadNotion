@@ -7,7 +7,7 @@ import MyTimeline from "./MyTimeline";
 
 const Myself: FC = function () {
   return (
-    <div className="mx-auto max-w-screen-xl px-4 py-6 sm:py-12 lg:px-6">
+    <div className="mx-auto max-w-screen-xl px-4 py-4 sm:py-12 lg:px-6">
       <div className="grid space-y-8 lg:grid-cols-2 lg:gap-12 lg:space-y-0">
         <div className="flex flex-col gap-2">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
