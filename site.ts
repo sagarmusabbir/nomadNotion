@@ -1,11 +1,17 @@
 import { FooterNavItem, LinkItem } from "@/lib/types";
 
-import { GithubIcon, LinkedInIcon } from "./components/icons";
+import {
+  AboutIcon,
+  ArticleIcon,
+  GithubIcon,
+  LinkedInIcon,
+  ProjectIcon,
+} from "./components/icons";
 
 export const links: LinkItem[] = [
-  { id: 0, name: "Articles", to: "/articles" },
-  { id: 1, name: "About", to: "/about" },
-  { id: 2, name: "Projects", to: "/post" },
+  { id: 0, name: "Articles", to: "/articles", icon: ArticleIcon },
+  { id: 1, name: "Projects", to: "/post", icon: ProjectIcon },
+  { id: 2, name: "About", to: "/about", icon: AboutIcon },
 
   // { id: 3, name: "Search", to: "/search" },
 ];

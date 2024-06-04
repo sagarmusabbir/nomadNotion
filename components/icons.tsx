@@ -1,6 +1,68 @@
 import * as React from "react";
 import { IconSvgProps } from "@/types";
 import { SVGProps } from "react";
+import {
+  MdPerson,
+  MdPersonOutline,
+  MdKeyboard,
+  MdComputer,
+  MdOutlineKeyboard,
+  MdOutlineKeyboardAlt,
+  MdOutlineDesktopMac,
+  MdDesktopMac,
+  MdAccountCircle,
+  MdAccountBox,
+  MdOutlineScreenSearchDesktop,
+  MdScreenSearchDesktop,
+  MdKeyboardAlt,
+  MdOutlinePersonOutline,
+  MdOutlinePerson4,
+} from "react-icons/md";
+
+export const ArticleIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
+  <MdOutlineKeyboardAlt
+    fill="none"
+    height={size || height}
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  ></MdOutlineKeyboardAlt>
+);
+
+export const ProjectIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
+  <MdComputer
+    fill="none"
+    height={size || height}
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  ></MdComputer>
+);
+
+export const AboutIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
+  <MdOutlinePerson4
+    fill="none"
+    height={size || height}
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  ></MdOutlinePerson4>
+);
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,

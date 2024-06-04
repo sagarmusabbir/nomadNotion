@@ -32,7 +32,7 @@ const HeroSection = () => {
           </p>
           <div className="flex w-fit items-center gap-2 ">
             <Link href="/about">
-              <Button color="dark" size="sm">
+              <Button color="light" outline size="sm">
                 About Me
                 {/* <HiArrowRight className="ml-2 mt-px h-4 w-4" /> */}
               </Button>
