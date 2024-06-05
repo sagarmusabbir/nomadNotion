@@ -104,7 +104,7 @@ const Cta: FC = function () {
       <div className="mt-12 lg:mt-24">
         <div className="flex flex-row">
           <h2 className="mb-8 lg:mb-16 text-4xl font-extrabold text-gray-400 dark:text-teal-500 tracking-tight">
-            ♻️ My Ecosystem
+            My Ecosystem
           </h2>
         </div>
         <div className="grid grid-cols-4 gap-5 text-gray-500 dark:text-gray-400 sm:grid-cols-4 sm:gap-3">

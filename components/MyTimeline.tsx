@@ -71,7 +71,7 @@ const MyTimeline: FC = function () {
           </Timeline.Content>
         </Timeline.Point>
       </Timeline.Item>
-      <Timeline.Item>
+      {/* <Timeline.Item>
         <Timeline.Point icon={Iconn}>
           <Timeline.Content>
             <Timeline.Time>August 2007</Timeline.Time>
@@ -94,7 +94,7 @@ const MyTimeline: FC = function () {
             </Timeline.Body>
           </Timeline.Content>
         </Timeline.Point>
-      </Timeline.Item>
+      </Timeline.Item> */}
     </Timeline>
     // </div>
   );

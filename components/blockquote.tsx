@@ -12,11 +12,11 @@ const BlockquoteTestimonial: FC = function () {
         </p>
       </blockquote>
       <Avatar img="avatar.svg" rounded size="xs">
-        <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-          <div className="pr-3 font-medium text-gray-900 dark:text-white leading-4">
+        <div className="flex items-center divide-x divide-gray-400 dark:divide-gray-700">
+          <div className="pr-3 font-medium text-gray-700 dark:text-white leading-4 text-sm">
             Musabbir Sagar
           </div>
-          <div className="pl-3 text-sm text-gray-500 dark:text-gray-400 leading-4">
+          <div className="pl-3 text-sm text-gray-500 dark:text-gray-400 leading-4 text-sm">
             CEO at ThirdBracket
           </div>
         </div>

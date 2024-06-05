@@ -19,10 +19,11 @@ export function BtnGrp() {
         <Button
           as={Link}
           href={link.to}
+          outline
           size="sm"
           color="gray"
           key={link.id}
-          className="flex justify-center items-center backdrop-blur-lg bg-opacity-30"
+          className="flex justify-center items-center "
         >
           <link.icon
             className="mr-2 mt-0.5  h-4 w-4 fill-gray-700 hover:fill-slate-800 "

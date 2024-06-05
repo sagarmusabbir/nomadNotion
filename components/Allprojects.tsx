@@ -19,7 +19,7 @@ const Portfolio: FC = function () {
         >
           Latest Projects
         </h2>
-        <p className="mt-4 text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
+        <p className="mt-4 text-lg font-normal text-gray-500 dark:text-gray-400 ">
           Here you can find my recent projects and short demostration with the
           live preview and githib repo.
         </p>

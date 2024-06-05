@@ -42,7 +42,7 @@ const HeroSection = () => {
               href="https://www.upwork.com/workwith/smamusabbirs"
               target="_blank"
             ></Link>
-            <Button color="dark" outline pill size="sm">
+            <Button color="dark" pill size="sm">
               Hire @Upwork
               <HiExternalLink className="ml-2 mt-px h-4 w-4" />
             </Button>
