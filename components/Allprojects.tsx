@@ -11,12 +11,15 @@ import {
 
 const Portfolio: FC = function () {
   return (
-    <div className="max-w-screen-xl px-4 py-8 mx-auto ">
+    <div className="max-w-screen-xl px-4 py-8 lg:py-16 mx-auto mt-4 lg:mt-8 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-xl font-bold leading-tight tracking-tight text-gray-800 sm:text-4xl dark:text-white">
+        <h2
+          className="text-4xl font-bold leading-tight text-gray-900 dark:text-white
+        "
+        >
           Latest Projects
         </h2>
-        <p className="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+        <p className="mt-4 text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
           Here you can find my recent projects and short demostration with the
           live preview and githib repo.
         </p>
@@ -25,12 +28,12 @@ const Portfolio: FC = function () {
         <div>
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/agency-landing-page.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <img
             className="object-cover w-full rounded-lg shadow-lg hidden dark:block mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/agency-landing-page-dark.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <div className="space-y-3 mb-6">
@@ -43,16 +46,16 @@ const Portfolio: FC = function () {
                 Agency Landing Page
               </a>
             </h3>
-            <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
           </div>
-          <div className="flex items-center justify-between gap-4 leading-none">
-            <Button href="#" size="xs" color="dark">
+          <div className="flex items-center gap-4 leading-none">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="xs">
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className=" mr-2 h-4 w-4"
@@ -70,14 +73,10 @@ const Portfolio: FC = function () {
         <div>
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/analytics-tool.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
-          <img
-            className="object-cover w-full rounded-lg shadow-lg mb-6 dark:block hidden"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/analytics-tool-dark.jpg"
-            alt=""
-          />
+          <img className="#" alt="" />
           <div className="space-y-3 mb-6">
             <Badge color="gray" className="w-fit">
               <SiHugo className="w-4 h-4" />
@@ -88,16 +87,16 @@ const Portfolio: FC = function () {
                 Eventually
               </a>
             </h3>
-            <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
           </div>
           <div className="flex items-center gap-4 leading-none">
-            <Button href="#" size="xs" color="dark">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="xs" className="w-fit">
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className="w-4 h-4 mr-2 -ml-1"
@@ -115,12 +114,12 @@ const Portfolio: FC = function () {
         <div>
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/task-management.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:block hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/task-management-dark.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <div className="space-y-3 mb-6">
@@ -130,19 +129,19 @@ const Portfolio: FC = function () {
             </Badge>
             <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
               <a href="#" className="hover:underline">
-                Task management system
+                Task management
               </a>
             </h3>
-            <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
           </div>
           <div className="flex items-center gap-4 leading-none">
-            <Button href="#" size="xs" color="dark">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="xs" className="w-fit">
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className="w-4 h-4 mr-2 -ml-1"
@@ -160,12 +159,12 @@ const Portfolio: FC = function () {
         <div>
           <img
             className="object-cover w-full rounded-lg shadow-lg mb-6 dark:hidden"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:block hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard-dark.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <div className="space-y-3 mb-6">
@@ -178,16 +177,16 @@ const Portfolio: FC = function () {
                 Flowbite's dashboard
               </a>
             </h3>
-            <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button href="#" size="xs" color="dark">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="xs" className="w-fit">
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className="w-4 h-4 mr-2 -ml-1"
@@ -205,12 +204,12 @@ const Portfolio: FC = function () {
         <div>
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/landing-page-ngo.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <img
             className="object-cover w-full rounded-lg shadow-lg mb-6 dark:block hidden"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/landing-page-ngo-dark.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <div className="space-y-3 mb-6">
@@ -223,16 +222,16 @@ const Portfolio: FC = function () {
                 NGO Landing Page
               </a>
             </h3>
-            <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button href="#" size="xs" color="dark">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="xs" className="w-fit">
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className="w-4 h-4 mr-2 -ml-1"
@@ -250,12 +249,12 @@ const Portfolio: FC = function () {
         <div>
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/mail-management-system.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:block hidden mb-6"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/mail-management-system-dark.jpg"
+            src="https://raw.githubusercontent.com/sagarmusabbir/nextjs-14-notion/main/public/terminal.webp"
             alt=""
           />
           <div className="space-y-3 mb-6">
@@ -265,19 +264,19 @@ const Portfolio: FC = function () {
             </Badge>
             <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
               <a href="#" className="hover:underline">
-                Mail management system
+                Mail management
               </a>
             </h3>
-            <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-lg font-normal text-gray-500 dark:text-gray-400 line-clamp-3">
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Button href="#" size="xs" color="dark">
+            <Button href="#" size="sm" color="dark">
               Case study
             </Button>
-            <Button color="light" href="#" size="xs" className="w-fit">
+            <Button color="light" href="#" size="sm" className="w-fit">
               <svg
                 aria-hidden="true"
                 className="w-4 h-4 mr-2 -ml-1"
