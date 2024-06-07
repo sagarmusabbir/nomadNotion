@@ -22,7 +22,7 @@ export default function PostPage() {
         </div> */}
 
         <div
-          className="max-w-5xl px-6 mx-auto mb-24 space-y-8 md:px-8 dark:text-zinc-300
+          className="mx-auto mb-24 space-y-8 dark:text-zinc-300
         
         "
         >
