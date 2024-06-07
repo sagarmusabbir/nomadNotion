@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { NavBar } from "@/components/Navbar";
+
 // import { ThemeModeScript } from "flowbite-react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,7 +31,7 @@ export default function RootLayout({
 
         className={`${inter.className} antialiased dark:bg-zinc-950 text-gray-800 bg-slate-50 dark:text-slate-200`}
       >
-        <Header />
+        <NavBar />
 
         <main className="">
           {children}
