@@ -6,7 +6,7 @@ import Myself from "@/components/musabbir";
 
 export default function AboutPage() {
   return (
-    <main className="space-y-5 max-w-7xl mx-auto">
+    <main className="space-y-5 max-w-5xl mx-auto">
       <div className="relative  w-full h-52 ">
         <Image
           src="/cover.webp"
@@ -23,7 +23,7 @@ export default function AboutPage() {
           </div>
         </div> */}
 
-        <div className="max-w-5xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 dark:text-zinc-300">
+        <div className="mx-auto mb-24 space-y-8 md:px-8 pt-4 dark:text-zinc-300">
           <BlockquoteTestimonial />
           <Myself />
         </div>
