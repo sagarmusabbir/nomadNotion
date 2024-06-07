@@ -9,7 +9,7 @@ export default function AboutPage() {
     <main className="space-y-5 max-w-7xl mx-auto">
       <div className="relative  w-full h-52 ">
         <Image
-          src="/cover.webp"
+          src="/about.png.png"
           objectFit="cover"
           alt="musabbirsagar"
           fill={true}
