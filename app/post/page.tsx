@@ -7,7 +7,7 @@ export default function PostPage() {
     <main className="space-y-5 max-w-5xl m-auto">
       <div className="relative  w-full h-52 ">
         <Image
-          src="/post.png"
+          src="/Untitled.png"
           objectFit="cover"
           alt="musabbirsagar"
           fill={true}
