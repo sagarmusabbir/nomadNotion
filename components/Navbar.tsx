@@ -48,8 +48,8 @@ export const NavBar: FC = function () {
             ))}
           </ButtonGroup>
         </div>
-        <div className="flex md:hidden my-4 flex-col space-y-2">
-          <div className="flex flex-col  items-end ">
+        <div className="flex md:hidden my-4 flex-col space-y-4">
+          <div className="flex flex-col  items-center ">
             <Logo className="fill-gray-800 hover:fill-gray-700 dark:fill-slate-200 dark:hover:fill-slate-300 w-10 h-10 " />
             <span className="whitespace-nowrap font-semibold   text-gray-800 hover:text-gray-700 dark:text-slate-200 hover:dark:text-slate-200  ">
               Musabbirs Terminal
@@ -57,22 +57,22 @@ export const NavBar: FC = function () {
           </div>
 
           {links.map((link) => (
-            <div className="flex justify-end">
-              <Button
-                as={Link}
-                href={link.to}
-                outline
-                size="xs"
-                color="gray"
-                key={link.id}
-              >
-                <link.icon
-                  className="h-3 w-3 fill-gray-700 hover:fill-slate-800 mr-2 mt-0.5"
-                  aria-hidden="true"
-                />
-                <span>{link.name}</span>
-              </Button>
-            </div>
+            // <div className="flex justify-end">
+            <Button
+              as={Link}
+              href={link.to}
+              outline
+              size="xs"
+              color="gray"
+              key={link.id}
+            >
+              <link.icon
+                className="h-3 w-3 fill-gray-700 hover:fill-slate-800 mr-2 mt-0.5"
+                aria-hidden="true"
+              />
+              <span>{link.name}</span>
+            </Button>
+            // </div>
           ))}
         </div>
       </NavbarCollapse>
