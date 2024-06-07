@@ -11,7 +11,7 @@ export default function PostPage() {
           objectFit="cover"
           alt="musabbirsagar"
           fill={true}
-          className="aspect-video"
+          className="aspect-video bg-[#EDFCF5]"
         ></Image>
       </div>
       <div>
