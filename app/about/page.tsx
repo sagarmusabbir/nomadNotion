@@ -23,7 +23,7 @@ export default function AboutPage() {
           </div>
         </div> */}
 
-        <div className="mx-auto mb-24 px-4 space-y-8 md:px-8 pt-4 dark:text-zinc-300">
+        <div className="mx-auto mb-24 px-4 space-y-8 md:px-8 dark:text-zinc-300">
           <BlockquoteTestimonial />
           <Myself />
         </div>
