@@ -6,7 +6,7 @@ import Myself from "@/components/musabbir";
 
 export default function AboutPage() {
   return (
-    <main className="space-y-5 max-w-5xl mx-auto">
+    <main className="space-y-5 max-w-5xl p-4 mx-auto">
       <div className="relative  w-full h-52 ">
         <Image
           src="/cover.webp"
