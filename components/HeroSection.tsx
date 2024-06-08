@@ -10,16 +10,30 @@ const HeroSection = () => {
     <section className="bg-[#EDFCF5] dark:bg-gray-900">
       {/* #EDFCF5 #D3F8E6*/}
       <div
-        className="mx-auto grid max-w-screen-xl  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
+        className="mx-auto grid max-w-screen-md  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
       "
       >
-        <div className="  place-self-center  lg:col-span-6 ">
+        <div className="hidden lg:col-span-6 lg:mt-0 lg:flex  mr-auto ">
+          <Image
+            src="/terminal.png"
+            alt="ddx"
+            width={600}
+            height={375}
+            priority={true}
+            style={{ objectFit: "contain" }}
+          ></Image>
+        </div>
+        <div className="place-self-center  lg:col-span-6">
           <Cover className="fill-gray-800 dark:fill-slate-200 w-20 h-20 mb-2 " />
-          <h1 className=" max-w-2xl text-3xl font-bold leading-none tracking-tight text-gray-800 dark:text-slate-400 mb-2   ">
-            Musabbir Sagar
+          <h1
+            className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight text-gray-800 dark:text-slate-400 mb-1 md:text-3xl lg:text-4xl   
+          
+          "
+          >
+            Musabbirs Terminal
           </h1>
-          <p className="mb-2 max-w-xl text-gray-700 dark:text-slate-400 md:text-lg font-light lg:text-xl">
-            Full Stack Next.js Developer
+          <p className="mb-2 max-w-xl text-gray-700 dark:text-slate-400 text-lg font-normal">
+            <span className=" text-sm font-light">by&nbsp;</span>Musabbir Sagar
           </p>
           <div className="flex w-fit items-center gap-2 ">
             <Button color="light" outline size="sm">
@@ -40,15 +54,6 @@ const HeroSection = () => {
               </Link>
             </Button>
           </div>
-        </div>
-        <div className="hidden lg:col-span-6 lg:mt-0 lg:flex ">
-          <Image
-            src="/terminal.png"
-            alt="ddx"
-            width={400}
-            height={250}
-            priority={true}
-          ></Image>
         </div>
       </div>
     </section>
