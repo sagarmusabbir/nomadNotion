@@ -22,20 +22,22 @@ const HeroSection = () => {
             Full Stack Next.js Developer
           </p>
           <div className="flex w-fit items-center gap-2 ">
-            <Link href="/about">
-              <Button color="light" outline size="sm">
+            <Button color="light" outline size="sm">
+              <Link href="/about">
                 About Me
                 {/* <HiArrowRight className="ml-2 mt-px h-4 w-4" /> */}
-              </Button>
-            </Link>
+              </Link>
+            </Button>
 
-            <Link
-              href="https://www.upwork.com/workwith/smamusabbirs"
-              target="_blank"
-            ></Link>
             <Button color="dark" pill size="sm">
-              Hire @Upwork
-              <HiExternalLink className="ml-2 mt-px h-4 w-4" />
+              <Link
+                href="https://www.upwork.com/workwith/smamusabbirs"
+                target="_blank"
+                className="flex justify-center items-center "
+              >
+                Hire @Upwork
+                <HiExternalLink className="ml-2 mt-px h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>

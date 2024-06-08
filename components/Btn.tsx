@@ -14,22 +14,39 @@ import { start } from "repl";
 
 export function BtnGrp() {
   return (
+    // <ButtonGroup>
+    //   {links.map((link) => (
+    //     <Button
+    //       as={Link}
+    //       href={link.to}
+    //       outline
+    //       size="sm"
+    //       color="gray"
+    //       key={link.id}
+    //       className="flex justify-center items-center "
+    //     >
+    //       <link.icon
+    //         className="mr-2 mt-0.5  h-4 w-4 fill-gray-700 hover:fill-slate-800 "
+    //         aria-hidden="true"
+    //       />
+    //       <span>{link.name}</span>
+    //     </Button>
+    //   ))}
+    // </ButtonGroup>
     <ButtonGroup>
       {links.map((link) => (
-        <Button
-          as={Link}
-          href={link.to}
-          outline
-          size="sm"
-          color="gray"
-          key={link.id}
-          className="flex justify-center items-center "
-        >
-          <link.icon
-            className="mr-2 mt-0.5  h-4 w-4 fill-gray-700 hover:fill-slate-800 "
-            aria-hidden="true"
-          />
-          <span>{link.name}</span>
+        <Button color="light" outline size="sm">
+          <Link
+            href={link.to}
+            key={link.id}
+            className="flex justify-center items-center "
+          >
+            <link.icon
+              className="mr-2   h-4 w-4 fill-gray-700 hover:fill-slate-800 "
+              aria-hidden="true"
+            />
+            <span>{link.name}</span>
+          </Link>
         </Button>
       ))}
     </ButtonGroup>
