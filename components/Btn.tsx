@@ -35,12 +35,8 @@ export function BtnGrp() {
     // </ButtonGroup>
     <ButtonGroup>
       {links.map((link) => (
-        <Button color="light" outline size="sm">
-          <Link
-            href={link.to}
-            key={link.id}
-            className="flex justify-center items-center "
-          >
+        <Button color="light" key={link.id} outline size="sm">
+          <Link href={link.to} className="flex justify-center items-center">
             <link.icon
               className="mr-2   h-4 w-4 fill-gray-700 hover:fill-slate-800 "
               aria-hidden="true"
