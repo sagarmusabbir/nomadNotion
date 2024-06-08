@@ -17,7 +17,7 @@ export const NavBar: FC = function () {
     <Navbar className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-slate-100 dark:bg-zinc-950 dark:bg-opacity-30 py-4 px-0">
       <NavbarBrand as={Link} href="/">
         <Logo className="fill-gray-800 hover:fill-gray-700 dark:fill-slate-200 dark:hover:fill-slate-300 mr-3 h-6 sm:h-9" />
-        <span className="self-center hidden md:block whitespace-nowrap text-xl  font-semibold dark:text-white">
+        <span className="self-center hidden md:block whitespace-nowrap text-xl  font-semibold dark:text-white text-gray-800 hover:text-gray-700">
           Musabbirs Terminal
         </span>
       </NavbarBrand>
@@ -28,18 +28,21 @@ export const NavBar: FC = function () {
       />
       <NavbarCollapse>
         {/* <div className="hidden md:block"> */}
-        <span className="self-start md:hidden whitespace-nowrap text-md  font-medium dark:text-white p-3">
+        <span className="self-start md:hidden whitespace-nowrap text-md  font-medium dark:text-white p-3 text-gray-800 hover:text-gray-700">
           Musabbirs Terminal
         </span>
         {links.map((link) => (
           <NavbarLink
-            href="link.to"
+            href={link.to}
             key={link.id}
-            className="flex items-center justify-between gap-1 "
+            as={Link}
+            className="flex items-center justify-between gap-1    "
           >
-            {link.name}
+            <span className="text-gray-800 hover:text-gray-700">
+              {link.name}
+            </span>
             <link.icon
-              className=" fill-gray-700 hover:fill-slate-800 ml-1 "
+              className="ml-1 fill-gray-800 hover:fill-gray-700"
               aria-hidden="true"
             />
           </NavbarLink>

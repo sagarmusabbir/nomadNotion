@@ -10,19 +10,10 @@ const HeroSection = () => {
     <section className="bg-[#EDFCF5] dark:bg-gray-900">
       {/* #EDFCF5 #D3F8E6*/}
       <div
-        className="mx-auto grid max-w-screen-md  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
+        className="mx-auto grid max-w-screen-xl  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
       "
       >
-        <div className="hidden lg:col-span-6 lg:mt-0 lg:flex ">
-          <Image
-            src="/terminal.png"
-            alt="ddx"
-            width={400}
-            height={250}
-            priority={true}
-          ></Image>
-        </div>
-        <div className="mr-auto  place-self-center  lg:col-span-6 ">
+        <div className="  place-self-center  lg:col-span-6 ">
           <Cover className="fill-gray-800 dark:fill-slate-200 w-20 h-20 mb-2 " />
           <h1 className=" max-w-2xl text-3xl font-bold leading-none tracking-tight text-gray-800 dark:text-slate-400 mb-2   ">
             Musabbir Sagar
@@ -47,6 +38,15 @@ const HeroSection = () => {
               <HiExternalLink className="ml-2 mt-px h-4 w-4" />
             </Button>
           </div>
+        </div>
+        <div className="hidden lg:col-span-6 lg:mt-0 lg:flex ">
+          <Image
+            src="/terminal.png"
+            alt="ddx"
+            width={400}
+            height={250}
+            priority={true}
+          ></Image>
         </div>
       </div>
     </section>
