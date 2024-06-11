@@ -1,26 +1,10 @@
 import { FC } from "react";
 import CarouselSliderTestimonial from "./carousel-slider";
 
-import {
-  SiTypescript,
-  SiJavascript,
-  SiTailwindcss,
-  SiNextdotjs,
-  SiReact,
-  SiNodedotjs,
-  SiVercel,
-  SiNetlify,
-  SiWordpress,
-  SiElementor,
-  SiAmazonaws,
-  SiGhost,
-  SiHugo,
-} from "react-icons/si";
-
 const Cta: FC = function () {
   // const function Cta = () =>  {
   return (
-    <section>
+    <div className="flex flex-col gap-2">
       <div>
         <a
           href="https://www.upwork.com/workwith/smamusabbirs"
@@ -100,70 +84,7 @@ const Cta: FC = function () {
           </svg>
         </a>
       </div>
-
-      <div className="mt-12 lg:mt-24">
-        <div className="flex flex-row">
-          <h2 className="mb-8 lg:mb-16 text-4xl font-extrabold text-gray-400 dark:text-teal-500 tracking-tight">
-            My Ecosystem
-          </h2>
-        </div>
-        <div className="grid grid-cols-4 gap-5 text-gray-500 dark:text-gray-400 sm:grid-cols-4 sm:gap-3">
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Next.js</span>
-            <SiNextdotjs className="h-10 w-10" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Nodedotjs</span>
-            <SiNodedotjs className="h-12 w-12" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">React</span>
-            <SiReact className="h-8 w-8" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Tailwindcss</span>
-            <SiTailwindcss className="h-16 w-16" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Vercel</span>
-            <SiVercel className="h-10 w-10" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Google</span>
-            <SiAmazonaws className="h-14 w-14" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Typescript</span>
-            <SiTypescript className="h-10 w-10" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Elementor</span>
-            <SiElementor className="h-10 w-10" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Ghost</span>
-            <SiGhost className="h-10 w-10" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Javascript</span>
-            <SiJavascript className="h-8 w-8" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Netlify</span>
-            <SiNetlify className="h-14 w-14" />
-          </a>
-
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Wordpress</span>
-            <SiWordpress className="h-12 w-12" />
-          </a>
-          <a href="#" className="flex items-center justify-center">
-            <span className="sr-only">Hugo</span>
-            <SiHugo className="h-10 w-10" />
-          </a>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 export default Cta;

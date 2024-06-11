@@ -7,11 +7,30 @@ import {
   LinkedInIcon,
   ProjectIcon,
 } from "./components/icons";
+import { Cover, Logo } from "./components/icons";
 
 export const links: LinkItem[] = [
-  { id: 0, name: "Articles", to: "/articles", icon: ArticleIcon },
-  { id: 1, name: "Projects", to: "/post", icon: ProjectIcon },
-  { id: 2, name: "About", to: "/about", icon: AboutIcon },
+  {
+    id: 0,
+    name: "Articles",
+    to: "/articles",
+    icon: ArticleIcon,
+    cover: "/terminal.webp",
+  },
+  {
+    id: 1,
+    name: "Projects",
+    to: "/post",
+    icon: ProjectIcon,
+    cover: "/terminal.webp",
+  },
+  {
+    id: 2,
+    name: "About",
+    to: "/about",
+    icon: Logo,
+    cover: "/terminal.webp",
+  },
 
   // { id: 3, name: "Search", to: "/search" },
 ];

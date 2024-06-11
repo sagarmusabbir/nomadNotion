@@ -7,6 +7,7 @@ export interface LinkItem {
   name: string;
   to: string;
   icon: any;
+  cover?: string;
 }
 
 export interface BreadcrumbItem {

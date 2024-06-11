@@ -4,7 +4,7 @@ import Portfolio from "@/components/Allprojects";
 
 export default function PostPage() {
   return (
-    <main className="space-y-5 max-w-5xl m-auto">
+    <main className="space-y-5 max-w-7xl m-auto min-h-screen">
       <div className="relative  w-full h-52 ">
         <Image
           src="/Untitled.png"

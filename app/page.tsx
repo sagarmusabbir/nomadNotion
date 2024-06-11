@@ -33,7 +33,7 @@ const HomePage = async ({
 
   return (
     <>
-      <div className="">
+      <div className="space-y-5 max-w-7xl m-auto min-h-screen">
         <HeroSection />
         <div className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
           <Feed articles={publishedPosts} />

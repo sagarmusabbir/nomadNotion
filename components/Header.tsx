@@ -8,7 +8,7 @@ import { BtnGrp } from "./Btn";
 const Header = () => {
   return (
     <>
-      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-slate-50 dark:bg-zinc-950 dark:bg-opacity-30 py-4">
+      <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-slate-50 dark:bg-zinc-950 dark:bg-opacity-30 p-4">
         <div className="max-w-5xl flex flex-row justify-between items-center m-auto px-4">
           {/* Logo */}
           <div className="flex flex-row items-center">
