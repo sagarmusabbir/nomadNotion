@@ -1,28 +1,17 @@
 import Image from "next/image";
 
 import Portfolio from "@/components/Allprojects";
+import DefaultHero from "@/components/Hero";
+import { MdComputer } from "react-icons/md";
 
 export default function PostPage() {
   return (
     <main className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <div className="relative  w-full h-52 ">
-        <Image
-          src="/Untitled.png"
-          objectFit="cover"
-          alt="musabbirsagar"
-          fill={true}
-          className="aspect-video bg-[#EDFCF5]"
-        ></Image>
-      </div>
-      <div>
-        {/* <div className="text-center text-sm mx-auto my-3">
-          <div className="tracking-tight sm:text-2xl">
-            <h1>Project</h1>
-          </div>
-        </div> */}
+      <DefaultHero Icon={MdComputer} name="Projects" source="/terminal.webp" />
 
+      <div>
         <div
-          className="mx-auto mb-24 space-y-8 dark:text-zinc-300
+          className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen
         
         "
         >

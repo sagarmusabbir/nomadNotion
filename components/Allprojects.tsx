@@ -11,20 +11,23 @@ import {
 
 const Portfolio: FC = function () {
   return (
-    <div className="max-w-screen-xl px-4 py-8 lg:py-16 mx-auto mt-4 lg:mt-8 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
-      <div className="max-w-2xl mx-auto text-center">
+    <div className="">
+      <div className=" mx-auto text-center lg:px-8 max-w-2xl px-4 pb-8 ">
         <h2
-          className="text-4xl font-bold leading-tight text-gray-900 dark:text-white
+          className="text-4xl font-bold leading-tight text-gray-900 dark:text-white text-center mb-2 
         "
         >
           Latest Projects
         </h2>
-        <p className="mt-4 text-lg font-normal text-gray-500 dark:text-gray-400 ">
+        <p className="text-lg font-normal text-gray-500 dark:text-gray-400 ">
           Here you can find my recent projects and short demostration with the
           live preview and githib repo.
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-12 mt-12 sm:gap-8 lg:gap-16 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        className="
+      grid gap-10 lg:gap-12 sm:grid-cols-2 pb-4 sm:pb-12 px-4 lg:px-6"
+      >
         <div>
           <img
             className="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6"

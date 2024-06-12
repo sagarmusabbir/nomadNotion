@@ -1,73 +1,59 @@
 import Image from "next/image";
 
-import { Button } from "flowbite-react";
+import { Breadcrumb, Button } from "flowbite-react";
 import Link from "next/link";
-import { links } from "@/site";
 
-import { HiExternalLink, HiArrowRight } from "react-icons/hi";
+import { MdHome } from "react-icons/md";
+import { FC } from "react";
 
-const DefaultHero = () => {
-  const about: any = links.find((myPage) => myPage.id === 2);
-
+interface HeroProps {
+  Icon: React.ElementType;
+  name: string;
+  source: string;
+}
+const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
   return (
     <section className="bg-[#EDFCF5]">
       {/* #EDFCF5 #D3F8E6*/}
 
       <div
-        className="mx-auto grid max-w-screen-md  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
+        className="mx-auto grid max-w-screen-md  px-4 py-6 lg:grid-cols-12 lg:gap-8 lg:py-12 
           
       "
       >
-        <div className="hidden lg:col-span-6 lg:mt-0 lg:flex  mr-auto ">
-          {/* <Image
-            src="/terminal.png"
-            alt="ddx"
-            width={600}
-            height={375}
-            priority={true}
-            style={{ objectFit: "contain" }}
-          ></Image> */}
-
+        <div className="hidden lg:col-span-6 lg:mt-0 lg:flex place-self-end ">
           <Image
-            src={about.cover}
-            alt={about.name}
-            width={600}
-            height={375}
+            src={source}
+            alt={name}
+            width={224}
+            height={140}
             priority={true}
             style={{ objectFit: "contain" }}
           ></Image>
         </div>
-        <div className="place-self-center  lg:col-span-6">
-          <about.icon className="fill-gray-800 dark:fill-slate-200 w-20 h-20 mb-2" />
+        <div className="place-self-start  lg:col-span-6">
+          {/* {Icon && <Icon  />} */}
+          {Icon && (
+            <Icon className="fill-gray-800 dark:fill-slate-200 w-10 h-10  " />
+          )}
 
           <h1
             className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight text-gray-800 dark:text-slate-400 mb-1 md:text-3xl lg:text-4xl   
           
           "
           >
-            {about.name}
+            {name}
           </h1>
           <p className="mb-2 max-w-xl text-gray-700 dark:text-slate-400 text-lg font-normal">
             <span className=" text-sm font-light">by&nbsp;</span>Musabbir Sagar
           </p>
           <div className="flex w-fit items-center gap-2 ">
-            <Button color="light" outline size="sm">
-              <Link href="/about">
-                About Me
-                {/* <HiArrowRight className="ml-2 mt-px h-4 w-4" /> */}
-              </Link>
-            </Button>
-
-            <Button color="dark" pill size="sm">
-              <Link
-                href="https://www.upwork.com/workwith/smamusabbirs"
-                target="_blank"
-                className="flex justify-center items-center "
-              >
-                Hire @Upwork
-                <HiExternalLink className="ml-2 mt-px h-4 w-4" />
-              </Link>
-            </Button>
+            <Breadcrumb>
+              <Breadcrumb.Item href="/" icon={MdHome}>
+                MS
+              </Breadcrumb.Item>
+              <Breadcrumb.Item>{name}</Breadcrumb.Item>
+            </Breadcrumb>
           </div>
         </div>
       </div>

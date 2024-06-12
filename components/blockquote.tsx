@@ -5,7 +5,7 @@ import { Logo } from "./icons";
 const BlockquoteTestimonial: FC = function () {
   return (
     <div
-      className="text-center lg:px-8 max-w-2xl px-4 py-4 mx-auto 
+      className="text-center lg:px-8 max-w-2xl px-4 pb-4 mx-auto 
     "
     >
       <blockquote>
