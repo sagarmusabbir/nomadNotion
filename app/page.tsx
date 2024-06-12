@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection";
 import axios, { AxiosResponse } from "axios";
 import { sendSlackMessage } from "@/functions/sendSlackMessage";
 import DefaultHero from "@/components/Hero";
-import { Logo } from "@/components/icons";
+import { Cover } from "@/components/icons";
 import Search from "@/components/Search";
 import { calculateTagFrequency } from "@/functions/getAllTags";
 
@@ -39,7 +39,7 @@ const HomePage = async ({
     <>
       <div className="space-y-5 max-w-7xl m-auto min-h-screen">
         <DefaultHero
-          Icon={Logo}
+          Icon={Cover}
           name="Musabbirs Terminal"
           source="/terminal.webp"
         />
