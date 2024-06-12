@@ -17,7 +17,7 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
       {/* #EDFCF5 #D3F8E6*/}
 
       <div
-        className="mx-auto grid max-w-screen-md  px-4 py-6 lg:grid-cols-12 lg:gap-8 lg:py-12 
+        className="mx-auto grid max-w-screen-md  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
           
       "
       >
