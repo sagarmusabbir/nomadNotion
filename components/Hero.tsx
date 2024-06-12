@@ -47,7 +47,7 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
           <p className="mb-2 max-w-xl text-gray-700 dark:text-slate-400 text-lg font-normal">
             <span className=" text-sm font-light">by&nbsp;</span>Musabbir Sagar
           </p>
-          <div className="flex w-fit items-center gap-2 ">
+          <div className="my-2 w-fit">
             <Breadcrumb>
               <Breadcrumb.Item href="/" icon={MdHome}>
                 MS
