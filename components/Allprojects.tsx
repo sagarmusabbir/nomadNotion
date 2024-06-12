@@ -26,7 +26,7 @@ const Portfolio: FC = function () {
       </div>
       <div
         className="
-      grid gap-10 lg:gap-12 sm:grid-cols-2 pb-4 sm:pb-12 px-4 lg:px-6"
+      grid gap-10 lg:gap-12 sm:grid-cols-2 pb-4 sm:pb-12"
       >
         <div>
           <img
