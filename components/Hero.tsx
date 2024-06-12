@@ -34,7 +34,7 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
         <div className="place-self-start  lg:col-span-6">
           {/* {Icon && <Icon  />} */}
           {Icon && (
-            <Icon className="fill-gray-800 dark:fill-slate-200 w-10 h-10  " />
+            <Icon className="fill-gray-800 dark:fill-slate-200 w-20 h-20 mb-2  " />
           )}
 
           <h1
