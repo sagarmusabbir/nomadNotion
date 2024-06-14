@@ -10,7 +10,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Musabbir Sagar",
+  title: "Musabbirs Terminal | Musabbir Sagar",
   description: "Full Stack Next.Js Developer",
 };
 
