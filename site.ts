@@ -45,7 +45,6 @@ export const siteData = {
   language: "en-us",
   locale: "en-US",
   websiteUrl: "musabbirsagar.com",
-  socialBanner: "@app/api/og",
 };
 
 export const footerNavigation: FooterNavItem[] = [

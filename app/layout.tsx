@@ -4,22 +4,27 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { MetaHead } from "@/lib/MetaHead";
 
 // import { ThemeModeScript } from "flowbite-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  ...MetaHead,
   title: {
-    template: "%s | Musabbirs Terminal",
     default: "Musabbir Sagar",
+    template: "%s | Musabbirs Terminal",
   },
-
-  description: "Full Stack Next.Js Developer",
+  metadataBase: new URL("https://musabbirsagar.com"),
+  description:
+    "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
   openGraph: {
-    url: "@/app/api/og",
+    title: "Musabbirs Terminal by Musabbir Sagar",
+    description:
+      "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
+    images: [`/api/og?title=Musabbirs Terminal by Musabbir Sagar`],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

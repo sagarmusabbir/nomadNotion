@@ -10,8 +10,13 @@ import { ArticleIcon } from "@/components/icons";
 import DefaultHero from "@/components/Hero";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Articles",
+const title = "Articles";
+export const metadata = {
+  title,
+  openGraph: {
+    title,
+    images: [`/api/og?title=${title}`],
+  },
 };
 
 const Articles = async () => {

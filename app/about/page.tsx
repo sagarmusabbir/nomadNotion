@@ -7,8 +7,13 @@ import DefaultHero from "@/components/Hero";
 import { Logo } from "@/components/icons";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About Musabbir",
+const title = "About Musabbir";
+export const metadata = {
+  title,
+  openGraph: {
+    title,
+    images: [`/api/og?title=${title}`],
+  },
 };
 
 export default function AboutPage() {

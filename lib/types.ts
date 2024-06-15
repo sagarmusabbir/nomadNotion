@@ -1,6 +1,4 @@
 import { type } from "os";
-import { BlockMapType } from "react-notion";
-import { usePathname } from "next/navigation";
 
 export interface LinkItem {
   id: number;
@@ -33,7 +31,6 @@ export type Article = {
   summary: string[];
   coverImage: string;
   author: string;
-  socialBanner: string;
 };
 
 export type PaginationProps = {

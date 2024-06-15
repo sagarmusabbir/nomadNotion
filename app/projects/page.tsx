@@ -5,8 +5,13 @@ import DefaultHero from "@/components/Hero";
 import { MdComputer } from "react-icons/md";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Projects",
+const title = "Projects";
+export const metadata = {
+  title,
+  openGraph: {
+    title,
+    images: [`/api/og?title=${title}`],
+  },
 };
 
 export default function PostPage() {

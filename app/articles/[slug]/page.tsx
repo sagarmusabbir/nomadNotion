@@ -12,16 +12,6 @@ import { Article } from "@/lib/types";
 import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
-import { Metadata } from "next";
-import Articles from "../page";
-import { title } from "process";
-
-export const metadata: Metadata = {
-  title: "Blog",
-  openGraph: {
-    images: "@app/articles/[slug]/opengraph-image",
-  },
-};
 
 export default async function Page({
   searchParams,
