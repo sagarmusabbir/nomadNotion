@@ -8,6 +8,11 @@ import { HiHome } from "react-icons/hi";
 import HeroSection from "@/components/HeroSection";
 import { ArticleIcon } from "@/components/icons";
 import DefaultHero from "@/components/Hero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Articles",
+};
 
 const Articles = async () => {
   const publishedPosts: Article[] = await getAllPosts();

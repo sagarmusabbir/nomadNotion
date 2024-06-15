@@ -33,6 +33,7 @@ export type Article = {
   summary: string[];
   coverImage: string;
   author: string;
+  socialBanner: string;
 };
 
 export type PaginationProps = {

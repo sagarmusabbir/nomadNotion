@@ -5,6 +5,11 @@ import BlockquoteTestimonial from "@/components/blockquote";
 import Myself from "@/components/musabbir";
 import DefaultHero from "@/components/Hero";
 import { Logo } from "@/components/icons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Musabbir",
+};
 
 export default function AboutPage() {
   return (

@@ -4,14 +4,23 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { MetaHead } from "@/lib/MetaHead";
 
 // import { ThemeModeScript } from "flowbite-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Musabbirs Terminal | Musabbir Sagar",
+  ...MetaHead,
+  title: {
+    template: "%s | Musabbirs Terminal",
+    default: "Musabbir Sagar",
+  },
+
   description: "Full Stack Next.Js Developer",
+  openGraph: {
+    url: "@/app/api/og",
+  },
 };
 
 export default function RootLayout({

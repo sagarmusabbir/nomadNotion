@@ -12,32 +12,16 @@ import { Article } from "@/lib/types";
 import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
+import { Metadata } from "next";
+import Articles from "../page";
+import { title } from "process";
 
-// type Props = {
-//   params: { id: string };
-//   searchParams: { [key: string]: string | string[] | undefined };
-// };
-
-// export async function generateMetadata(
-//   { params, searchParams }: Props,
-//   parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   // read route params
-//   const id = params.id;
-
-//   // fetch data
-//   const post = await fetch(`https://.../${id}`).then((res) => res.json());
-
-//   // optionally access and extend (rather than replace) parent metadata
-//   const previousImages = (await parent).openGraph?.images || [];
-
-//   return {
-//     title: post.title,
-//     openGraph: {
-//       images: ["/some-specific-page-image.jpg", ...previousImages],
-//     },
-//   };
-// }
+export const metadata: Metadata = {
+  title: "Blog",
+  openGraph: {
+    images: "@app/articles/[slug]/opengraph-image",
+  },
+};
 
 export default async function Page({
   searchParams,

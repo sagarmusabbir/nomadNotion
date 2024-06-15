@@ -3,6 +3,11 @@ import Image from "next/image";
 import Portfolio from "@/components/Allprojects";
 import DefaultHero from "@/components/Hero";
 import { MdComputer } from "react-icons/md";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 export default function PostPage() {
   return (

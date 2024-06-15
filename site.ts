@@ -20,7 +20,7 @@ export const links: LinkItem[] = [
   {
     id: 1,
     name: "Projects",
-    to: "/post",
+    to: "/projects",
     icon: ProjectIcon,
     cover: "/terminal.webp",
   },
@@ -45,6 +45,7 @@ export const siteData = {
   language: "en-us",
   locale: "en-US",
   websiteUrl: "musabbirsagar.com",
+  socialBanner: "@app/api/og",
 };
 
 export const footerNavigation: FooterNavItem[] = [
