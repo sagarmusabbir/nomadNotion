@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   description:
     "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
   openGraph: {
-    title: "Musabbirs Terminal by Musabbir Sagar",
+    title: "Musabbirs Terminal | Musabbir Sagar",
     description:
       "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
-    images: [`/api/og?title=Musabbirs Terminal by Musabbir Sagar`],
+    images: [`/api/og?title=Musabbirs Terminal | Musabbir Sagar`],
   },
   twitter: {
     card: "summary_large_image",
