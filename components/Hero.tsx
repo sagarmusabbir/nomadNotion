@@ -21,7 +21,7 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
           
       "
       >
-        <div className="hidden lg:col-span-6 lg:mt-0 lg:flex place-self-end ">
+        <div className="hidden lg:col-span-6  lg:flex place-self-end ">
           <Image
             src={source}
             alt={name}
@@ -34,20 +34,20 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
         <div className="place-self-start  lg:col-span-6">
           {/* {Icon && <Icon  />} */}
           {Icon && (
-            <Icon className="fill-gray-800 dark:fill-slate-200 w-20 h-20 mb-2  " />
+            <Icon className="fill-gray-800 dark:fill-slate-200 w-14 h-14 " />
           )}
 
           <h1
-            className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight text-gray-800 dark:text-slate-400 mb-1 md:text-3xl lg:text-4xl   
+            className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight text-gray-800 dark:text-slate-400  md:text-3xl lg:text-4xl   
           
           "
           >
             {name}
           </h1>
-          <p className="mb-2 max-w-xl text-gray-700 dark:text-slate-400 text-lg font-normal">
+          <p className=" max-w-xl text-gray-700 dark:text-slate-400 text-lg font-normal">
             <span className=" text-sm font-light">by&nbsp;</span>Musabbir Sagar
           </p>
-          <div className="my-2 w-fit">
+          <div className=" w-fit">
             <Breadcrumb>
               <Breadcrumb.Item href="/" icon={MdHome}>
                 MS
