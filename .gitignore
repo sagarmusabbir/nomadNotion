@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+
+/github-token
+
 # next.js
 /.next/
 /out/
