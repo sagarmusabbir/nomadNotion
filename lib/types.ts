@@ -33,6 +33,19 @@ export type Article = {
   author: string;
 };
 
+export type Project = {
+  id: string;
+  title: string;
+  date: string;
+  type: string;
+  slug: string;
+  status: string;
+  tags: string[];
+  summary: string[];
+  coverImage: string;
+  author: string;
+};
+
 export type PaginationProps = {
   currentPage: number;
   totalPages: number;

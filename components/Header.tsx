@@ -19,10 +19,10 @@ const Header = () => {
                 height={28}
                 alt="AnalyticsRoundtable"
               /> */}
-              <Logo className="fill-gray-800 hover:fill-gray-700 dark:fill-slate-200 dark:hover:fill-slate-300 w-7 h-7" />
+              <Logo className="fill-gray-800 hover:fill-gray-700 dark:fill-slate-200 dark:hover:fill-slate-300 w-6 h-6" />
             </Link>
             <Link
-              className="hidden sm:block  font-semibold text-gray-800 hover:text-gray-700 dark:text-slate-200 hover:dark:text-slate-200 text-xl   self-center
+              className="hidden sm:block  font-semibold text-gray-800 hover:text-gray-700 dark:text-slate-200 hover:dark:text-slate-200 text-xl   self-center ml-1
               "
               href="/"
             >
