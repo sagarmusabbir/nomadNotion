@@ -10,7 +10,7 @@
 /coverage
 
 
-github-token
+github-token.txt
 
 # next.js
 /.next/
