@@ -45,6 +45,7 @@ export const siteData = {
   language: "en-us",
   locale: "en-US",
   websiteUrl: "musabbirsagar.com",
+  username: "sagarmusabbir",
 };
 
 export const footerNavigation: FooterNavItem[] = [
