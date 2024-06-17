@@ -76,14 +76,17 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
 
 function LightSvg(): ReactElement {
   return (
-    <svg
-      width="75"
-      viewBox="0 0 75 65"
-      fill="#000"
-      style={{ margin: "0 75px" }}
-    >
-      <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
-    </svg>
+    <div>
+      <svg
+        width="75"
+        viewBox="0 0 75 65"
+        fill="#000"
+        style={{ margin: "0 75px" }}
+      >
+        <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
+      </svg>
+      <div style={{ marginTop: 40 }}>Hello, World</div>
+    </div>
 
     // <svg
     //   fill="none"
@@ -390,14 +393,17 @@ function LightSvg(): ReactElement {
 
 function DarkSvg(): ReactElement {
   return (
-    <svg
-      width="75"
-      viewBox="0 0 75 65"
-      fill="#fff"
-      style={{ margin: "0 75px" }}
-    >
-      <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
-    </svg>
+    <div>
+      <svg
+        width="75"
+        viewBox="0 0 75 65"
+        fill="#fff"
+        style={{ margin: "0 75px" }}
+      >
+        <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
+      </svg>
+      <div style={{ marginTop: 40 }}>Hello, World</div>
+    </div>
 
     // <svg
     //   fill="none"
