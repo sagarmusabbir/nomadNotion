@@ -43,19 +43,7 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
             </div>
           </div>
         </div>
-      ),
-      {
-        width: 843,
-        height: 441,
-        fonts: [
-          {
-            name: "Inter",
-            data: await interSemiBold,
-            style: "normal",
-            weight: 400,
-          },
-        ],
-      }
+      )
     );
   } catch (e) {
     if (!(e instanceof Error)) throw e;
