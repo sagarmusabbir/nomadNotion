@@ -77,16 +77,12 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
 function LightSvg(): ReactElement {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
-      height="32"
-      width="32"
+      width="75"
+      viewBox="0 0 75 65"
+      fill="#000"
+      style={{ margin: "0 75px" }}
     >
-      <path
-        d="M10 14h4v11h-4V14zm8 11h4V14h-4v11zM2.083 6L2 25h4V10h20.083L26 25h4V6H2.083z"
-        fill="#EFEFEF"
-      />
+      <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
     </svg>
 
     // <svg
@@ -395,16 +391,12 @@ function LightSvg(): ReactElement {
 function DarkSvg(): ReactElement {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
-      height="32"
-      width="32"
+      width="75"
+      viewBox="0 0 75 65"
+      fill="#fff"
+      style={{ margin: "0 75px" }}
     >
-      <path
-        d="M10 14h4v11h-4V14zm8 11h4V14h-4v11zM2.083 6L2 25h4V10h20.083L26 25h4V6H2.083z"
-        fill="#333333"
-      />
+      <path d="M37.59.25l36.95 64H.64l36.95-64z"></path>
     </svg>
 
     // <svg
