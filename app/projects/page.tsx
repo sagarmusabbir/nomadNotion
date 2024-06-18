@@ -6,12 +6,9 @@ import { MdComputer } from "react-icons/md";
 import { Metadata } from "next";
 
 const title = "Projects";
-export const metadata = {
-  title,
-  openGraph: {
-    title,
-    images: [`/api/og?title=${title}`],
-  },
+
+export const metadata: Metadata = {
+  title: `${title}`,
 };
 
 export default function PostPage() {

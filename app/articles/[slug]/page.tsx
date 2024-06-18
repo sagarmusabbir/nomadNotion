@@ -12,6 +12,13 @@ import { Article } from "@/lib/types";
 import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
+import { Metadata } from "next";
+
+const title = "Article written by Musabbir Sagar";
+
+export const metadata: Metadata = {
+  title: `${title}`,
+};
 
 export default async function Page({
   searchParams,

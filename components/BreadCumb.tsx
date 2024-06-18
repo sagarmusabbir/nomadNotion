@@ -12,9 +12,7 @@ const DefaultBreadcrumb: FC<BreadcrumbItem> = function ({
   return (
     <>
       <Breadcrumb>
-        <Breadcrumb.Item href="/" icon={icon}>
-          MS
-        </Breadcrumb.Item>
+        <Breadcrumb.Item href="/" icon={icon}></Breadcrumb.Item>
         <Breadcrumb.Item>{route}</Breadcrumb.Item>
         <Breadcrumb.Item>{title}</Breadcrumb.Item>
       </Breadcrumb>

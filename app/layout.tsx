@@ -11,16 +11,34 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Musabbir Sagar",
     template: "%s | Musabbirs Terminal",
+    default: "Musabbir Sagar",
   },
   metadataBase: new URL("https://musabbirsagar.com"),
   description:
-    "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
+    "Musabbir Sagar is a top rated Next.js Developer in Upwork and Fiverr. He created 'Third Bracket Solutions', 'Nomad Gang Lab', and 'Literature Review UK'. He provides web development and literature review services through these agencies.",
+  applicationName: "Musabbirs Terminal",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "Musabbir Sagar",
+    "Next.js Developer",
+    "Third Bracket Solutions",
+    "Literature Review UK",
+    "Nomad Gang Lab",
+  ],
+  authors: [{ name: "Musabbir Sagar", url: "https://musabbirsagar.com/about" }],
+  creator: "Musabbir Sagar",
+  publisher: "Musabbir Sagar",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "Musabbirs Terminal | Musabbir Sagar",
+    url: "/api/og",
+    title: "",
     description:
-      "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
+      "Musabbir Sagar is a top rated Next.js Developer in Upwork and Fiverr. He created 'Third Bracket Solutions', 'Nomad Gang Lab', and 'Literature Review UK'. He provides web development and literature review services through these agencies.",
     images: [`/api/og?title=Musabbirs Terminal | Musabbir Sagar`],
   },
   twitter: {
