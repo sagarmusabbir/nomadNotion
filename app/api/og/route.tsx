@@ -32,7 +32,7 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
     return new ImageResponse(
       (
         <div
-          tw={`h-full w-full px-20 py-16 bg-slate-200 border border-slate-100 flex flex-col justify-between`}
+          tw={`h-full w-full px-20 py-16 bg-teal-50 border border-slate-100 flex flex-col justify-between`}
           // tw={`h-full w-full bg-slate-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-slate-100 flex flex-col justify-between px-20 py-16`}
         >
           <h1
