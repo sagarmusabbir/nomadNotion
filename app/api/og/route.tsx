@@ -32,17 +32,17 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
     return new ImageResponse(
       (
         <div
-          tw={`h-full w-full px-20 py-16 bg-slate-50 border border-gray-100 flex flex-col justify-between`}
+          tw={`h-full w-full px-20 py-16 bg-gray-950 border border-gray-800 flex flex-col justify-between`}
           // tw={`h-full w-full bg-slate-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-slate-100 flex flex-col justify-between px-20 py-16`}
         >
           <h1
-            tw="text-6xl leading-none text-gray-400"
+            tw="text-8xl leading-none text-slate-200"
             style={{ fontFamily: "interSemiBold" }}
           >
             {title}
           </h1>
           <p
-            tw="mb-16 text-4xl text-gray-500 leading-tight"
+            tw="mb-16 text-5xl text-slate-400 leading-tight"
             style={{ fontFamily: "interSemiBold" }}
           >
             {description}
@@ -51,7 +51,7 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
             {avatar?.startsWith("http") ? (
               <img
                 src={avatar}
-                tw={`mr-4 h-14 w-14 bg-slate-100 rounded-full`}
+                tw={`mr-4 h-14 w-14 bg-gray-700 rounded-full`}
               />
             ) : (
               <span tw="mr-4 text-4xl">{avatar}</span>
