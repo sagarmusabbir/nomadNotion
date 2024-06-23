@@ -10,10 +10,13 @@ import { ArticleIcon } from "@/components/icons";
 import DefaultHero from "@/components/Hero";
 import { Metadata } from "next";
 
-const title = "Article";
+const title = "Musabbirs Thoughts and Web Development Articles";
 
 export const metadata: Metadata = {
   title: `${title}`,
+  openGraph: {
+    title: `${title}`,
+  },
 };
 
 const Articles = async () => {

@@ -40,12 +40,14 @@ export const siteData = {
   author: "Musabbir Sagar",
   headerTitle: "Musabbirs Terminal",
   profileUrl: "/logo.svg",
-  headerDescription: "Full Stack Next.js Developer",
+  headerDescription:
+    "Creator of Third Bracket Solutions, Nomad Gang Labs and Literature Review UK.",
   footerText: "© All rights reserved",
   language: "en-us",
   locale: "en-US",
-  websiteUrl: "musabbirsagar.com",
+  websiteUrl: "https://musabbirsagar.com",
   username: "sagarmusabbir",
+  avatarUrl: "/avatar.svg",
 };
 
 export const footerNavigation: FooterNavItem[] = [

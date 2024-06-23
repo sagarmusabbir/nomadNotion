@@ -7,10 +7,13 @@ import DefaultHero from "@/components/Hero";
 import { Logo } from "@/components/icons";
 import { Metadata } from "next";
 
-const title = "About";
+const title = "Learn About the Creator of Third Bracket Solutions";
 
 export const metadata: Metadata = {
   title: `${title}`,
+  openGraph: {
+    title: `${title}`,
+  },
 };
 
 export default function AboutPage() {

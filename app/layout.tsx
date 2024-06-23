@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { siteData } from "@/site";
 
 // import { ThemeModeScript } from "flowbite-react";
 
@@ -11,8 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Musabbirs Terminal",
-    default: "Musabbir Sagar",
+    template: `%s | ${siteData.title}`,
+    default: `${siteData.headerDescription} | ${siteData.title}`,
   },
   metadataBase: new URL("https://musabbirsagar.com"),
   description:
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     "Literature Review UK",
     "Nomad Gang Lab",
   ],
-  authors: [{ name: "Musabbir Sagar", url: "https://musabbirsagar.com/about" }],
+  authors: [{ name: siteData.author, url: "https://musabbirsagar.com/about" }],
   creator: "Musabbir Sagar",
   publisher: "Musabbir Sagar",
   formatDetection: {
@@ -35,14 +36,22 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    url: "/api/og",
-    title: "",
-    description:
-      "Musabbir Sagar is a top rated Next.js Developer in Upwork and Fiverr. He created 'Third Bracket Solutions', 'Nomad Gang Lab', and 'Literature Review UK'. He provides web development and literature review services through these agencies.",
-    images: [`/api/og?title=Musabbirs Terminal | Musabbir Sagar`],
+    url: siteData.websiteUrl,
+    title: siteData.title,
+    authors: siteData.author,
+
+    description: siteData.headerDescription,
+
+    images: [`/api/og?title=${siteData.title}`],
   },
   twitter: {
     card: "summary_large_image",
+
+    title: siteData.title,
+
+    description: siteData.headerDescription,
+
+    images: [`/api/og?title=${siteData.title}`],
   },
 };
 

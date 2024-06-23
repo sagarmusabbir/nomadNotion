@@ -5,10 +5,13 @@ import DefaultHero from "@/components/Hero";
 import { MdComputer } from "react-icons/md";
 import { Metadata } from "next";
 
-const title = "Projects";
+const title = "Musabbirs Contributions through Nomad Gang Labs";
 
 export const metadata: Metadata = {
   title: `${title}`,
+  openGraph: {
+    title: `${title}`,
+  },
 };
 
 export default function PostPage() {
