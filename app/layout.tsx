@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { siteData } from "@/site";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // import { ThemeModeScript } from "flowbite-react";
 
@@ -65,7 +66,9 @@ export default function RootLayout({
       <head>
         {/* <ThemeModeScript /> */}
         <link rel="shortcut icon" href="/logo.svg" />
+        <GoogleAnalytics />
       </head>
+
       <body
         // className={inter.className}
 
