@@ -19,7 +19,7 @@ const BlockquoteTestimonial: FC = function () {
           <div className="pr-3 font-medium text-gray-700 dark:text-white leading-4 text-sm">
             Musabbir Sagar
           </div>
-          <div className="pl-3 text-sm text-gray-500 dark:text-gray-400 leading-4 text-sm">
+          <div className="pl-3 text-sm text-gray-500 dark:text-gray-400 leading-4 ">
             CEO at ThirdBracket
           </div>
         </div>

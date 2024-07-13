@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteData.title}`,
     default: `${siteData.headerDescription} | ${siteData.title}`,
   },
+
   metadataBase: new URL("https://musabbirsagar.com"),
   description:
     "Musabbir Sagar is a top rated Next.js Developer in Upwork and Fiverr. He created 'Third Bracket Solutions', 'Nomad Gang Lab', and 'Literature Review UK'. He provides web development and literature review services through these agencies.",
