@@ -31,7 +31,7 @@ const Projects = async () => {
         source="/coverprojects.webp"
       />
       <div className="max-w-5xl m-auto p-4 min-h-screen">
-        <Feed articles={publishedProjects} projects={publishedProjects} />
+        <Feed articles={publishedProjects} />
       </div>
     </main>
   );

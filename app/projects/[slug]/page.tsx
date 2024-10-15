@@ -13,7 +13,6 @@ import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
 import { Metadata } from "next";
-import ProjectList from "@/components/ProjectList";
 
 const title = "Article written by Musabbir Sagar";
 
@@ -86,7 +85,7 @@ export default async function Page({
                 </span>
               </Link>
             </div>
-            <ProjectList projects={tagPosts} />
+            <ArticleList articles={tagPosts} />
           </Container>
         </div>
       </div>

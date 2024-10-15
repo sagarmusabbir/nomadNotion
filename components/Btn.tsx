@@ -46,7 +46,7 @@ export function BtnGrp() {
       <Link
         className={`link ${
           pathname === "/articles" ? "active" : "bg-gray-200 "
-        } flex bg-slate-400 border border-r-0 border-gray-500   px-4 py-2 text-xs text-white rounded-l-md`}
+        } flex bg-slate-700 border border-r-0 border-gray-600   px-4 py-2 text-xs text-white rounded-l-md`}
         href="/articles"
       >
         <ArticleIcon
@@ -60,7 +60,7 @@ export function BtnGrp() {
       <Link
         className={`link ${
           pathname === "/projects" ? "active" : "bg-gray-200 "
-        } flex bg-slate-400 border border-gray-500   px-4 py-2 text-xs text-white`}
+        } flex bg-slate-700 border border-gray-600   px-4 py-2 text-xs text-white`}
         href="/projects"
       >
         <ProjectIcon
@@ -74,7 +74,7 @@ export function BtnGrp() {
       <Link
         className={`link ${
           pathname === "/about" ? "active" : "bg-gray-200 "
-        } flex bg-slate-400 border border-l-0 border-gray-500   px-4 py-2 text-xs text-white rounded-r-md`}
+        } flex bg-slate-700 border border-l-0 border-gray-600   px-4 py-2 text-xs text-white rounded-r-md`}
         href="/about"
       >
         <Logo
