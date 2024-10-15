@@ -45,8 +45,8 @@ export function BtnGrp() {
     <ButtonGroup outline>
       <Link
         className={`link ${
-          pathname === "/articles" ? "active" : "bg-gray-200 "
-        } flex bg-slate-300 border border-r-0 border-slate-500   px-4 py-2 text-xs text-gray-800 rounded-l-md`}
+          pathname === "/articles" ? "active" : "bg-gray-200 text-gray-800"
+        } flex bg-slate-200 border border-r-0 border-slate-400   px-4 py-2 text-xs text-current rounded-l-md`}
         href="/articles"
       >
         <ArticleIcon
@@ -59,8 +59,8 @@ export function BtnGrp() {
 
       <Link
         className={`link ${
-          pathname === "/projects" ? "active" : "bg-gray-200 "
-        } flex bg-slate-300 border border-slate-500   px-4 py-2 text-xs text-gray-800`}
+          pathname === "/projects" ? "active" : "bg-gray-200 text-gray-800"
+        } flex bg-slate-200 border border-slate-500   px-4 py-2 text-xs text-current`}
         href="/projects"
       >
         <ProjectIcon
@@ -73,8 +73,8 @@ export function BtnGrp() {
 
       <Link
         className={`link ${
-          pathname === "/about" ? "active" : "bg-gray-200 "
-        } flex bg-slate-300 border border-l-0 border-slate-500   px-4 py-2 text-xs text-gray-800 rounded-r-md`}
+          pathname === "/about" ? "active" : "bg-gray-200 text-gray-800"
+        } flex bg-slate-200 border border-l-0 border-slate-500   px-4 py-2 text-xs text-current rounded-r-md`}
         href="/about"
       >
         <Logo
