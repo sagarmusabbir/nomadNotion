@@ -46,7 +46,7 @@ const HomePage = async ({
           source="/coverhome.webp"
         />
         <div className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
-          <Feed articles={publishedPosts} projects={publishedProjects} />
+          <Feed articles={publishedPosts} />
         </div>
       </div>
     </>
