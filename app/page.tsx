@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/functions/getAllPosts";
-import { Article } from "@/lib/types";
+import { Article, Project } from "@/lib/types";
 import { postsPerPage } from "@/site";
 import Feed from "@/components/Feed";
 import HeroSection from "../components/HeroSection";
@@ -9,6 +9,7 @@ import DefaultHero from "@/components/Hero";
 import { Cover } from "@/components/icons";
 import Search from "@/components/Search";
 import { calculateTagFrequency } from "@/functions/getAllTags";
+import { getAllProjects } from "@/functions/getAllProjects";
 
 const HomePage = async ({
   searchParams,
@@ -17,6 +18,7 @@ const HomePage = async ({
 }) => {
   const page = Number(searchParams.page) || 1;
   const publishedPosts: Article[] = await getAllPosts();
+  const publishedProjects: Project[] = await getAllProjects();
 
   // Send a message to Slack when the page is accessed
   const message = {
@@ -41,10 +43,10 @@ const HomePage = async ({
         <DefaultHero
           Icon={Cover}
           name="Musabbirs Terminal"
-          source="/terminal.webp"
+          source="/coverhome.webp"
         />
         <div className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
-          <Feed articles={publishedPosts} />
+          <Feed articles={publishedPosts} projects={publishedProjects} />
         </div>
       </div>
     </>

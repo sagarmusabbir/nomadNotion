@@ -9,12 +9,41 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // import { ThemeModeScript } from "flowbite-react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: {
     template: `%s | ${siteData.title}`,
     default: `${siteData.headerDescription} | ${siteData.title}`,
+  },
+  icons: {
+    icon: [
+      {
+        rel: "icon",
+        url: "/favicon-48x48.png",
+      },
+      {
+        rel: "icon",
+        url: "/favicon.svg",
+      },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  manifest: "/site.webmanifest",
+
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+    },
+  },
+  verification: {
+    google: "google1234567890",
   },
 
   metadataBase: new URL("https://musabbirsagar.com"),
@@ -57,10 +86,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-
     title: siteData.title,
-
     description: siteData.headerDescription,
+    creator: "@musabbirsagar",
 
     images: [
       {
@@ -83,7 +111,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* <ThemeModeScript /> */}
-        <link rel="shortcut icon" href="/logo.svg" />
+
         <GoogleAnalytics />
       </head>
 

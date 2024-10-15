@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <DefaultHero Icon={Logo} name="About" source="/terminal.webp" />
+      <DefaultHero Icon={Logo} name="About" source="/coverabout.webp" />
       <div>
         <div className="mt-4 bg-slate-50 m-auto p-4 min-h-screen">
           <BlockquoteTestimonial />

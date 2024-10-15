@@ -74,7 +74,7 @@ export const Logo: React.FC<IconSvgProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     // fill="#717D79"
     // stroke="#717D79"
-    aria-hidden="true"
+    // aria-hidden="true"
     fill="none"
     height={size || height}
     viewBox="0 0 32 32"
@@ -82,8 +82,8 @@ export const Logo: React.FC<IconSvgProps> = ({
     {...props}
   >
     <path
-      d="M10 14h4v11h-4V14zm8 11h4V14h-4v11zM2.083 6L2 25h4V10h20.083L26 25h4V6H2.083z"
-      fill="currentColor"
+      // fill="currentColor"
+      d="M10 14h4v11h-4V14zm8 11h4V14h-4v11zM2.083 6 2 25h4V10h20.083L26 25h4V6H2.083z"
     />
   </svg>
 );

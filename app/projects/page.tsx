@@ -4,6 +4,12 @@ import Portfolio from "@/components/Allprojects";
 import DefaultHero from "@/components/Hero";
 import { MdComputer } from "react-icons/md";
 import { Metadata } from "next";
+import { Project } from "@/lib/types";
+import { getAllProjects } from "@/functions/getAllProjects";
+import { calculateTagFrequency } from "@/functions/getAllTags";
+import { ProjectIcon } from "@/components/icons";
+import Search from "@/components/Search";
+import Feed from "@/components/Feed";
 
 const title = "Musabbirs Contributions through Nomad Gang Labs";
 
@@ -14,20 +20,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PostPage() {
+const Projects = async () => {
+  const publishedProjects: Project[] = await getAllProjects();
+
   return (
     <main className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <DefaultHero Icon={MdComputer} name="Projects" source="/terminal.webp" />
-
-      <div>
-        <div
-          className="mt-4 bg-slate-50 m-auto p-4 min-h-screen
-        
-        "
-        >
-          <Portfolio />
-        </div>
+      <DefaultHero
+        Icon={ProjectIcon}
+        name="Projects"
+        source="/coverprojects.webp"
+      />
+      <div className="max-w-5xl m-auto p-4 min-h-screen">
+        <Feed articles={publishedProjects} projects={publishedProjects} />
       </div>
     </main>
   );
-}
+};
+
+export default Projects;

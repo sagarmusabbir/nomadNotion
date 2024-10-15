@@ -13,7 +13,7 @@ interface HeroProps {
 }
 const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
   return (
-    <section className="bg-[#EDFCF5]">
+    <section className="bg-slate-300">
       {/* #EDFCF5 #D3F8E6*/}
 
       <div
