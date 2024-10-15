@@ -46,12 +46,12 @@ export function BtnGrp() {
       <Link
         className={`link ${
           pathname === "/articles" ? "active" : "bg-gray-200 "
-        } flex bg-slate-700 border border-r-0 border-gray-600   px-4 py-2 text-xs text-white rounded-l-md`}
+        } flex bg-gray-600 border border-r-0 border-slate-700   px-4 py-2 text-xs text-white rounded-l-md`}
         href="/articles"
       >
         <ArticleIcon
           className={`link ${
-            pathname === "/articles" ? "active" : "fill-gray-600 "
+            pathname === "/articles" ? "active" : "fill-slate-500 "
           } mr-2 w-4 h-4  fill-current `}
         />
         <span>Articles</span>
@@ -60,12 +60,12 @@ export function BtnGrp() {
       <Link
         className={`link ${
           pathname === "/projects" ? "active" : "bg-gray-200 "
-        } flex bg-slate-700 border border-gray-600   px-4 py-2 text-xs text-white`}
+        } flex bg-gray-600 border border-slate-700   px-4 py-2 text-xs text-white`}
         href="/projects"
       >
         <ProjectIcon
           className={`link ${
-            pathname === "/projects" ? "active" : "fill-gray-600 "
+            pathname === "/projects" ? "active" : "fill-slate-500 "
           } mr-2 w-4 h-4  fill-current `}
         />
         <span>Projects</span>
@@ -74,12 +74,12 @@ export function BtnGrp() {
       <Link
         className={`link ${
           pathname === "/about" ? "active" : "bg-gray-200 "
-        } flex bg-slate-700 border border-l-0 border-gray-600   px-4 py-2 text-xs text-white rounded-r-md`}
+        } flex bg-gray-600 border border-l-0 border-slate-700   px-4 py-2 text-xs text-white rounded-r-md`}
         href="/about"
       >
         <Logo
           className={`link ${
-            pathname === "/about" ? "active" : "fill-gray-600 "
+            pathname === "/about" ? "active" : "fill-slate-500 "
           } mr-2 w-4 h-4  fill-current `}
         />
         <span>About</span>

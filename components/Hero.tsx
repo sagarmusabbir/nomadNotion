@@ -38,13 +38,13 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
           )}
 
           <h1
-            className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight text-gray-800 dark:text-slate-400  md:text-3xl lg:text-4xl   
+            className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight text-gray-800 dark:text-slate-400  md:text-3xl lg:text-2xl   
           
           "
           >
             {name}
           </h1>
-          <p className=" max-w-xl text-gray-700 dark:text-slate-400 text-lg font-normal">
+          <p className=" max-w-xl text-gray-700 dark:text-slate-400 text-base font-normal">
             <span className=" text-sm font-light">by&nbsp;</span>Musabbir Sagar
           </p>
           <div className=" w-fit">
