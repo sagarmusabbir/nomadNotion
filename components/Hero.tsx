@@ -13,15 +13,17 @@ interface HeroProps {
 }
 const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
   return (
-    <section className="bg-slate-300">
-      {/* #EDFCF5 #D3F8E6*/}
+    <section
+      // className="bg-gradient-to-l from-slate-300 to-gray-400"
 
+      className="bg-gradient-to-l from-slate-200 to-gray-200"
+    >
       <div
-        className="mx-auto grid max-w-screen-md  px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
+        className="justify-start  lg:justify-center grid   px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
           
       "
       >
-        <div className="hidden lg:col-span-6  lg:flex place-self-end ">
+        <div className="hidden lg:col-span-6  lg:flex place-self-end mr-auto lg:mr-0">
           <Image
             src={source}
             alt={name}

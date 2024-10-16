@@ -2,21 +2,9 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 import { SVGProps } from "react";
 import {
-  MdPerson,
-  MdPersonOutline,
-  MdKeyboard,
   MdComputer,
-  MdOutlineKeyboard,
   MdOutlineKeyboardAlt,
-  MdOutlineDesktopMac,
-  MdDesktopMac,
-  MdAccountCircle,
-  MdAccountBox,
-  MdOutlineScreenSearchDesktop,
-  MdScreenSearchDesktop,
-  MdKeyboardAlt,
-  MdOutlinePersonOutline,
-  MdOutlinePerson4,
+  MdOutlinePersonSearch,
 } from "react-icons/md";
 
 export const ArticleIcon: React.FC<IconSvgProps> = ({
@@ -55,13 +43,13 @@ export const AboutIcon: React.FC<IconSvgProps> = ({
   height,
   ...props
 }) => (
-  <MdOutlinePerson4
+  <MdOutlinePersonSearch
     fill="none"
     height={size || height}
     viewBox="0 0 24 24"
     width={size || width}
     {...props}
-  ></MdOutlinePerson4>
+  ></MdOutlinePersonSearch>
 );
 
 export const Logo: React.FC<IconSvgProps> = ({

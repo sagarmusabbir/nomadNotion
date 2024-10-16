@@ -28,7 +28,7 @@ export const links: LinkItem[] = [
     id: 2,
     name: "About",
     to: "/about",
-    icon: Logo,
+    icon: AboutIcon,
     cover: "/coverabout.webp",
   },
 

@@ -1,13 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { links } from "@/site";
+
 import { Logo } from "./icons";
-import { BtnGrp } from "./Btn";
+
+import NavLinks from "./Navlinks";
+
 // import { DarkThemeToggle } from "flowbite-react";
 
 const Header = () => {
   return (
-    <>
+    <header>
       <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-slate-50 dark:bg-zinc-950 dark:bg-opacity-30 p-4">
         <div className="max-w-7xl flex flex-row justify-between items-center m-auto">
           {/* Logo */}
@@ -23,17 +25,12 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Navlinks */}
-          {/* <div className="flex-shrink-0"> */}
-          {/* <ul>
-            <li> */}
-          <BtnGrp />
-          {/* </li>
-          </ul> */}
-          {/* </div> */}
+          {/* <DarkThemeToggle /> */}
+
+          <NavLinks />
         </div>
       </div>
-    </>
+    </header>
   );
 };
 

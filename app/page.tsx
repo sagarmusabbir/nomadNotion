@@ -38,18 +38,18 @@ const HomePage = async ({
   }
 
   return (
-    <>
+    <main>
+      <DefaultHero
+        Icon={Cover}
+        name="Musabbirs Terminal"
+        source="/coverhome.webp"
+      />
       <div className="space-y-5 max-w-7xl m-auto min-h-screen">
-        <DefaultHero
-          Icon={Cover}
-          name="Musabbirs Terminal"
-          source="/coverhome.webp"
-        />
         <div className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
           <Feed articles={publishedPosts} />
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

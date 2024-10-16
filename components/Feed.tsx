@@ -10,7 +10,7 @@ type Props = {
 
 export default function ArticleList({ articles }: Props) {
   return (
-    <div className="grid gap-10 lg:gap-12 sm:grid-cols-2">
+    <div className="grid gap-10 lg:gap-12 sm:grid-cols-2 justify-center">
       {articles &&
         articles.map((article) => (
           <ArticleCard article={article} key={article.id} />
