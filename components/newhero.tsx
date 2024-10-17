@@ -3,7 +3,13 @@ import Image from "next/image";
 import { Breadcrumb, Button } from "flowbite-react";
 import Link from "next/link";
 
-import { MdHome } from "react-icons/md";
+import {
+  MdArrowOutward,
+  MdArrowRight,
+  MdChevronRight,
+  MdHome,
+  MdOutlineChevronRight,
+} from "react-icons/md";
 import { FC } from "react";
 
 interface HeroProps {
@@ -27,38 +33,41 @@ const NewHero: FC<HeroProps> = ({ Icon, name, source }) => {
           <div className="flex w-fit items-center gap-5">
             <Button
               color="light"
-              href="#"
+              href="/articles"
               size="md"
               className="[&>span]:items-center"
             >
               Latest Insights
-              <svg
-                className="-mr-1 ml-2 h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <MdOutlineChevronRight className="-mr-1 ml-2 h-5 w-5" />
             </Button>
-            <Button color="dark" size="md">
+            <Button
+              color="dark"
+              size="md"
+              href="https://www.upwork.com/workwith/smamusabbirs"
+              target="_blank"
+            >
               Hire Me
+              <MdArrowOutward className="-mr-1 ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
         <div className="hidden lg:col-span-5 lg:mt-0 lg:flex">
-          <Image
+          {/* <Image
             src={source}
             alt={name}
-            width={224}
-            height={140}
+            width={320}
+            height={200}
             priority={true}
             style={{ objectFit: "contain" }}
-          />
+          /> */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 480 480"
+            style={{ objectFit: "contain" }}
+            className="fill-gray-600 h-52 w-52 "
+          >
+            <path d="M320 240 206.6 70a56 56 0 0 0-93.2 0L0 240h160l113.4 170a56 56 0 0 0 93.2 0L480 240H320Z"></path>
+          </svg>
         </div>
       </div>
     </section>
