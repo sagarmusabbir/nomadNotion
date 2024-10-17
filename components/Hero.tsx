@@ -16,10 +16,10 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
     <section
       // className="bg-gradient-to-l from-slate-300 to-gray-400"
 
-      className="bg-gradient-to-l from-slate-200 to-gray-200"
+      className="bg-slate-300 dark:bg-gray-900 bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light"
     >
       <div
-        className="justify-start  lg:justify-center grid   px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
+        className="relative z-10 justify-start  lg:justify-center grid   px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 
           
       "
       >

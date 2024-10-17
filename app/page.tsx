@@ -10,6 +10,7 @@ import { Cover } from "@/components/icons";
 import Search from "@/components/Search";
 import { calculateTagFrequency } from "@/functions/getAllTags";
 import { getAllProjects } from "@/functions/getAllProjects";
+import NewHero from "@/components/newhero";
 
 const HomePage = async ({
   searchParams,
@@ -39,7 +40,7 @@ const HomePage = async ({
 
   return (
     <main>
-      <DefaultHero
+      <NewHero
         Icon={Cover}
         name="Musabbirs Terminal"
         source="/coverhome.webp"
