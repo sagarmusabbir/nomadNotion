@@ -13,7 +13,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div className="max-w-5xl m-auto p-4 min-h-screen">
-      <Search
+      <Search 
         publishedPosts={tagFilteredPosts}
         tagFrequencyMap={tagFrequencyMap}
       />
