@@ -1,6 +1,6 @@
 import notion from "@/lib";
 import { Project } from "@/lib/types";
-import { convertToPost } from "./convertToPost";
+import { convertToProject } from "./convertToPost";
 
 export const getAllProjects = async (): Promise<Project[]> => {
   const databaseId = process.env.NOTION_DATABASE_ID!;
@@ -32,7 +32,8 @@ export const getAllProjects = async (): Promise<Project[]> => {
   });
 
   const publishedProjects: Project[] = response.results.map((e) =>
-    convertToPost(e)
+    // convertToPost(e)
+    convertToProject(e)
   );
 
   return publishedProjects;

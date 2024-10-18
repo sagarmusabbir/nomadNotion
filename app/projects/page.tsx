@@ -10,6 +10,8 @@ import { calculateTagFrequency } from "@/functions/getAllTags";
 import { ProjectIcon } from "@/components/icons";
 import Search from "@/components/Search";
 import Feed from "@/components/Feed";
+import SearchProject from "@/components/SearchProject";
+import { calculateProjectTagFrequency } from "@/functions/getAllProjectTags";
 
 const title = "Musabbirs Contributions through Nomad Gang Labs";
 
@@ -22,6 +24,9 @@ export const metadata: Metadata = {
 
 const Projects = async () => {
   const publishedProjects: Project[] = await getAllProjects();
+  const tagFrequencyMap = await calculateProjectTagFrequency({
+    publishedProjects,
+  });
 
   return (
     <main className="space-y-5 max-w-7xl m-auto min-h-screen">
@@ -31,7 +36,10 @@ const Projects = async () => {
         source="/coverprojects.webp"
       />
       <div className="max-w-5xl m-auto p-4 min-h-screen">
-        <Feed articles={publishedProjects} />
+        <SearchProject
+          publishedProjects={publishedProjects}
+          tagFrequencyMap={tagFrequencyMap}
+        />
       </div>
     </main>
   );

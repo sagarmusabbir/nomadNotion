@@ -2,19 +2,23 @@ import "react-notion/src/styles.css";
 import "prismjs/themes/prism-tomorrow.css";
 import { NotionRenderer } from "react-notion";
 import notion from "@/lib";
-import { convertToPost } from "@/functions/convertToPost";
+import { convertToPost, convertToProject } from "@/functions/convertToPost";
 import Link from "next/link";
 import TopScrollButton from "../../../components/TopScrollButton";
 import Container from "@/components/Container";
 import ArticleList from "@/components/ArticleList";
 import { getAllPosts } from "@/functions/getAllPosts";
-import { Article } from "@/lib/types";
+import { Article, Project } from "@/lib/types";
 import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
+
 import SocialshareButtons from "@/components/SocialshareButtons";
 import { Metadata } from "next";
+import { getAllProjects } from "@/functions/getAllProjects";
+import { getTagFilteredProjects } from "@/functions/projectFilteredproject";
+import ProjectList from "@/components/ProjectList";
 
-const title = "Article written by Musabbir Sagar";
+const title = "Projects by Musabbir Sagar";
 
 export const metadata: Metadata = {
   title: `${title}`,
@@ -31,17 +35,19 @@ export default async function Page({
     next: { revalidate: 60 },
   });
   console.log(response);
-  const blockMap = await response.json();
+  const blockMapP = await response.json();
   const pageProperties = await notion.pages.retrieve({ page_id: id });
-  const postDetails = convertToPost(pageProperties);
-  const moreArticles: Article[] = await getAllPosts();
 
-  const formattedTime = getLocalizedDate(postDetails.date);
-  const slug = postDetails.slug || [];
-  const tags = postDetails.tags || [];
+  const projectDetails = convertToProject(pageProperties);
+
+  const moreProjects: Project[] = await getAllProjects();
+
+  const formattedTime = getLocalizedDate(projectDetails.date);
+  const slug = projectDetails.slug || [];
+  const tags = projectDetails.tags || [];
 
   // Pass id instead of uniqueId
-  const tagPosts: Article[] = await getTagFilteredPosts({
+  const tagProjects: Project[] = await getTagFilteredProjects({
     tags,
     slug: String(slug),
   });
@@ -50,28 +56,28 @@ export default async function Page({
     <div className="space-y-5 max-w-7xl m-auto min-h-screen">
       <img
         className="object-cover w-full h-52 aspect-video"
-        src={postDetails.coverImage}
+        src={projectDetails.coverImage}
       />
 
       <div>
         <div className="text-center space-y-5 text-sm text-gray-800 dark:text-slate-300 mx-auto mt-3">
           <div className="text-2xl px-px font-medium leading-none tracking-tight">
-            <h1>{postDetails.title}</h1>
+            <h1>{projectDetails.title}</h1>
           </div>
           <div className="text-md leading-8 sm:mt-4">
             <div>
               <time dateTime={formattedTime}>{formattedTime}</time>
             </div>
-            <div className="font-semibold">{postDetails.author}</div>
+            <div className="font-semibold">{projectDetails.author}</div>
             <SocialshareButtons
-              shareUrl={`http://localhost:3000/${postDetails.slug}?id=${postDetails.id}`}
-              title={postDetails.title}
+              shareUrl={`http://localhost:3000/${projectDetails.slug}?id=${projectDetails.id}`}
+              title={projectDetails.title}
             />
           </div>
         </div>
 
         <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t border-slate-200 dark:border-gray-800 mt-4 text-gray-800 dark:text-slate-200">
-          <NotionRenderer blockMap={blockMap} />
+          <NotionRenderer blockMap={blockMapP} />
         </div>
         <div className="py-12 border-t border-slate-200 dark:border-gray-800">
           <Container>
@@ -85,7 +91,7 @@ export default async function Page({
                 </span>
               </Link>
             </div>
-            <ArticleList articles={tagPosts} />
+            <ProjectList projects={tagProjects} />
           </Container>
         </div>
       </div>

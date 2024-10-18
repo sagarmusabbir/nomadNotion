@@ -11,6 +11,7 @@ import Search from "@/components/Search";
 import { calculateTagFrequency } from "@/functions/getAllTags";
 import { getAllProjects } from "@/functions/getAllProjects";
 import NewHero from "@/components/newhero";
+import ProjectFeed from "@/components/ProjectFeed";
 
 const HomePage = async ({
   searchParams,
@@ -48,6 +49,7 @@ const HomePage = async ({
       <div className="space-y-5 max-w-7xl m-auto min-h-screen">
         <div className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
           <Feed articles={publishedPosts} />
+          <ProjectFeed projects={publishedProjects} />
         </div>
       </div>
     </main>

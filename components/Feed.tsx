@@ -1,11 +1,9 @@
 import { Article } from "../lib/types";
-import { Project } from "../lib/types";
+
 import ArticleCard from "./ArticleCard";
-import ProjectCard from "./ProjectCard";
 
 type Props = {
   articles: Article[];
-  // projects: Project[];
 };
 
 export default function ArticleList({ articles }: Props) {
