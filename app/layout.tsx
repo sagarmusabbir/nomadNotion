@@ -9,6 +9,30 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // import { ThemeModeScript } from "flowbite-react";
 
+import { WebPage, WithContext } from "schema-dts";
+
+export const jsonLd: WithContext<WebPage> = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Musabbir Sagar",
+
+  url: "https://musabbirsagar.com",
+  description:
+    "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
+
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Musabbir Sagar",
+    url: "https://musabbirsagar.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Musabbir Sagar",
+    url: "https://musabbirsagar.com",
+    legalName: "Musabbir Sagar",
+  },
+};
+
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
@@ -37,10 +61,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-    },
+    canonical: "https://musabbirsagar.com",
   },
   verification: {
     google: "google1234567890",
@@ -111,6 +132,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* <ThemeModeScript /> */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
 
         <GoogleAnalytics />
       </head>

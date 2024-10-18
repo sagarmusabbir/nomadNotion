@@ -41,7 +41,7 @@ export const siteData = {
   headerTitle: "Musabbirs Terminal",
   profileUrl: "/logo.svg",
   headerDescription:
-    "Creator of Third Bracket Solutions, Nomad Gang Labs and Literature Review UK.",
+    "Musabbir Sagar is a top rated Next.js Developer in Upwork and Fiverr. He created 'Third Bracket Solutions', 'Nomad Gang Lab', and 'Literature Review UK'. He provides web development and literature review services through these agencies.",
   footerText: "© All rights reserved",
   language: "en-us",
   locale: "en-US",
