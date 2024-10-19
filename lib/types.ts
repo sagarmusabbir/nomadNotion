@@ -44,6 +44,7 @@ export type Project = {
   summary: string[];
   coverImage: string;
   author: string;
+  content: string;
 };
 
 export type PaginationProps = {

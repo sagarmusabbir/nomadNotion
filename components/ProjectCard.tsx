@@ -1,63 +1,60 @@
-import { Project } from "@/lib/types";
-import slugify from "slugify";
-import getLocalizedDate from "../app/utils/getLocalizedDate";
+// import notion from "@/lib";
+// import { convertToPost } from "@/functions/convertToPost";
+// import { Article } from "@/lib/types";
+// import Link from "next/link";
 
-type Props = {
-  project: Project;
-};
+// export default async function ProjectCard() {
+//   const databaseId = process.env.NOTION_DATABASE_ID;
 
-export default function ProjectCard({ project }: Props) {
-  const slug = slugify(project.slug).toLowerCase();
+//   if (!databaseId) {
+//     console.error("NOTION_DATABASE_ID is not defined");
+//     return null;
+//   }
 
-  const formattedTime = getLocalizedDate(project.date);
+//   // Fetch all articles from the Notion database
+//   const response = await notion.databases.query({
+//     database_id: databaseId,
+//     filter: {
+//       property: "type",
+//       select: {
+//         equals: "Projects",
+//       },
+//     },
+//   });
 
-  return (
-    <a href={`/projects/${slug}?id=${project.id}`}>
-      <div className="flex flex-col overflow-hidden cursor-pointer group">
-        <div className="relative">
-          <div className="absolute">
-            {project?.tags?.map((tag) => (
-              <div
-                key={tag}
-                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-bold text-zinc-800 uppercase bg-slate-100 rounded left-3 top-3"
-              >
-                {tag}
-              </div>
-            ))}
-          </div>
-          <div className=" filter contrast-[0.9]">
-            <img
-              className="object-cover w-full h-52 transition rounded-xl aspect-video group-hover:opacity-90 bg-slate-50 dark:bg-zinc-900"
-              src={project.coverImage}
-              alt={"project cover"}
-            />
-          </div>
-        </div>
-        <div className="flex flex-col justify-between flex-1 py-4 ">
-          <div className="flex-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-slate-200">
-              {project.title}
-            </p>
-            <p className="mt-3 text-base text-gray-600 dark:text-gray-500 line-clamp-2">
-              {project.summary}
-            </p>
-          </div>
-          <div className="flex items-center mt-4">
-            <div className="flex mb-2 space-x-1 text-xs text-gray-500">
-              {project.tags.map((tag) => (
-                <div key={tag}>
-                  <span className="font-semibold text-gray-600 dark:text-gray-400">
-                    {tag}{" "}
-                  </span>
-                  <span aria-hidden="true">&middot;</span>
-                </div>
-              ))}
-              <time dateTime={formattedTime}>{formattedTime}</time>
-            </div>
-            {/* <p className="text-sm font-medium text-gray-900">{project?.author?.name}</p> */}
-          </div>
-        </div>
-      </div>
-    </a>
-  );
-}
+//   // Convert the response to Article objects
+//   const projects: Article[] = response.results.map((page: any) =>
+//     convertToPost(page)
+//   );
+
+//   return (
+//     <>
+//       {projects.map((project) => (
+//         <Link
+//           href={`/projects/${project.slug}`}
+//           key={project.id}
+//           className="border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+//         >
+//           <div className="relative">
+//           <div className=" filter contrast-[0.9]">
+//             <img
+//               src={project.coverImage}
+//               alt={project.title}
+//               className="object-cover w-full h-52 transition rounded-xl aspect-video group-hover:opacity-90 bg-slate-50 dark:bg-zinc-900"
+//             />
+//             </div>
+//             <div className="flex flex-col justify-between flex-1 py-4">
+//             <div className="flex-1">
+//               <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
+//               <p className="mt-3 text-base text-gray-600 dark:text-gray-500 line-clamp-2">
+//               {project.summary}
+//             </p>
+//               {/* <p className="text-gray-600 mb-4">{project.excerpt}</p> */}
+//               {/* <span className="text-blue-500 hover:underline">Read more</span> */}
+//             </div>
+//           </div>
+//         </Link>
+//       ))}
+//     </>
+//   );
+// }

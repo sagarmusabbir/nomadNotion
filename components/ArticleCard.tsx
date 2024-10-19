@@ -33,6 +33,7 @@ export default function ArticleCard({ article }: Props) {
             />
           </div>
         </div>
+
         <div className="flex flex-col justify-between flex-1 py-4 ">
           <div className="flex-1">
             <p className="text-xl font-semibold text-gray-800 dark:text-slate-200">
