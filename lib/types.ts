@@ -24,28 +24,29 @@ export type Article = {
   id: string;
   title: string;
   date: string;
-  type: string;
+  // type: string;
   slug: string;
   status: string;
   tags: string[];
   summary: string[];
   coverImage: string;
   author: string;
+  type: "Post" | "Project";
 };
 
-export type Project = {
-  id: string;
-  title: string;
-  date: string;
-  type: string;
-  slug: string;
-  status: string;
-  tags: string[];
-  summary: string[];
-  coverImage: string;
-  author: string;
-  content: string;
-};
+// export type Project = {
+//   id: string;
+//   title: string;
+//   date: string;
+//   type: string;
+//   slug: string;
+//   status: string;
+//   tags: string[];
+//   summary: string[];
+//   coverImage: string;
+//   author: string;
+//   content: string;
+// };
 
 export type PaginationProps = {
   currentPage: number;

@@ -1,40 +1,39 @@
-// import notion from "@/lib";
-// import { Project } from "@/lib/types";
-// import { convertToProject } from "./convertToPost";
+import notion from "@/lib";
+import { convertToPost } from "./convertToPost";
+import { Article } from "@/lib/types";
 
-// export const getAllProjects = async (): Promise<Project[]> => {
-//   const databaseId = process.env.NOTION_DATABASE_ID!;
-//   const response = await notion.databases.query({
-//     database_id: databaseId,
-//     filter: {
-//       and: [
-//         {
-//           property: "status",
-//           select: {
-//             equals: "Published",
-//           },
-//         },
-//         {
-//           property: "type",
-//           select: {
-//             equals: "Project",
-//           },
-//         },
-//         // Add more conditions if needed
-//       ],
-//     },
-//     sorts: [
-//       {
-//         property: "date",
-//         direction: "ascending",
-//       },
-//     ],
-//   });
+export async function getAllProjects(): Promise<Article[]> {
+  const databaseId = process.env.NOTION_DATABASE_ID;
 
-//   const publishedProjects: Project[] = response.results.map((e) =>
-//     // convertToPost(e)
-//     convertToProject(e)
-//   );
+  if (!databaseId) {
+    console.error("NOTION_DATABASE_ID is not defined");
+    return [];
+  }
 
-//   return publishedProjects;
-// };
+  try {
+    const response = await notion.databases.query({
+      database_id: databaseId,
+      filter: {
+        property: "type",
+        select: {
+          equals: "Project",
+        },
+      },
+      sorts: [
+        {
+          property: "date",
+          direction: "descending",
+        },
+      ],
+    });
+
+    const projects: Article[] = response.results.map((page) =>
+      convertToPost(page)
+    );
+
+    return projects;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    return [];
+  }
+}
