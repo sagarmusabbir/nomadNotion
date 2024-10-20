@@ -1,6 +1,8 @@
 import { Article } from "@/lib/types";
 import slugify from "slugify";
 import getLocalizedDate from "../app/utils/getLocalizedDate";
+import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   article: Article;
@@ -12,19 +14,21 @@ export default function ArticleCard({ article }: Props) {
   const formattedTime = getLocalizedDate(article.date);
 
   return (
-    <a href={`/articles/${slug}?id=${article.id}`}>
+    // <a href={`/articles/${slug}?id=${article.id}`}>
+    <Link
+      href={`/articles/${article.type.toLowerCase()}s/${slug}?id=${article.id}`}
+    >
       <div className="flex flex-col overflow-hidden cursor-pointer group">
         <div className="relative">
           <div className="absolute">
-            {/* {article?.tags?.map((tag) => (
+            {article?.tags?.map((tag) => (
               <div
                 key={tag}
                 className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-bold text-zinc-800 uppercase bg-slate-100 rounded left-3 top-3"
               >
                 {tag}
-                
               </div>
-            ))} */}
+            ))}
             {article.type === "Project" && (
               <span className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-bold text-zinc-800 uppercase bg-slate-100 rounded left-3 top-3">
                 Project
@@ -65,6 +69,7 @@ export default function ArticleCard({ article }: Props) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
+    // </a>
   );
 }

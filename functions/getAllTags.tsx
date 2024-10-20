@@ -1,10 +1,13 @@
 import { Article, TagFrequencyMap } from "@/lib/types";
 
-export const calculateTagFrequency = async ({
-  publishedPosts,
-}: {
-  publishedPosts: Article[];
-}) => {
+export const calculateTagFrequency = async (
+  {
+    publishedPosts,
+  }: {
+    publishedPosts: Article[];
+  },
+  p0: { publishedProjects: Article[] }
+) => {
   let allTags: string[] = [];
   const tagFrequencyMap: TagFrequencyMap = {};
 

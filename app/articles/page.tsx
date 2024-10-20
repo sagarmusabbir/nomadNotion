@@ -2,13 +2,11 @@ import { getAllPosts } from "@/functions/getAllPosts";
 import { Article } from "@/lib/types";
 import Search from "../../components/Search";
 import { calculateTagFrequency } from "@/functions/getAllTags";
-import { BreadcrumbItem } from "flowbite-react";
-import DefaultBreadcrumb from "@/components/BreadCumb";
-import { HiHome } from "react-icons/hi";
-import HeroSection from "@/components/HeroSection";
-import { ArticleIcon } from "@/components/icons";
+
+import { ArticleIcon, BrowseIcon } from "@/components/icons";
 import DefaultHero from "@/components/Hero";
 import { Metadata } from "next";
+import { getAllProjects } from "@/functions/getAllProjects";
 
 const title = "Musabbirs Thoughts and Web Development Articles";
 
@@ -21,18 +19,23 @@ export const metadata: Metadata = {
 
 const Articles = async () => {
   const publishedPosts: Article[] = await getAllPosts();
-  const tagFrequencyMap = await calculateTagFrequency({ publishedPosts });
+  const publishedProjects: Article[] = await getAllProjects();
+  const tagFrequencyMap = await calculateTagFrequency(
+    { publishedPosts },
+    { publishedProjects }
+  );
 
   return (
     <main className="space-y-5 max-w-7xl m-auto min-h-screen">
       <DefaultHero
-        Icon={ArticleIcon}
+        Icon={BrowseIcon}
         name="Articles"
         source="/coverarticles.webp"
       />
       <div className="max-w-5xl m-auto p-4 min-h-screen">
         <Search
           publishedPosts={publishedPosts}
+          publishedProjects={publishedProjects}
           tagFrequencyMap={tagFrequencyMap}
         />
       </div>

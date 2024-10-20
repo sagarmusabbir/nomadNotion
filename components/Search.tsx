@@ -9,9 +9,11 @@ import Feed from "./Feed";
 
 const Search = ({
   publishedPosts,
+  publishedProjects,
   tagFrequencyMap,
 }: {
   publishedPosts: Article[];
+  publishedProjects: Article[];
   tagFrequencyMap: TagFrequencyMap;
 }) => {
   const [searchValue, setSearchValue] = useState("");

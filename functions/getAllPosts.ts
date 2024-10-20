@@ -4,36 +4,45 @@ import { convertToPost } from "./convertToPost";
 
 export const getAllPosts = async (): Promise<Article[]> => {
   const databaseId = process.env.NOTION_DATABASE_ID!;
-  const response = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      and: [
-        {
-          property: "status",
-          select: {
-            equals: "Published",
+  if (!databaseId) {
+    console.error("NOTION_DATABASE_ID is not defined");
+    return [];
+  }
+  try {
+    const response = await notion.databases.query({
+      database_id: databaseId,
+      filter: {
+        and: [
+          {
+            property: "status",
+            select: {
+              equals: "Published",
+            },
           },
-        },
-        {
-          property: "type",
-          select: {
-            equals: "Post",
+          {
+            property: "type",
+            select: {
+              equals: "Post",
+            },
           },
-        },
-        // Add more conditions if needed
-      ],
-    },
-    sorts: [
-      {
-        property: "date",
-        direction: "ascending",
+          // Add more conditions if needed
+        ],
       },
-    ],
-  });
+      sorts: [
+        {
+          property: "date",
+          direction: "ascending",
+        },
+      ],
+    });
 
-  const publishedPosts: Article[] = response.results.map((e) =>
-    convertToPost(e)
-  );
+    const publishedPosts: Article[] = response.results.map((e) =>
+      convertToPost(e)
+    );
 
-  return publishedPosts;
+    return publishedPosts;
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return [];
+  }
 };

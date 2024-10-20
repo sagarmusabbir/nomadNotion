@@ -14,10 +14,20 @@ export async function getAllProjects(): Promise<Article[]> {
     const response = await notion.databases.query({
       database_id: databaseId,
       filter: {
-        property: "type",
-        select: {
-          equals: "Project",
-        },
+        and: [
+          {
+            property: "status",
+            select: {
+              equals: "Published",
+            },
+          },
+          {
+            property: "type",
+            select: {
+              equals: "Project",
+            },
+          },
+        ],
       },
       sorts: [
         {
@@ -27,11 +37,11 @@ export async function getAllProjects(): Promise<Article[]> {
       ],
     });
 
-    const projects: Article[] = response.results.map((page) =>
+    const publishedProjects: Article[] = response.results.map((page) =>
       convertToPost(page)
     );
 
-    return projects;
+    return publishedProjects;
   } catch (error) {
     console.error("Error fetching projects:", error);
     return [];

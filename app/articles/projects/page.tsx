@@ -101,6 +101,8 @@ import { getAllProjects } from "@/functions/getAllProjects";
 import { Article } from "@/lib/types";
 import ArticleList from "@/components/ArticleList";
 import Container from "@/components/Container";
+import DefaultHero from "@/components/Hero";
+import { ArticleIcon, ProjectIcon } from "@/components/icons";
 
 export const metadata = {
   title: "Projects | Musabbir Sagar",
@@ -111,16 +113,18 @@ export default async function ProjectsPage() {
   const projects: Article[] = await getAllProjects();
 
   return (
-    <Container>
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          Projects
-        </h1>
-        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          A collection of projects I've worked on
-        </p>
+    // <Container>
+
+    <main className="space-y-5 max-w-7xl m-auto min-h-screen">
+      <DefaultHero
+        Icon={ProjectIcon}
+        name="Projects"
+        source="/coverarticles.webp"
+      />
+      <div className="max-w-5xl m-auto p-4 min-h-screen">
+        <ArticleList articles={projects} />
       </div>
-      <ArticleList articles={projects} />
-    </Container>
+    </main>
+    // </Container>
   );
 }

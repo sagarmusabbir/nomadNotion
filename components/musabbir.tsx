@@ -20,6 +20,7 @@ import {
   SiGhost,
   SiHugo,
 } from "react-icons/si";
+import Cta from "./cta";
 
 const Myself: FC = function () {
   return (
@@ -34,7 +35,7 @@ const Myself: FC = function () {
             who loves to create stunning websites with cutting-edge
             technologies.
           </p>
-          {/* <Cta /> */}
+          <Cta />
         </div>
         <MyTimeline />
       </div>

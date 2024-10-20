@@ -3,29 +3,38 @@ import { FooterNavItem, LinkItem } from "@/lib/types";
 import {
   AboutIcon,
   ArticleIcon,
+  BrowseIcon,
   GithubIcon,
   LinkedInIcon,
   ProjectIcon,
 } from "./components/icons";
+
 import { Cover, Logo } from "./components/icons";
 
 export const links: LinkItem[] = [
   {
     id: 0,
-    name: "Articles",
+    name: "Browse Articles",
     to: "/articles",
-    icon: ArticleIcon,
+    icon: BrowseIcon,
     cover: "/coverarticles.webp",
   },
   {
     id: 1,
     name: "Projects",
-    to: "/projects",
+    to: "/articles/projects",
     icon: ProjectIcon,
     cover: "/coverprojects.webp",
   },
+  // {
+  //   id: 2,
+  //   name: "Posts",
+  //   to: "/articles/posts",
+  //   icon: ArticleIcon,
+  //   cover: "/coverartcles.webp",
+  // },
   {
-    id: 2,
+    id: 3,
     name: "About",
     to: "/about",
     icon: AboutIcon,

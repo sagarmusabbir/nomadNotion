@@ -15,6 +15,7 @@ import { filterArticles } from "./utils/filterArticles";
 import ArticleList from "@/components/Feed";
 import { types } from "util";
 import { isTypedArray } from "util/types";
+import Link from "next/link";
 
 const HomePage = async ({
   searchParams,
@@ -23,34 +24,40 @@ const HomePage = async ({
 }) => {
   const page = Number(searchParams.page) || 1;
   const publishedPosts: Article[] = await getAllPosts();
-
-  // // Send a message to Slack when the page is accessed
-  // const message = {
-  //   text: `Someone visited the homepage! Page: ${page}`,
-  // };
-
-  // try {
-  //   await sendSlackMessage(message);
-  // } catch (error: unknown) {
-  //   if (error instanceof Error) {
-  //     console.error("Error sending Slack message:", error.message);
-  //     // Handle the error as needed
-  //   } else {
-  //     console.error("An unexpected error occurred:", error);
-  //     // Handle other types of errors or log them
-  //   }
-  // }
+  const publishedProjects: Article[] = await getAllPosts();
 
   return (
-    <main>
+    <main className="space-y-7 py-4">
       <NewHero
         Icon={Cover}
         name="Musabbirs Terminal"
         source="/coverhome.webp"
       />
-      <div className="space-y-5 max-w-7xl m-auto min-h-screen">
-        <div className="mt-4 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
-          <Feed articles={publishedPosts} />
+      <div className="space-y-7 max-w-7xl m-auto min-h-screen">
+        <div className="space-y-7 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
+          {/* <Feed articles={publishedPosts} /> */}
+          <div className="space-y-5">
+            <h2 className="max-w-xl text-xl  leading-none tracking-tight  md:text-2xl xl:text-3xl text-gray-700 ">
+              Recent Articles
+            </h2>
+            <ArticleList articles={publishedPosts} />
+            <Link href="/articles">
+              <span className="text-sm leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
+                More articles ➜
+              </span>
+            </Link>
+          </div>
+          <div className="space-y-5">
+            <h2 className="max-w-xl text-xl  leading-none tracking-tight  md:text-2xl xl:text-3xl text-gray-700 ">
+              Recent Projects
+            </h2>
+            <ArticleList articles={publishedProjects} />
+            <Link href="/articles">
+              <span className="text-sm leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
+                More projects ➜
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </main>

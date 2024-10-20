@@ -4,7 +4,8 @@ import { NotionRenderer } from "react-notion";
 import notion from "@/lib";
 import { convertToPost } from "@/functions/convertToPost";
 import Link from "next/link";
-import TopScrollButton from "../../../components/TopScrollButton";
+import TopScrollButton from "../../../../components/TopScrollButton";
+
 import Container from "@/components/Container";
 import ArticleList from "@/components/ArticleList";
 import { getAllPosts } from "@/functions/getAllPosts";

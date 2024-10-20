@@ -23,10 +23,10 @@ const NewHero: FC<HeroProps> = ({ Icon, name, source }) => {
       <div className="relative z-10 mx-auto grid max-w-screen-lg px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
         <div className="mr-auto place-self-center lg:col-span-7">
           {Icon && <Icon className="fill-gray-900  w-14 h-14 mb-4" />}
-          <h1 className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-900">
+          <h1 className=" max-w-2xl text-2xl font-medium leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-700">
             {name}
           </h1>
-          <p className="mb-6 max-w-2xl text-gray-700 md:text-lg lg:mb-8 lg:text-xl">
+          <p className="mb-6 max-w-2xl text-slate-500 md:text-lg lg:mb-8 lg:text-xl">
             <span className=" text-sm font-light">by&nbsp;</span>Musabbir Sagar
           </p>
 
@@ -37,7 +37,7 @@ const NewHero: FC<HeroProps> = ({ Icon, name, source }) => {
               size="md"
               className="[&>span]:items-center"
             >
-              Latest Insights
+              Latest Artcles
               <MdOutlineChevronRight className="-mr-1 ml-2 h-5 w-5" />
             </Button>
             <Button

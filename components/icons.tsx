@@ -2,9 +2,20 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 import { SVGProps } from "react";
 import {
+  MdBrowseGallery,
+  MdCode,
   MdComputer,
+  MdDehaze,
+  MdDensityMedium,
+  MdFace5,
+  MdFilter1,
+  MdManageSearch,
+  MdOutlineFeed,
   MdOutlineKeyboardAlt,
+  MdOutlineMenu,
   MdOutlinePersonSearch,
+  MdSavedSearch,
+  MdTagFaces,
 } from "react-icons/md";
 
 export const ArticleIcon: React.FC<IconSvgProps> = ({
@@ -13,13 +24,28 @@ export const ArticleIcon: React.FC<IconSvgProps> = ({
   height,
   ...props
 }) => (
-  <MdOutlineKeyboardAlt
+  <MdDehaze
     fill="none"
     height={size || height}
     viewBox="0 0 24 24"
     width={size || width}
     {...props}
-  ></MdOutlineKeyboardAlt>
+  ></MdDehaze>
+);
+
+export const BrowseIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
+  <MdManageSearch
+    fill="none"
+    height={size || height}
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  ></MdManageSearch>
 );
 
 export const ProjectIcon: React.FC<IconSvgProps> = ({
@@ -28,13 +54,13 @@ export const ProjectIcon: React.FC<IconSvgProps> = ({
   height,
   ...props
 }) => (
-  <MdComputer
+  <MdCode
     fill="none"
     height={size || height}
     viewBox="0 0 24 24"
     width={size || width}
     {...props}
-  ></MdComputer>
+  ></MdCode>
 );
 
 export const AboutIcon: React.FC<IconSvgProps> = ({
@@ -43,13 +69,13 @@ export const AboutIcon: React.FC<IconSvgProps> = ({
   height,
   ...props
 }) => (
-  <MdOutlinePersonSearch
+  <MdFace5
     fill="none"
     height={size || height}
     viewBox="0 0 24 24"
     width={size || width}
     {...props}
-  ></MdOutlinePersonSearch>
+  ></MdFace5>
 );
 
 export const Logo: React.FC<IconSvgProps> = ({
