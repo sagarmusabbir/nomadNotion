@@ -27,7 +27,7 @@ const HomePage = async ({
   const publishedProjects: Article[] = await getAllPosts();
 
   return (
-    <main className="space-y-7 py-4">
+    <main className="space-y-7 ">
       <NewHero
         Icon={Cover}
         name="Musabbirs Terminal"
@@ -42,7 +42,7 @@ const HomePage = async ({
             </h2>
             <ArticleList articles={publishedPosts} />
             <Link href="/articles">
-              <span className="text-sm leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
+              <span className="text-base leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
                 More articles ➜
               </span>
             </Link>
@@ -53,7 +53,7 @@ const HomePage = async ({
             </h2>
             <ArticleList articles={publishedProjects} />
             <Link href="/articles">
-              <span className="text-sm leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
+              <span className="text-base leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
                 More projects ➜
               </span>
             </Link>

@@ -1,15 +1,9 @@
 import Image from "next/image";
 
-import { Breadcrumb, Button } from "flowbite-react";
+import { Button } from "flowbite-react";
 import Link from "next/link";
 
-import {
-  MdArrowOutward,
-  MdArrowRight,
-  MdChevronRight,
-  MdHome,
-  MdOutlineChevronRight,
-} from "react-icons/md";
+import { MdArrowOutward, MdOutlineChevronRight } from "react-icons/md";
 import { FC } from "react";
 
 interface HeroProps {
@@ -19,7 +13,7 @@ interface HeroProps {
 }
 const NewHero: FC<HeroProps> = ({ Icon, name, source }) => {
   return (
-    <section className="bg-slate-300 dark:bg-gray-900 bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
+    <section className="bg-slate-300  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
       <div className="relative z-10 mx-auto grid max-w-screen-lg px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
         <div className="mr-auto place-self-center lg:col-span-7">
           {Icon && <Icon className="fill-gray-900  w-14 h-14 mb-4" />}
@@ -75,3 +69,12 @@ const NewHero: FC<HeroProps> = ({ Icon, name, source }) => {
 };
 
 export default NewHero;
+
+{
+  /* <Breadcrumb>
+<Breadcrumb.Item href="/" icon={MdHome}>
+  MS
+</Breadcrumb.Item>
+<Breadcrumb.Item>{name}</Breadcrumb.Item>
+</Breadcrumb> */
+}
