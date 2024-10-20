@@ -1,5 +1,4 @@
 import { FC } from "react";
-import CarouselSliderTestimonial from "./carousel-slider";
 
 const Cta: FC = function () {
   // const function Cta = () =>  {
