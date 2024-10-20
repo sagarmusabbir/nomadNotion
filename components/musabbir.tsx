@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
-import { BtnGrp } from "./Btn";
-import Cta from "./cta";
+// import { BtnGrp } from "./Btn";
+// import Cta from "./cta";
 import LogoCloud from "./logocloud";
 import MyTimeline from "./MyTimeline";
 
@@ -34,7 +34,7 @@ const Myself: FC = function () {
             who loves to create stunning websites with cutting-edge
             technologies.
           </p>
-          <Cta />
+          {/* <Cta /> */}
         </div>
         <MyTimeline />
       </div>
