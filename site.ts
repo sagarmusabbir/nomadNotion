@@ -45,12 +45,12 @@ export const links: LinkItem[] = [
 ];
 
 export const siteData = {
-  title: "Musabbirs Terminal",
+  title: "Musabbir Sagar",
   author: "Musabbir Sagar",
-  headerTitle: "Musabbirs Terminal",
+  headerTitle: "Top Rated Next.js Developer from UpWork",
   profileUrl: "/logo.svg",
   headerDescription:
-    "Musabbir Sagar is a top rated Next.js Developer in Upwork and Fiverr. He created 'Third Bracket Solutions', 'Nomad Gang Lab', and 'Literature Review UK'. He provides web development and literature review services through these agencies.",
+    "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
   footerText: "© All rights reserved",
   language: "en-us",
   locale: "en-US",

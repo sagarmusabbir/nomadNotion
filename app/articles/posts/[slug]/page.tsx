@@ -20,6 +20,29 @@ export const metadata: Metadata = {
   title: `${title}`,
 };
 
+// export async function generateMetadata({
+//   params,
+// }: {
+//   params: { id: string };
+// }): Promise<Metadata> {
+//   // Fetch the page data from Notion
+//   const { id } = params;
+//   const page = await notion.pages.retrieve({ page_id: id });
+//   const pageDetails = convertToPost(page);
+//   // Extract the title from the Notion page
+//   const title = pageDetails.title;
+
+//   return {
+//     title: title, // This will be inserted into the template from layout.tsx
+//     openGraph: {
+//       title: title,
+//     },
+//     twitter: {
+//       title: title,
+//     },
+//   };
+// }
+
 export default async function Page({
   searchParams,
 }: {

@@ -14,11 +14,10 @@ import { WebPage, WithContext } from "schema-dts";
 export const jsonLd: WithContext<WebPage> = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Musabbir Sagar",
+  name: siteData.title + "|" + siteData.headerTitle,
 
   url: "https://musabbirsagar.com",
-  description:
-    "This is Musabbir sagar, A web development polymath and digital nomad who loves to create stunning websites with cutting-edge technologies.",
+  description: siteData.headerDescription,
 
   isPartOf: {
     "@type": "WebSite",
@@ -38,7 +37,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 export const metadata: Metadata = {
   title: {
     template: `%s | ${siteData.title}`,
-    default: `${siteData.headerDescription} | ${siteData.title}`,
+    default: `${siteData.headerTitle} | ${siteData.title}`,
   },
   icons: {
     icon: [
@@ -68,16 +67,15 @@ export const metadata: Metadata = {
   },
 
   metadataBase: new URL("https://musabbirsagar.com"),
-  description:
-    "Musabbir Sagar is a top rated Next.js Developer in Upwork and Fiverr. He created 'Third Bracket Solutions', 'Nomad Gang Lab', and 'Literature Review UK'. He provides web development and literature review services through these agencies.",
-  applicationName: "Musabbirs Terminal",
+  description: siteData.headerDescription,
+  applicationName: "Musabbir Sagar",
   referrer: "origin-when-cross-origin",
   keywords: [
     "Musabbir Sagar",
     "Next.js Developer",
     "Third Bracket Solutions",
     "Literature Review UK",
-    "Nomad Gang Lab",
+    "Top Rated Web Developer",
   ],
   authors: [{ name: siteData.author, url: "https://musabbirsagar.com/about" }],
   creator: "Musabbir Sagar",
@@ -89,7 +87,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: siteData.websiteUrl,
-    title: siteData.title,
+    title: `${siteData.headerTitle} | ${siteData.title}`,
     authors: siteData.author,
 
     description: siteData.headerDescription,
@@ -99,7 +97,7 @@ export const metadata: Metadata = {
       {
         // url: "https://og.tailgraph.com/og?fontFamily=Inter&title=Musabbirs%20Terminal&titleTailwind=text-gray-800%20font-bold%20text-6xl&text=Creator%20of%20Third%20Bracket%20Solutions%2C%20Nomad%20Gang%20Labs%20and%20Products%20of%20Bangladesh.&textTailwind=text-gray-700%20text-2xl%20mt-4&logoUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2FnomadNotion%2Fmain%2Fpublic%2FLogo.svg&logoTailwind=w-14%20mx-auto&bgUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2FnomadNotion%2Fmain%2Fpublic%2Fmusabbir-cover.svg&bgTailwind=bg-white&footer=musabbirsagar.com&footerTailwind=text-emerald-400&t=1720906704239&refresh=1",
         url: "https://og.tailgraph.com/og?fontFamily=Inter&title=Musabbirs%20Terminal&titleTailwind=text-gray-800%20font-bold%20text-6xl&text=Creator%20of%20Third%20Bracket%20Solutions%2C%20Nomad%20Gang%20Labs%20and%20Products%20of%20Bangladesh.&textTailwind=text-gray-700%20text-2xl%20mt-4&logoUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2FnomadNotion%2Fmain%2Fpublic%2FLogo.svg&logoTailwind=w-14%20mx-auto&bgUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2FnomadNotion%2Fmain%2Fpublic%2Fmusabbir-cover.svg&bgTailwind=bg-white&footer=musabbirsagar.com&footerTailwind=text-emerald-400&t=1720906704239&refresh=1",
-        alt: "musabbirsagar.com og-image",
+        alt: "Musabbir Sagar - Next.Js Developer",
         width: 800,
         height: 600,
       },
@@ -107,7 +105,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteData.title,
+    title: `${siteData.headerTitle} | ${siteData.title}`,
     description: siteData.headerDescription,
     creator: "@musabbirsagar",
 
@@ -115,7 +113,7 @@ export const metadata: Metadata = {
       {
         // url: "https://og.tailgraph.com/og?fontFamily=Roboto&title=Best%20Platform%20for%20sourcing%20Made%20in%20Bangladesh%20Products&titleTailwind=font-extrabold%20text-white%20text-5xl%20text-center%20px-4&titleFontFamily=Inter&text=ProductsofBangladesh.com&textTailwind=text-2xl%20mt-4%20text-center%20text-white&textFontFamily=Inter&logoUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2Ftb%2Fmain%2Fpublic%2Foldlogo.svg&logoTailwind=text-center%20mx-auto%20w-20%20h-20%20p-4&bgUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2Ftb%2Fmain%2Fpublic%2Fcover-mint.svg&bgTailwind=bg-white%20bg-opacity-50&footer=ProductsofBangladesh.com&footerTailwind=text-white&containerTailwind=p-4&t=1720553933274&refresh=1",
         url: "https://og.tailgraph.com/og?fontFamily=Inter&title=Musabbirs%20Terminal&titleTailwind=text-gray-800%20font-bold%20text-6xl&text=Creator%20of%20Third%20Bracket%20Solutions%2C%20Nomad%20Gang%20Labs%20and%20Products%20of%20Bangladesh.&textTailwind=text-gray-700%20text-2xl%20mt-4&logoUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2FnomadNotion%2Fmain%2Fpublic%2FLogo.svg&logoTailwind=w-14%20mx-auto&bgUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fsagarmusabbir%2FnomadNotion%2Fmain%2Fpublic%2Fmusabbir-cover.svg&bgTailwind=bg-white&footer=musabbirsagar.com&footerTailwind=text-emerald-400&t=1720906704239&refresh=1",
-        alt: "musabbirsagar.com og-image",
+        alt: "Musabbir Sagar - Next.Js Developer",
         width: 800,
         height: 600,
       },

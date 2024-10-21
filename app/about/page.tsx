@@ -8,12 +8,12 @@ import { AboutIcon, Logo } from "@/components/icons";
 import { Metadata } from "next";
 import cover from "@/public/about.svg";
 
-const title = "Learn About the Creator of Third Bracket Solutions";
+const title = "About";
 
 export const metadata: Metadata = {
-  title: `${title}`,
+  title,
   openGraph: {
-    title: `${title}`,
+    title: `${title} | Musabbir Sagar`,
   },
 };
 

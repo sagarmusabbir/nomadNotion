@@ -8,12 +8,12 @@ import DefaultHero from "@/components/Hero";
 import { Metadata } from "next";
 import { getAllProjects } from "@/functions/getAllProjects";
 
-const title = "Musabbirs Thoughts and Web Development Articles";
+const title = "Thoughts & Web Development Articles";
 
 export const metadata: Metadata = {
-  title: `${title}`,
+  title,
   openGraph: {
-    title: `${title}`,
+    title: `${title} | Musabbir Sagar`,
   },
 };
 
