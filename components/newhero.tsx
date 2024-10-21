@@ -8,21 +8,28 @@ import { FC } from "react";
 
 interface HeroProps {
   Icon: React.ElementType;
-  name: string;
-  source: string;
 }
-const NewHero: FC<HeroProps> = ({ Icon, name, source }) => {
+const NewHero: FC<HeroProps> = ({ Icon }) => {
   return (
     <section className="bg-slate-300  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
       <div className="relative z-10 mx-auto grid max-w-screen-lg px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
-        <div className="mr-auto place-self-center lg:col-span-7">
-          {Icon && <Icon className="fill-gray-900  w-14 h-14 mb-4" />}
-          <h1 className=" max-w-2xl text-2xl font-medium leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-700">
-            {name}
+        <div className="mr-auto place-self-center lg:col-span-7  ">
+          {Icon && <Icon className="fill-gray-900  w-14 h-14 " />}
+          <h1 className="max-w-2xl text-2xl font-semibold leading-none tracking-tighter  md:text-3xl xl:text-4xl text-gray-700 mt-6">
+            MUSABBIR SAGAR
           </h1>
-          <p className="mb-6 max-w-2xl text-slate-500 md:text-lg lg:mb-8 lg:text-xl">
-            <span className=" text-sm font-light">by&nbsp;</span>Musabbir Sagar
-          </p>
+
+          <h2 className=" max-w-2xl text-xl font-light leading-none tracking-tight  md:text-2xl xl:text-3xl text-gray-600 text-wrap items-center mb-6">
+            Top Rated &nbsp;
+            <span className="bg-gray-400 text-slate-50 font-semibold p-1 text-lg md:text-xl xl:text-xl rounded-md  ">
+              Next.Js
+            </span>
+            &nbsp;Developer
+          </h2>
+
+          {/* <p className="mb-6 max-w-2xl text-slate-500 md:text-lg lg:mb-8 lg:text-xl">
+            Musabbir Sagar
+          </p> */}
 
           <div className="flex w-fit items-center gap-5">
             <Button

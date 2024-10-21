@@ -28,11 +28,7 @@ const HomePage = async ({
 
   return (
     <main className="space-y-7 ">
-      <NewHero
-        Icon={Cover}
-        name="Musabbirs Terminal"
-        source="/coverhome.webp"
-      />
+      <NewHero Icon={Cover} />
       <div className="space-y-7 max-w-7xl m-auto min-h-screen">
         <div className="space-y-7 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
           {/* <Feed articles={publishedPosts} /> */}

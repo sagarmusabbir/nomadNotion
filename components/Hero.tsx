@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { MdArrowOutward, MdHome, MdOutlineChevronRight } from "react-icons/md";
 import { FC } from "react";
-import { AboutIcon } from "./icons";
+import { AboutIcon, ArticleIcon, BrowseIcon } from "./icons";
 
 interface HeroProps {
   Icon: React.ElementType;
@@ -21,10 +21,10 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
       "
       >
         <div className="lg:mt-0 lg:flex ">
-          <AboutIcon className="fill-gray-600 h-28 w-28 " />
+          <Icon className="fill-gray-700 h-28 w-28 " />
         </div>
         <div className="">
-          <h1 className=" max-w-2xl text-2xl font-medium leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-700">
+          <h1 className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-800">
             {name}
           </h1>
           <p className="max-w-2xl text-slate-500 md:text-lg  lg:text-xl">
