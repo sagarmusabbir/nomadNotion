@@ -13,25 +13,45 @@ import { Article } from "@/lib/types";
 import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 
-const title = "Article written by Musabbir Sagar";
-
-export const metadata: Metadata = {
-  title: `${title}`,
+type Props = {
+  searchParams: { [key: string]: string };
 };
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string };
-}) {
+export async function generateMetadata(
+  { searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { id } = searchParams;
 
   const response = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`, {
     next: { revalidate: 60 },
   });
-  console.log(response);
+  // console.log(response);
+
+  const pageProperties = await notion.pages.retrieve({ page_id: id });
+  const post = convertToPost(pageProperties);
+
+  return {
+    title: `${post.title}`,
+    openGraph: {
+      title: `${post.title} | Musabbir Sagar`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Musabbir Sagar`,
+    },
+  };
+}
+
+export default async function Page({ searchParams }: Props) {
+  const { id } = searchParams;
+
+  const response = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`, {
+    next: { revalidate: 60 },
+  });
+  // console.log(response);
   const blockMap = await response.json();
   const pageProperties = await notion.pages.retrieve({ page_id: id });
   const postDetails = convertToPost(pageProperties);

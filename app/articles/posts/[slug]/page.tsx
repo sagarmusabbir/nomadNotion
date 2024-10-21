@@ -7,53 +7,51 @@ import Link from "next/link";
 import TopScrollButton from "../../../../components/TopScrollButton";
 import Container from "@/components/Container";
 import ArticleList from "@/components/ArticleList";
-import { getAllPosts } from "@/functions/getAllPosts";
+
 import { Article } from "@/lib/types";
 import getLocalizedDate from "@/app/utils/getLocalizedDate";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
-import { Metadata } from "next";
+import { getAllPosts } from "@/functions/getAllPosts";
+import { Metadata, ResolvingMetadata } from "next";
 
-const title = "Article written by Musabbir Sagar";
-
-export const metadata: Metadata = {
-  title: `${title}`,
+type Props = {
+  searchParams: { [key: string]: string };
 };
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: { id: string };
-// }): Promise<Metadata> {
-//   // Fetch the page data from Notion
-//   const { id } = params;
-//   const page = await notion.pages.retrieve({ page_id: id });
-//   const pageDetails = convertToPost(page);
-//   // Extract the title from the Notion page
-//   const title = pageDetails.title;
-
-//   return {
-//     title: title, // This will be inserted into the template from layout.tsx
-//     openGraph: {
-//       title: title,
-//     },
-//     twitter: {
-//       title: title,
-//     },
-//   };
-// }
-
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string };
-}) {
+export async function generateMetadata(
+  { searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const { id } = searchParams;
 
   const response = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`, {
     next: { revalidate: 60 },
   });
-  console.log(response);
+  // console.log(response);
+
+  const pageProperties = await notion.pages.retrieve({ page_id: id });
+  const post = convertToPost(pageProperties);
+
+  return {
+    title: `${post.title}`,
+    openGraph: {
+      title: `${post.title} | Musabbir Sagar`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Musabbir Sagar`,
+    },
+  };
+}
+
+export default async function Page({ searchParams }: Props) {
+  const { id } = searchParams;
+
+  const response = await fetch(`https://notion-api.splitbee.io/v1/page/${id}`, {
+    next: { revalidate: 60 },
+  });
+  // console.log(response);
   const blockMap = await response.json();
   const pageProperties = await notion.pages.retrieve({ page_id: id });
   const postDetails = convertToPost(pageProperties);

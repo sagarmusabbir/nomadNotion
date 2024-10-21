@@ -4,6 +4,16 @@ import { getAllProjects } from "@/functions/getAllProjects";
 import { calculateTagFrequency } from "@/functions/getAllTags";
 import { getTagFilteredPosts } from "@/functions/tagFilteredPosts";
 import { Article } from "@/lib/types";
+import { Metadata } from "next";
+
+const title = "Tags";
+
+export const metadata: Metadata = {
+  title,
+  openGraph: {
+    title: `${title} | Musabbir Sagar`,
+  },
+};
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
