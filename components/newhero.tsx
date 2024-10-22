@@ -3,7 +3,15 @@ import Image from "next/image";
 import { Button } from "flowbite-react";
 import Link from "next/link";
 
-import { MdArrowOutward, MdOutlineChevronRight } from "react-icons/md";
+import {
+  MdArrowForward,
+  MdArrowForwardIos,
+  MdArrowOutward,
+  MdChevronRight,
+  MdForward,
+  MdOutlineArrowForwardIos,
+  MdOutlineChevronRight,
+} from "react-icons/md";
 import { FC } from "react";
 
 interface HeroProps {
@@ -14,14 +22,14 @@ const NewHero: FC<HeroProps> = ({ Icon }) => {
     <section className="bg-slate-300  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
       <div className="relative z-10 mx-auto grid max-w-screen-lg px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
         <div className="mr-auto place-self-center lg:col-span-7  ">
-          {Icon && <Icon className="fill-gray-900  w-14 h-14 " />}
-          <h1 className="max-w-2xl text-2xl font-semibold leading-none tracking-tighter  md:text-3xl xl:text-4xl text-gray-700 mt-6">
-            MUSABBIR SAGAR
+          {Icon && <Icon className="fill-gray-900  w-14 h-14 mb-6" />}
+          <h1 className="max-w-2xl text-3xl font-semibold leading-none tracking-tight  md:text-4xl xl:text-5xl text-gray-900 ">
+            Musabbir Sagar
           </h1>
 
-          <h2 className=" max-w-2xl text-xl font-light leading-none tracking-tight  md:text-2xl xl:text-3xl text-gray-600 text-wrap items-center mb-6">
+          <h2 className=" max-w-2xl text-lg font-light leading-none tracking-tight  md:text-xl xl:text-2xl text-gray-600 text-wrap items-center mb-6">
             Top Rated &nbsp;
-            <span className="bg-gray-400 text-slate-50 font-semibold p-1 text-lg md:text-xl xl:text-xl rounded-md  ">
+            <span className="border border-slate-200 text-gray-700  px-0.5 text-lg md:text-xl xl:text-xl rounded-md  ">
               Next.Js
             </span>
             &nbsp;Developer
@@ -32,24 +40,22 @@ const NewHero: FC<HeroProps> = ({ Icon }) => {
           </p> */}
 
           <div className="flex w-fit items-center gap-5">
-            <Button
-              color="light"
-              href="/articles"
-              size="md"
-              className="[&>span]:items-center"
+            <Link
+              href="/about"
+              className="border border-gray-800 rounded-md bg-white text-gray-900 hover:bg-gray-800 hover:text-white    focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center p-2.5 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm  font-medium leading-none tracking-tight drop-shadow-sm"
             >
-              Latest Artcles
-              <MdOutlineChevronRight className="-mr-1 ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              color="dark"
-              size="md"
+              {/* href="https://www.upwork.com/workwith/smamusabbirs" */}
+              About Me
+              <MdArrowForward className="-mr-1 ml-1 h-4 w-4" />
+            </Link>
+            <Link
               href="https://www.upwork.com/workwith/smamusabbirs"
               target="_blank"
+              className="border border-gray-900 rounded-md bg-gray-900 text-white hover:bg-gray-800    focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center p-2.5 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm  font-medium leading-none tracking-tight drop-shadow-sm"
             >
               Hire Me
-              <MdArrowOutward className="-mr-1 ml-2 h-4 w-4" />
-            </Button>
+              <MdArrowOutward className="-mr-1 ml-1 h-4 w-4" />
+            </Link>
           </div>
         </div>
         <div className="hidden lg:col-span-5 lg:mt-0 lg:flex">
