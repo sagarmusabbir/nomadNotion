@@ -16,7 +16,7 @@ import ArticleList from "@/components/Feed";
 import { types } from "util";
 import { isTypedArray } from "util/types";
 import Link from "next/link";
-
+import { MdChevronRight, MdForward } from "react-icons/md";
 const HomePage = async ({
   searchParams,
 }: {
@@ -30,28 +30,30 @@ const HomePage = async ({
     <main className="space-y-7 ">
       <NewHero Icon={Cover} />
       <div className="space-y-7 max-w-7xl m-auto min-h-screen">
-        <div className="space-y-7 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen">
+        <div className="space-y-7 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen mb-6">
           {/* <Feed articles={publishedPosts} /> */}
-          <div className="space-y-5">
-            <h2 className="max-w-xl text-xl  leading-none tracking-tight  md:text-2xl xl:text-3xl text-gray-700 ">
+          <div className="space-y-7 ">
+            <h2 className="max-w-xl text-2xl  leading-none tracking-tight  md:text-3xl xl:text-4xl text-slate-500 ">
               Recent Articles
             </h2>
             <ArticleList articles={publishedPosts} />
             <Link href="/articles">
-              <span className="text-base leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
-                More articles ➜
-              </span>
+              <h4 className="text-lg leading-none tracking-tight  md:text-xl xl:text-2xl text-gray-700 hover:text-gray-800  cursor-pointer mt-6 font-light">
+                {" "}
+                More articles <MdChevronRight className="inline" />{" "}
+              </h4>
             </Link>
           </div>
-          <div className="space-y-5">
-            <h2 className="max-w-xl text-xl  leading-none tracking-tight  md:text-2xl xl:text-3xl text-gray-700 ">
+          <div className="space-y-7">
+            <h2 className="max-w-xl text-2xl  leading-none tracking-tight  md:text-3xl xl:text-4xl text-slate-500">
               Recent Projects
             </h2>
             <ArticleList articles={publishedProjects} />
-            <Link href="/articles">
-              <span className="text-base leading-none tracking-tight  md:text-sm xl:text-base text-gray-600 hover:text-gray-800  cursor-pointer">
-                More projects ➜
-              </span>
+            <Link href="/articles/projects">
+              <h4 className="text-lg leading-none tracking-tight  md:text-xl xl:text-2xl text-gray-700 hover:text-gray-800  cursor-pointer mt-6 font-light">
+                {" "}
+                More projects <MdChevronRight className="inline" />{" "}
+              </h4>
             </Link>
           </div>
         </div>

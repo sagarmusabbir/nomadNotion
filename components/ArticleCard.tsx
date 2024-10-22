@@ -3,6 +3,7 @@ import slugify from "slugify";
 import getLocalizedDate from "../app/utils/getLocalizedDate";
 import Link from "next/link";
 import Image from "next/image";
+import { Badge, Card } from "flowbite-react";
 
 type Props = {
   article: Article;
@@ -13,18 +14,19 @@ export default function ArticleCard({ article }: Props) {
 
   const formattedTime = getLocalizedDate(article.date);
 
+  const cover = article.coverImage;
+
   return (
-    // <a href={`/articles/${slug}?id=${article.id}`}>
     <Link
       href={`/articles/${article.type.toLowerCase()}s/${slug}?id=${article.id}`}
     >
-      <div className="flex flex-col overflow-hidden cursor-pointer group">
+      <div className="flex flex-col overflow-hidden cursor-pointer group h-full w-full bg-slate-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-5 drop-shadow-md transition-opacity hover:bg-opacity-10">
         <div className="relative">
           <div className="absolute">
             {article?.tags?.map((tag) => (
               <div
                 key={tag}
-                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-bold text-zinc-800 uppercase bg-slate-100 rounded left-3 top-3"
+                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-gray-700 uppercase bg-slate-100 rounded left-3 top-3"
               >
                 {tag}
               </div>
@@ -35,21 +37,23 @@ export default function ArticleCard({ article }: Props) {
               </span>
             )}
           </div>
-          <div className=" filter contrast-[0.9]">
-            <img
-              className="object-cover w-full h-52 transition rounded-xl aspect-video group-hover:opacity-90 bg-slate-50 dark:bg-zinc-900"
+          <div className="relative w-full h-48 filter contrast-[0.9]">
+            <Image
               src={article.coverImage}
-              alt={"article cover"}
+              alt={`Cover image for ${article.title}`}
+              fill
+              objectFit="cover"
+              className="rounded-t-lg group-hover:opacity-90 transition bg-slate-50"
             />
           </div>
         </div>
 
-        <div className="flex flex-col justify-between flex-1 py-4 ">
+        <div className="flex flex-col justify-between flex-1    p-4">
           <div className="flex-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-slate-200">
+            <p className="text-xl font-medium text-gray-800  line-clamp-2">
               {article.title}
             </p>
-            <p className="mt-3 text-base text-gray-600 dark:text-gray-500 line-clamp-2">
+            <p className="mt-3 text-base text-gray-500 line-clamp-2">
               {article.summary}
             </p>
           </div>
@@ -70,6 +74,5 @@ export default function ArticleCard({ article }: Props) {
         </div>
       </div>
     </Link>
-    // </a>
   );
 }

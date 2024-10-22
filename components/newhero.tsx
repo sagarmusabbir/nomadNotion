@@ -42,7 +42,7 @@ const NewHero: FC<HeroProps> = ({ Icon }) => {
           <div className="flex w-fit items-center gap-5">
             <Link
               href="/about"
-              className="border border-gray-800 rounded-md bg-white text-gray-900 hover:bg-gray-800 hover:text-white    focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center p-2.5 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm  font-medium leading-none tracking-tight drop-shadow-sm"
+              className="border border-white rounded-md bg-white text-gray-900 hover:bg-gray-800 hover:border-gray-800 hover:text-white    focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center p-2.5 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm  font-medium leading-none tracking-tight drop-shadow-sm"
             >
               {/* href="https://www.upwork.com/workwith/smamusabbirs" */}
               About Me
