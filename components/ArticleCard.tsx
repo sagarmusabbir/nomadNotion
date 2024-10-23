@@ -26,13 +26,13 @@ export default function ArticleCard({ article }: Props) {
             {article?.tags?.map((tag) => (
               <div
                 key={tag}
-                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-gray-700 uppercase bg-slate-100 rounded left-3 top-3"
+                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-gray-900  uppercase bg-slate-100 rounded left-3 top-3"
               >
                 {tag}
               </div>
             ))}
             {article.type === "Project" && (
-              <span className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-bold text-zinc-800 uppercase bg-slate-100 rounded left-3 top-3">
+              <span className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-gray-900  uppercase bg-slate-100 rounded left-3 top-3">
                 Project
               </span>
             )}
@@ -43,17 +43,17 @@ export default function ArticleCard({ article }: Props) {
               alt={`Cover image for ${article.title}`}
               fill
               objectFit="cover"
-              className="rounded-t-lg group-hover:opacity-90 transition bg-slate-50"
+              className="rounded-t-lg "
             />
           </div>
         </div>
 
         <div className="flex flex-col justify-between flex-1    p-4">
           <div className="flex-1">
-            <p className="text-xl font-medium text-gray-800  line-clamp-2">
+            <p className="text-xl font-semibold text-gray-800  line-clamp-2">
               {article.title}
             </p>
-            <p className="mt-3 text-base text-gray-500 line-clamp-2">
+            <p className="mt-3 text-base text-gray-600 line-clamp-2">
               {article.summary}
             </p>
           </div>

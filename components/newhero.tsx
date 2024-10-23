@@ -23,11 +23,11 @@ const NewHero: FC<HeroProps> = ({ Icon }) => {
       <div className="relative z-10 mx-auto grid max-w-screen-lg px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
         <div className="mr-auto place-self-center lg:col-span-7  ">
           {Icon && <Icon className="fill-gray-900  w-14 h-14 mb-6" />}
-          <h1 className="max-w-2xl text-3xl font-semibold leading-none tracking-tight  md:text-4xl xl:text-5xl text-gray-900 ">
+          <h1 className="max-w-2xl text-2xl font-bold leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-900 ">
             Musabbir Sagar
           </h1>
 
-          <h2 className=" max-w-2xl text-lg font-light leading-none tracking-tight  md:text-xl xl:text-2xl text-gray-600 text-wrap items-center mb-6">
+          <h2 className=" max-w-2xl text-base font-light leading-none tracking-tight  md:text-lg xl:text-xl text-gray-600 text-wrap items-center mb-6">
             Top Rated &nbsp;
             <span className="border border-slate-200 text-gray-700  px-0.5 text-lg md:text-xl xl:text-xl rounded-md  ">
               Next.Js
@@ -42,7 +42,7 @@ const NewHero: FC<HeroProps> = ({ Icon }) => {
           <div className="flex w-fit items-center gap-5">
             <Link
               href="/about"
-              className="border border-white rounded-md bg-white text-gray-900 hover:bg-gray-800 hover:border-gray-800 hover:text-white    focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center p-2.5 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm  font-medium leading-none tracking-tight drop-shadow-sm"
+              className="border border-white rounded-md bg-white text-gray-900 hover:bg-slate-50      focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center px-4 py-2 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm md:text-base   font-semibold leading-none tracking-tight drop-shadow-sm"
             >
               {/* href="https://www.upwork.com/workwith/smamusabbirs" */}
               About Me
@@ -51,7 +51,7 @@ const NewHero: FC<HeroProps> = ({ Icon }) => {
             <Link
               href="https://www.upwork.com/workwith/smamusabbirs"
               target="_blank"
-              className="border border-gray-900 rounded-md bg-gray-900 text-white hover:bg-gray-800    focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center p-2.5 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm  font-medium leading-none tracking-tight drop-shadow-sm"
+              className="border border-gray-900 rounded-md bg-gray-900 text-white hover:bg-gray-800    focus:ring-1 focus:ring-slate-400 enabled:hover:bg-slate-50  items-center  group relative flex  justify-center px-4 py-2 text-center  transition-[color,background-color,border-color,text-decoration-color,fill,stroke,box-shadow] focus:z-10 focus:outline-none text-sm md:text-base font-semibold leading-none tracking-tight drop-shadow-sm"
             >
               Hire Me
               <MdArrowOutward className="-mr-1 ml-1 h-4 w-4" />

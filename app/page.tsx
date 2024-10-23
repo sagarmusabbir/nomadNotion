@@ -33,7 +33,7 @@ const HomePage = async ({
         <div className="space-y-7 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen mb-6">
           {/* <Feed articles={publishedPosts} /> */}
           <div className="space-y-7 ">
-            <h2 className="max-w-xl text-2xl  leading-none tracking-tight  md:text-3xl xl:text-4xl text-slate-500 ">
+            <h2 className="max-w-xl text-2xl  leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-600 ">
               Recent Articles
             </h2>
             <ArticleList articles={publishedPosts} />
