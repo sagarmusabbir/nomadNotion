@@ -26,13 +26,9 @@ const Articles = async () => {
   );
 
   return (
-    <main className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <DefaultHero
-        Icon={BrowseIcon}
-        name="Articles"
-        source="/coverarticles.webp"
-      />
-      <div className="max-w-5xl m-auto p-4 min-h-screen">
+    <main className="space-y-5  m-auto min-h-screen">
+      <DefaultHero Icon={BrowseIcon} name="Articles" />
+      <div className="max-w-screen-lg m-auto p-4 min-h-screen">
         <Search
           publishedPosts={publishedPosts}
           publishedProjects={publishedProjects}

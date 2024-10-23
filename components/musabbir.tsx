@@ -24,8 +24,10 @@ import Cta from "./cta";
 
 const Myself: FC = function () {
   return (
-    <div className="py-4 sm:py-12">
-      <div className="grid gap-10 lg:gap-12 sm:grid-cols-2">
+    <div
+    // className="py-4 sm:py-12 "
+    >
+      <div className="grid gap-8  lg:gap-10 md:grid-cols-2 py-8 ">
         <div className="flex flex-col gap-2">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             ✋ Hi there!
@@ -37,66 +39,68 @@ const Myself: FC = function () {
           </p>
           <Cta />
         </div>
-        <MyTimeline />
+        <div className="px-4">
+          <MyTimeline />
+        </div>
       </div>
-      <div className="py-4 sm:py-12">
-        <h2 className="mb-4 text-4xl font-extrabold text-gray-400 dark:text-teal-500 tracking-tight text-center ">
+      <div className="py-6">
+        <h2 className="mb-6 md:mb-8 xl:mb-10 text-2xl md:text-3xl xl:4xl font-semibold text-gray-700  tracking-tight text-center  ">
           My Ecosystem
         </h2>
 
-        <div className=" mb-4 grid grid-cols-4 gap-2 text-gray-500 dark:text-gray-400 sm:grid-cols-4 sm:gap-1">
+        <div className="mb-6 grid grid-cols-4 gap-6 text-gray-500 sm:grid-cols-4 ">
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Next.js</span>
-            <SiNextdotjs className="h-6 w-6" />
+            <SiNextdotjs className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Nodedotjs</span>
-            <SiNodedotjs className="h-12 w-12" />
+            <SiNodedotjs className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">React</span>
-            <SiReact className="h-8 w-8" />
+            <SiReact className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Tailwindcss</span>
-            <SiTailwindcss className="h-16 w-16" />
+            <SiTailwindcss className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Vercel</span>
-            <SiVercel className="h-6 w-6" />
+            <SiVercel className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Google</span>
-            <SiAmazonaws className="h-14 w-14" />
+            <SiAmazonaws className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Typescript</span>
-            <SiTypescript className="h-6 w-6" />
+            <SiTypescript className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Elementor</span>
-            <SiElementor className="h-6 w-6" />
+            <SiElementor className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Ghost</span>
-            <SiGhost className="h-6 w-6" />
+            <SiGhost className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Javascript</span>
-            <SiJavascript className="h-8 w-8" />
+            <SiJavascript className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Netlify</span>
-            <SiNetlify className="h-14 w-14" />
+            <SiNetlify className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
 
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Wordpress</span>
-            <SiWordpress className="h-12 w-12" />
+            <SiWordpress className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
           <a href="#" className="flex items-center justify-center">
             <span className="sr-only">Hugo</span>
-            <SiHugo className="h-6 w-6" />
+            <SiHugo className="w-6 h-6 md:w-7 md:h-7 xl:h-8 xl:w-8" />
           </a>
         </div>
       </div>

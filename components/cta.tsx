@@ -8,18 +8,18 @@ const Cta: FC = function () {
         <a
           href="https://www.upwork.com/workwith/smamusabbirs"
           target="_blank"
-          className="mb-6 flex items-center justify-between rounded-lg border-l-4 border-emerald-300 bg-white p-4 shadow hover:bg-gray-50 dark:border-primary-500 dark:bg-gray-800 dark:hover:bg-gray-700"
+          className="mb-6 flex items-center justify-between rounded-lg border-l-4 border-slate-400 bg-white p-4 shadow hover:bg-gray-50  "
         >
           <div>
-            <span className="mb-1 block text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+            <span className="mb-1 block text-xs font-medium uppercase text-slate-500  ">
               Hire Me At Upwork
             </span>
-            <span className="text-xl font-semibold text-gray-600 dark:text-primary-500">
+            <span className="text-xl font-semibold text-gray-700 ">
               Work With Me
             </span>
           </div>
           <svg
-            className="h-6 w-6 text-emerald-400 dark:text-primary-500"
+            className="h-6 w-6 text-slate-400 dark:text-primary-500"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -34,18 +34,18 @@ const Cta: FC = function () {
         <a
           href="https://thirdbracket.co.uk/"
           target="_blank"
-          className="mb-6 flex items-center justify-between rounded-lg border-l-4 border-zinc-400 bg-white p-4 shadow hover:bg-gray-50 dark:border-red-500 dark:bg-gray-800 dark:hover:bg-gray-700"
+          className="mb-6 flex items-center justify-between rounded-lg border-l-4 border-emerald-400 bg-white p-4 shadow hover:bg-gray-50 "
         >
           <div>
-            <span className="mb-1 block text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
+            <span className="mb-1 block text-xs font-medium uppercase text-slate-400 ">
               Build . Integrate . Explore
             </span>
-            <span className="text-xl font-semibold text-gray-600 dark:text-gray-500">
+            <span className="text-xl font-semibold text-gray-700 ">
               Checkout Third Bracket
             </span>
           </div>
           <svg
-            className="h-6 w-6 text-zinc-600 "
+            className="h-6 w-6 text-emerald-400 "
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,19 +58,20 @@ const Cta: FC = function () {
           </svg>
         </a>
         <a
-          href="#"
-          className="flex items-center justify-between rounded-lg border-l-4 border-slate-400 bg-white p-4 shadow hover:bg-gray-50 dark:border-teal-500 dark:bg-gray-800 dark:hover:bg-gray-700"
+          href="https://verifypropertiesltd.com/"
+          target="_blank"
+          className="flex items-center justify-between rounded-lg border-l-4 border-orange-400 bg-white p-4 shadow hover:bg-gray-50 "
         >
           <div>
-            <span className="mb-1 block text-xs font-medium uppercase text-gray-500 dark:text-gray-400">
-              Collaborate & Opensource
+            <span className="mb-1 block text-xs font-medium uppercase text-slate-400 ">
+              Property Management Solution
             </span>
-            <span className="text-xl font-semibold text-slate-600 dark:text-gray-500">
-              Browse NomadGang
+            <span className="text-xl font-semibold text-gray-700 ">
+              Verify Uk Property
             </span>
           </div>
           <svg
-            className="h-6 w-6 text-slate-600 dark:text-slate-600"
+            className="h-6 w-6 text-orange-400 "
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"

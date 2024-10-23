@@ -17,7 +17,7 @@ const MyTimeline: FC = function () {
             marker: {
               icon: {
                 wrapper:
-                  "absolute flex items-center justify-center rounded-full bg-gray-100 w-7 h-7 -left-3.5 ring-8 ring-zinc-50",
+                  "absolute flex items-center justify-center rounded-full bg-slate-100 w-7 h-7 -left-3.5 ring-8 ring-slate-50 ",
               },
             },
           },

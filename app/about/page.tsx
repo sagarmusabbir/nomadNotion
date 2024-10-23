@@ -6,7 +6,6 @@ import Myself from "@/components/musabbir";
 import DefaultHero from "@/components/Hero";
 import { AboutIcon, Logo } from "@/components/icons";
 import { Metadata } from "next";
-import cover from "@/public/about.svg";
 
 const title = "About";
 
@@ -20,9 +19,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <DefaultHero Icon={AboutIcon} name="About" source={cover} />
+      <DefaultHero Icon={AboutIcon} name="About" />
       <div>
-        <div className="mt-4 bg-slate-50 m-auto p-4 min-h-screen">
+        <div className="p-4  m-auto min-h-screen max-w-screen-lg">
           <BlockquoteTestimonial />
           <Myself />
         </div>

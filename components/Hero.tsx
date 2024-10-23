@@ -10,13 +10,12 @@ import { AboutIcon, ArticleIcon, BrowseIcon } from "./icons";
 interface HeroProps {
   Icon: React.ElementType;
   name: string;
-  source: string;
 }
-const DefaultHero: FC<HeroProps> = ({ Icon, name, source }) => {
+const DefaultHero: FC<HeroProps> = ({ Icon, name }) => {
   return (
     <section className="bg-slate-300 dark:bg-gray-900 bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
       <div
-        className="relative z-10 mx-auto  max-w-screen-lg px-4 py-8  flex items-center justify-center gap-2 lg:py-16 
+        className="relative z-10 mx-auto  max-w-screen-lg px-4 py-8  flex items-center justify-start gap-2 lg:py-16 
           
       "
       >

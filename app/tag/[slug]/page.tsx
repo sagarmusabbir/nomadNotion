@@ -1,3 +1,5 @@
+import DefaultHero from "@/components/Hero";
+import { TagIcon } from "@/components/icons";
 import Search from "@/components/Search";
 import { getAllPosts } from "@/functions/getAllPosts";
 import { getAllProjects } from "@/functions/getAllProjects";
@@ -27,12 +29,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 
   return (
-    <div className="max-w-5xl m-auto p-4 min-h-screen">
-      <Search
-        publishedPosts={tagFilteredPosts}
-        publishedProjects={tagFilteredPosts}
-        tagFrequencyMap={tagFrequencyMap}
-      />
+    <div className="m-auto  min-h-screen space-y-5 ">
+      <DefaultHero Icon={TagIcon} name="Tags" />
+      <div className="max-w-screen-lg m-auto p-4 min-h-screen">
+        <Search
+          publishedPosts={tagFilteredPosts}
+          publishedProjects={tagFilteredPosts}
+          tagFrequencyMap={tagFrequencyMap}
+        />
+      </div>
     </div>
   );
 }

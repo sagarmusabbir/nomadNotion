@@ -15,6 +15,7 @@ import {
   MdOutlineMenu,
   MdOutlinePersonSearch,
   MdSavedSearch,
+  MdTag,
   MdTagFaces,
 } from "react-icons/md";
 
@@ -61,6 +62,21 @@ export const ProjectIcon: React.FC<IconSvgProps> = ({
     width={size || width}
     {...props}
   ></MdCode>
+);
+
+export const TagIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => (
+  <MdTag
+    fill="none"
+    height={size || height}
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  ></MdTag>
 );
 
 export const AboutIcon: React.FC<IconSvgProps> = ({

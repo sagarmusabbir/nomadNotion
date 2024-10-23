@@ -116,8 +116,8 @@ export default async function ProjectsPage() {
   return (
     // <Container>
 
-    <main className="space-y-5 max-w-7xl m-auto min-h-screen">
-      <DefaultHero Icon={ProjectIcon} name="Projects" source={cover} />
+    <main className="space-y-5 max-w-screen-xl m-auto min-h-screen">
+      <DefaultHero Icon={ProjectIcon} name="Projects" />
       <div className="max-w-5xl m-auto p-4 min-h-screen">
         <ArticleList articles={projects} />
       </div>
