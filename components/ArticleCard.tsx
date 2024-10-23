@@ -53,7 +53,7 @@ export default function ArticleCard({ article }: Props) {
             <p className="text-xl font-semibold text-gray-800  line-clamp-2">
               {article.title}
             </p>
-            <p className="mt-3 text-base text-gray-600 line-clamp-2">
+            <p className="mt-3 text-base text-gray-600 line-clamp-2"></p>
             <p className="mt-3 text-base text-gray-600 line-clamp-2">
               {article.summary}
             </p>
