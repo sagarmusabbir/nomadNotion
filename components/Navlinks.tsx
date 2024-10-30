@@ -20,7 +20,7 @@ export default function NavLinks() {
             key={link.name}
             href={link.to}
             className={clsx(
-              "flex items-center justify-center gap-0.5 md:gap-1    rounded-md  text-gray-800   px-3 py-1.5 text-xs md:text-sm font-medium  hover:text-gray-950   ",
+              "flex items-center justify-center gap-0.5 lg:gap-1    rounded-md  text-gray-800   px-3 py-1.5 text-sm lg:text-base font-medium  hover:text-gray-950   ",
               {
                 "bg-slate-100 font-semibold ": pathname === link.to,
               }

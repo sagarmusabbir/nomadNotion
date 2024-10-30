@@ -23,6 +23,6 @@ export default function Category({ setSelectedTag, tag, selectedTag }: CategoryP
       } inline-flex items-center px-3 py-1.5 uppercase bg-gray-100 rounded cursor-pointer`}
     >
       <span className="text-xs font-medium uppercase">{tag || 'All'}</span>
-    </div>
+    </div> 
   );
 }
