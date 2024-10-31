@@ -154,7 +154,7 @@ export default async function Page({ searchParams }: Props) {
     },
     name: postDetails.title,
     image: postDetails.coverImage,
-    summary: postDetails.summary,
+
     datePublished: formattedTime,
   };
 
