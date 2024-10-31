@@ -8,14 +8,31 @@ import { getTagFilteredPosts } from "@/functions/tagFilteredPosts";
 import { Article } from "@/lib/types";
 import { Metadata } from "next";
 
-const title = "Tags";
+// const title = "Tags";
 
-export const metadata: Metadata = {
-  title,
-  openGraph: {
-    title: `${title} | Musabbir Sagar`,
-  },
-};
+// export const metadata: Metadata = {
+//   title,
+//   openGraph: {
+//     title: `${title} | Musabbir Sagar`,
+//   },
+// };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = params;
+  const decodedSlug = decodeURIComponent(slug);
+  const tagTitle = decodedSlug.charAt(0).toUpperCase() + decodedSlug.slice(1); // Capitalize first letter
+
+  return {
+    title: `${tagTitle} | Tags`,
+    openGraph: {
+      title: `${tagTitle} | Tags | Musabbir Sagar`,
+    },
+  };
+}
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
