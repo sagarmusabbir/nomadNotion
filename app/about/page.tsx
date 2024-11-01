@@ -66,14 +66,15 @@ const jsonLd = {
 
 export default function AboutPage() {
   return (
-    <main className="space-y-5 max-w-7xl m-auto min-h-screen">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <DefaultHero Icon={AboutIcon} name="About" />
-      <div>
-        <div className="p-4  m-auto min-h-screen max-w-screen-lg">
+      <div className="space-y-5  m-auto min-h-screen">
+        <DefaultHero Icon={AboutIcon} name="About" />
+
+        <div className="px-4  m-auto  max-w-screen-lg">
           <BlockquoteTestimonial />
           <Myself />
         </div>

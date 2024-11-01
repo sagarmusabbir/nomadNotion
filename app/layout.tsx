@@ -151,7 +151,7 @@ export const jsonLd: WithContext<WebPage> = {
   },
 };
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -246,7 +246,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth bg-white text-gray-900">
+    <html lang="en" className="scroll-smooth ">
       <head>
         {/* <ThemeModeScript /> */}
         <script
@@ -260,7 +260,7 @@ export default function RootLayout({
       <body
         // className={inter.className}
 
-        className={`${inter.className} antialiased dark:bg-zinc-950 text-gray-800 bg-slate-50 dark:text-slate-200`}
+        className={`${inter.className} antialiased bg-white text-gray-900 `}
       >
         <Header />
 

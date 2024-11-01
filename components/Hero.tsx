@@ -23,7 +23,7 @@ const DefaultHero: FC<HeroProps> = ({ Icon, name }) => {
           <Icon className="fill-gray-700 h-28 w-28 " />
         </div>
         <div className="">
-          <h1 className=" max-w-2xl text-2xl font-semibold leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-800">
+          <h1 className=" text-3xl font-semibold leading-none  md:text-4xl xl:text-5xl text-gray-800">
             {name}
           </h1>
           <p className="max-w-2xl text-slate-500 md:text-lg  lg:text-xl">

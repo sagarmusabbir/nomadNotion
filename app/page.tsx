@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection";
 import axios, { AxiosResponse } from "axios";
 import { sendSlackMessage } from "@/functions/sendSlackMessage";
 import DefaultHero from "@/components/Hero";
-import { Cover } from "@/components/icons";
+import { AboutIcon, Cover, Logo } from "@/components/icons";
 import Search from "@/components/Search";
 import { calculateTagFrequency } from "@/functions/getAllTags";
 
@@ -30,63 +30,36 @@ const HomePage = async ({
   const publishedProjects: Article[] = await getAllProjects();
 
   return (
-    <main className="space-y-7 ">
+    <main className="space-y-5  m-auto min-h-screen">
       <NewHero Icon={Cover} />
-      <div className="space-y-7 max-w-5xl m-auto px-4 pb-8 ">
-        {/* <div className="space-y-7 bg-slate-50 max-w-5xl m-auto p-4 min-h-screen "> */}
-        {/* <Feed articles={publishedPosts} /> */}
-        <section>
-          <div className="flex items-center justify-between my-8">
-            <div className="text-3xl font-bold text-gray-700 dark:text-slate-300">
-              Latest articles
-            </div>
-            <Link href="/articles">
-              <span className="font-semibold text-gray-700 dark:text-slate-300 hover:text-gray-800  cursor-pointer">
-                More articles ➜
-              </span>
-            </Link>
-          </div>
-          <ArticleList articles={publishedPosts} />
-        </section>
-        <section>
-          <div className="flex items-center justify-between my-8">
-            <div className="text-3xl font-bold text-gray-700 dark:text-slate-300">
-              Latest Projects
-            </div>
-            <Link href="/articles/projects">
-              <span className="font-semibold text-gray-700 dark:text-slate-300 hover:text-gray-800  cursor-pointer">
-                More Projects ➜
-              </span>
-            </Link>
-          </div>
-          <ArticleList articles={publishedProjects} />
-        </section>
+      {/* <DefaultHero Icon={Cover} name="About" /> */}
+      <div
+        // className="max-w-screen-lg m-auto  min-h-screen px-4 py-8 lg:py-16 space-y-5"
+        className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4 "
+      >
+        <div className="flex items-center justify-between mb-5 ">
+          <h2 className="text-xl md:text-2xl xl:text-3xl font-medium text-gray-600  ">
+            Latest articles
+          </h2>
 
-        {/* <div className="space-y-7 ">
-            <h2 className="max-w-xl text-2xl  leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-600 ">
-              Recent Articles
-            </h2>
-            <ArticleList articles={publishedPosts} />
-            <Link href="/articles">
-              <h4 className="text-sm leading-none tracking-tight  md:text-base xl:text-lg text-gray-700 hover:text-gray-800  cursor-pointer mt-6 font-semibold">
-                {" "}
-                More articles <MdChevronRight className="inline" />{" "}
-              </h4>
-            </Link>
-          </div> */}
-        {/* <div className="space-y-7">
-            <h2 className="max-w-xl text-2xl  leading-none tracking-tight  md:text-3xl xl:text-4xl text-gray-600">
-              Recent Projects
-            </h2>
-            <ArticleList articles={publishedProjects} />
-            <Link href="/articles/projects">
-              <h4 className="text-sm leading-none tracking-tight  md:text-base xl:text-lg text-gray-700 hover:text-gray-800  cursor-pointer mt-6 font-semibold">
-                {" "}
-                More projects <MdChevronRight className="inline" />{" "}
-              </h4>
-            </Link>
-          </div> */}
-        {/* </div> */}
+          <Link href="/articles">
+            <span className="font-medium text-gray-700 dark:text-slate-300 hover:text-gray-800  cursor-pointer">
+              More articles ➜
+            </span>
+          </Link>
+        </div>
+        <ArticleList articles={publishedPosts} />
+        <div className="flex items-center justify-between mb-5 mt-10">
+          <div className="text-xl md:text-2xl xl:text-3xl font-medium text-gray-600">
+            Latest Projects
+          </div>
+          <Link href="/articles/projects">
+            <span className="font-medium text-gray-700 dark:text-slate-300 hover:text-gray-800  cursor-pointer">
+              More Projects ➜
+            </span>
+          </Link>
+        </div>
+        <ArticleList articles={publishedProjects} />
       </div>
     </main>
   );
