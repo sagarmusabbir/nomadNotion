@@ -22,7 +22,7 @@ export default function NavLinks() {
             className={clsx(
               "flex items-center justify-center gap-0.5 lg:gap-1    rounded-md  text-gray-800   px-3 py-1.5 text-sm lg:text-base font-medium  hover:text-gray-950   ",
               {
-                "bg-slate-100 font-semibold ": pathname === link.to,
+                "bg-slate-100  ": pathname === link.to,
               }
             )}
           >

@@ -25,12 +25,12 @@ const NewHero: FC<HeroProps> = ({ Icon }) => {
           {/* {Icon && (
               <Icon className="fill-gray-700 w-16 h-16 lg:h-20 lg:w-20   mb-4 lg:mb-8 " />
             )} */}
-          <div className="mb-4 lg:mb-8">
-            <h1 className="text-4xl font-semibold  leading-none  md:text-5xl xl:text-6xl text-gray-800 ">
+          <div className="mb-4 lg:mb-8  max-w-5xl">
+            <h1 className="text-3xl font-semibold  leading-none  md:text-4xl xl:text-5xl text-gray-800 ">
               Musabbir Sagar
             </h1>
 
-            <h2 className=" max-w-2xl text-base font-extralight leading-none tracking-tight  md:text-lg xl:text-xl text-gray-600 text-wrap items-center  ">
+            <h2 className=" max-w-4xl text-lg font-extralight leading-none   md:text-xl xl:text-2xl text-gray-600 text-wrap items-center  ">
               Top Rated &nbsp;
               <span className="border border-slate-200   px-0.5 text-base md:text-lg xl:text-xl rounded-md  ">
                 Next.Js

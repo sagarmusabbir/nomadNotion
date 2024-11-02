@@ -14,8 +14,6 @@ export default function ArticleCard({ article }: Props) {
 
   const formattedTime = getLocalizedDate(article.date);
 
-  const cover = article.coverImage;
-
   return (
     <Link
       href={`/articles/${article.type.toLowerCase()}s/${slug}?id=${article.id}`}
@@ -37,13 +35,16 @@ export default function ArticleCard({ article }: Props) {
               </span>
             )}
           </div>
-          <div className="relative w-full h-48 filter contrast-[0.9]">
+          <div className="relative w-full h-48 ">
             <Image
               src={article.coverImage}
               alt={`Cover image for ${article.title}`}
               fill
-              objectFit="cover"
               className="rounded-t-lg "
+              style={{
+                objectFit: "cover",
+                filter: "contrast(0.9)",
+              }}
             />
           </div>
         </div>
