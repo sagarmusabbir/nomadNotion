@@ -35,15 +35,15 @@ const HomePage = async ({
       {/* <DefaultHero Icon={Cover} name="About" /> */}
       <div
         // className="max-w-screen-lg m-auto  min-h-screen px-4 py-8 lg:py-16 space-y-5"
-        className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4 "
+        className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4  "
       >
-        <div className="flex items-center justify-between mb-5 ">
-          <h2 className="text-xl md:text-2xl xl:text-3xl font-medium text-gray-600  ">
+        <div className="flex items-center justify-between py-5">
+          <h2 className="text-lg md:text-xl xl:text-2xl font-medium text-gray-600  ">
             Latest articles
           </h2>
 
           <Link href="/articles">
-            <span className="font-medium text-gray-700 dark:text-slate-300 hover:text-gray-800  cursor-pointer">
+            <span className="font-medium text-gray-700 dark:text-slate-300 hover:text-gray-800 text-xs md:text-sm xl:text-base  cursor-pointer">
               More articles ➜
             </span>
           </Link>

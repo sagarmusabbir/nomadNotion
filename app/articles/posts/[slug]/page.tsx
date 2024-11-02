@@ -16,6 +16,7 @@ import { getAllPosts } from "@/functions/getAllPosts";
 import { Metadata, ResolvingMetadata } from "next";
 import { title } from "process";
 import { url } from "inspector";
+import Image from "next/image";
 
 type Props = {
   searchParams: { [key: string]: string };
@@ -154,54 +155,67 @@ export default async function Page({ searchParams }: Props) {
   };
 
   return (
-    <div className="space-y-5 max-w-7xl m-auto min-h-screen">
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <div className="space-y-5 max-w-7xl m-auto min-h-screen ">
+        {/* <img
+          className="object-cover w-full h-52 aspect-video"
+          src={postDetails.coverImage}
+        /> */}
 
-      <img
-        className="object-cover w-full h-52 aspect-video"
-        src={postDetails.coverImage}
-      />
+        <Image
+          src={postDetails.coverImage}
+          alt="Picture of the author"
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "13rem",
+          }}
+          width={16}
+          height={9}
+        />
 
-      <div>
-        <div className="text-center space-y-5 text-sm text-gray-800 dark:text-slate-300 mx-auto mt-3">
-          <div className="text-2xl px-px font-medium leading-none tracking-tight">
-            <h1>{postDetails.title}</h1>
-          </div>
-          <div className="text-md leading-8 sm:mt-4">
-            <div>
-              <time dateTime={formattedTime}>{formattedTime}</time>
+        <div>
+          <div className="text-center space-y-5 text-sm text-gray-800 dark:text-slate-300 mx-auto mt-3">
+            <div className="text-2xl px-px font-medium leading-none tracking-tight">
+              <h1>{postDetails.title}</h1>
             </div>
-            <div className="font-semibold">{postDetails.author}</div>
-            <SocialshareButtons
-              shareUrl={`http://localhost:3000/${postDetails.slug}?id=${postDetails.id}`}
-              title={postDetails.title}
-            />
-          </div>
-        </div>
-
-        <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t border-slate-200 dark:border-gray-800 mt-4 text-gray-800 dark:text-slate-200">
-          <NotionRenderer blockMap={blockMap} />
-        </div>
-        <div className="py-12 border-t border-slate-200 dark:border-gray-800">
-          <Container>
-            <div className="flex items-center justify-between my-8">
-              <div className="text-3xl font-bold text-gray-700 dark:text-slate-300">
-                Latest articles
+            <div className="text-md leading-8 sm:mt-4">
+              <div>
+                <time dateTime={formattedTime}>{formattedTime}</time>
               </div>
-              <Link href="/articles">
-                <span className="font-semibold text-gray-700 dark:text-slate-300 hover:text-gray-800  cursor-pointer">
-                  More articles ➜
-                </span>
-              </Link>
+              <div className="font-semibold">{postDetails.author}</div>
+              <SocialshareButtons
+                shareUrl={`http://localhost:3000/${postDetails.slug}?id=${postDetails.id}`}
+                title={postDetails.title}
+              />
             </div>
-            <ArticleList articles={tagPosts} />
-          </Container>
+          </div>
+
+          <div className="max-w-4xl px-6 mx-auto mb-24 space-y-8 md:px-8 pt-4 border-t border-slate-200 dark:border-gray-800 mt-4 text-gray-800 dark:text-slate-200">
+            <NotionRenderer blockMap={blockMap} />
+          </div>
+          <div className="py-12 border-t border-slate-200 dark:border-gray-800">
+            <Container>
+              <div className="flex items-center justify-between my-8">
+                <div className="text-3xl font-bold text-gray-700 dark:text-slate-300">
+                  Latest articles
+                </div>
+                <Link href="/articles">
+                  <span className="font-semibold text-gray-700 dark:text-slate-300 hover:text-gray-800  cursor-pointer">
+                    More articles ➜
+                  </span>
+                </Link>
+              </div>
+              <ArticleList articles={tagPosts} />
+            </Container>
+          </div>
         </div>
+        <TopScrollButton />
       </div>
-      <TopScrollButton />
-    </div>
+    </main>
   );
 }

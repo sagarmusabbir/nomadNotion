@@ -20,7 +20,7 @@ export default function ArticleCard({ article }: Props) {
     <Link
       href={`/articles/${article.type.toLowerCase()}s/${slug}?id=${article.id}`}
     >
-      <div className="flex flex-col overflow-hidden cursor-pointer group h-full w-full bg-slate-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-5 drop-shadow-md transition-opacity hover:bg-opacity-10">
+      <div className="flex flex-col overflow-hidden cursor-pointer group h-full w-full bg-slate-300 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-5 drop-shadow-md transition-opacity hover:bg-opacity-10">
         <div className="relative">
           <div className="absolute">
             {article?.tags?.map((tag) => (
