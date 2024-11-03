@@ -29,7 +29,7 @@ const NewHero: FC<HeroProps> = ({
 
             <h2 className=" max-w-5xl text-lg font-light    md:text-xl xl:text-2xl text-gray-600 text-wrap items-center  tracking-tight">
               {subtitleStart} &nbsp;
-              <span className="bg-opacity-90 backdrop-blur-xl text-white   px-1 text-base md:text-lg xl:text-xl rounded-md  uppercase">
+              <span className="bg-slate-500 bg-opacity-90 backdrop-blur-xl text-white   px-1 text-base md:text-lg xl:text-xl rounded-md  uppercase">
                 {highlight}
               </span>
               &nbsp;{subtitleEnd}
