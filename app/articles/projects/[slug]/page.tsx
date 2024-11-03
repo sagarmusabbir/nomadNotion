@@ -172,6 +172,7 @@ export default async function Page({ searchParams }: Props) {
         src={postDetails.coverImage}
       /> */}
         <Image
+          unoptimized
           src={postDetails.coverImage}
           alt="Picture of the author"
           sizes="100vw"

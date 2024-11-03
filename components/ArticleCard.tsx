@@ -37,6 +37,7 @@ export default function ArticleCard({ article }: Props) {
           </div>
           <div className="relative w-full h-48 ">
             <Image
+              unoptimized
               src={article.coverImage}
               alt={`Cover image for ${article.title}`}
               fill
