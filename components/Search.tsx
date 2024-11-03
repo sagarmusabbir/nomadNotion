@@ -28,6 +28,17 @@ const Search = ({
     const searchContent = post.title + post.summary + tagContent;
     return searchContent.toLowerCase().includes(searchValue.toLowerCase());
   });
+  const filteredBlogProjects = publishedProjects.filter((project) => {
+    const tagContent = project.tags ? project.tags.join(" ") : "";
+    const searchContent = project.title + project.summary + tagContent;
+    return searchContent.toLowerCase().includes(searchValue.toLowerCase());
+  });
+
+  const filteredArticles = publishedProjects.filter((all) => {
+    const tagContent = all.tags ? all.tags.join(" ") : "";
+    const searchContent = all.title + all.summary + tagContent;
+    return searchContent.toLowerCase().includes(searchValue.toLowerCase());
+  });
 
   return (
     <>
@@ -45,11 +56,14 @@ const Search = ({
         <Tags tagFrequencyMap={tagFrequencyMap} />
       </div>
 
-      {!filteredBlogPosts.length && (
+      {!filteredArticles.length && (
         <p className="text-gray-500 text-center">No posts found.</p>
       )}
 
-      <Feed articles={filteredBlogPosts} />
+      {/* <Feed articles={filteredBlogPosts }
+       /> */}
+
+      <Feed articles={[...filteredBlogPosts, ...filteredBlogProjects]} />
     </>
   );
 };

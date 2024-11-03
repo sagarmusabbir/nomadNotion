@@ -31,7 +31,7 @@ export const getAllPosts = async (): Promise<Article[]> => {
       sorts: [
         {
           property: "date",
-          direction: "ascending",
+          direction: "descending",
         },
       ],
     });
