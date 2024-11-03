@@ -161,12 +161,12 @@ export default async function Page({ searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="space-y-5 max-w-screen-lg m-auto  ">
-        {/* <img
+        <img
           className="object-cover w-full h-52 aspect-video"
           src={postDetails.coverImage}
-        /> */}
+        />
 
-        <Image
+        {/* <Image
           unoptimized
           src={postDetails.coverImage}
           alt="Picture of the author"
@@ -177,7 +177,7 @@ export default async function Page({ searchParams }: Props) {
           }}
           width={16}
           height={9}
-        />
+        /> */}
 
         <div>
           <div className="text-center space-y-5 text-sm text-gray-800 dark:text-slate-300 mx-auto mt-3">
