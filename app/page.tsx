@@ -1,7 +1,7 @@
 import { getAllPosts } from "@/functions/getAllPosts";
 import { Article } from "@/lib/types";
 
-import { AboutIcon, Cover, Logo } from "@/components/icons";
+import { Cover } from "@/components/icons";
 
 import NewHero from "@/components/newhero";
 
@@ -13,6 +13,8 @@ import { getAllProjects } from "@/functions/getAllProjects";
 import Container from "@/components/Container";
 import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import ArticleList from "@/components/ArticleList";
+import { DarkButton, LightButton } from "@/components/Buttons";
+
 const HomePage = async ({
   searchParams,
 }: {
@@ -23,11 +25,27 @@ const HomePage = async ({
   const publishedProjects: Article[] = await getAllProjects();
 
   return (
-    <main className="space-y-8 lg:space-y-12   m-auto min-h-screen">
-      <NewHero Icon={Cover} />
+    <main className="space-y-8 lg:space-y-12   m-auto ">
+      <NewHero
+        Icon={Cover}
+        title="Musabbir Sagar"
+        subtitleStart="Top Rated"
+        highlight="Next.Js"
+        subtitleEnd="Developer"
+        actionArea={
+          <div className="flex w-fit items-center gap-5">
+            <LightButton href="/about" text="About Me" />
+            <DarkButton
+              href="https://www.upwork.com/workwith/smamusabbirs"
+              text="Hire Me"
+              target="_blank"
+            />
+          </div>
+        }
+      />
 
-      <div className="max-w-screen-lg m-auto  min-h-screen  px-4   ">
-        <div className="flex items-center justify-between ">
+      <div className="max-w-screen-lg m-auto  px-4   ">
+        <div className="flex items-center justify-between  mb-4">
           <h2 className="text-lg md:text-xl xl:text-2xl font-medium text-gray-600  ">
             Latest articles
           </h2>
@@ -41,7 +59,7 @@ const HomePage = async ({
         <ArticleList articles={publishedPosts} />
       </div>
       <div className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4   ">
-        <div className="flex items-center justify-between  ">
+        <div className="flex items-center justify-between mb-4">
           <div className="text-lg md:text-xl xl:text-2xl font-medium text-gray-600 ">
             Latest Projects
           </div>

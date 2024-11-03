@@ -18,6 +18,7 @@ import {
   MdTag,
   MdTagFaces,
 } from "react-icons/md";
+import { GiDoctorFace } from "react-icons/gi";
 
 export const ArticleIcon: React.FC<IconSvgProps> = ({
   size = 24,

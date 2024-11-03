@@ -166,7 +166,7 @@ export default async function Page({ searchParams }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="space-y-5 max-w-7xl m-auto min-h-screen">
+      <div className="space-y-5 max-w-screen-lg m-auto ">
         {/* <img
         className="object-cover w-full h-52 aspect-video"
         src={postDetails.coverImage}

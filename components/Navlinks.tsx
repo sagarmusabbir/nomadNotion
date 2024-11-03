@@ -1,36 +1,50 @@
 "use client";
 
-import { AboutIcon, ArticleIcon, Logo, ProjectIcon } from "./icons";
-import Link from "next/link";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
-import clsx from "clsx";
+import Link from "next/link";
+import { MdMenu, MdClose, MdOutlineDragHandle } from "react-icons/md";
 import { links } from "@/site";
 
-// ...
-
-export default function NavLinks() {
+const NavLinks = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-row space-x-4">
-      {links.map((link) => {
-        const LinkIcon = link.icon;
-        return (
-          <Link
-            key={link.name}
-            href={link.to}
-            className={clsx(
-              "flex items-center justify-center gap-0.5 lg:gap-1    rounded-md  text-gray-800   px-3 py-1.5 text-sm lg:text-base font-medium  hover:text-gray-950   ",
-              {
-                "bg-slate-100  ": pathname === link.to,
-              }
-            )}
-          >
-            <LinkIcon className="h-4 w-4 fill-gray-600  hidden md:block" />
-            <p className="">{link.name}</p>
-          </Link>
-        );
-      })}
-    </div>
+    <nav>
+      <button
+        className="md:hidden p-2"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        {isOpen ? <MdClose size={32} /> : <MdOutlineDragHandle size={32} />}
+      </button>
+
+      <ul
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:flex md:space-x-4 absolute md:relative top-full  backdrop-blur-lg left-0 z-50 right-0 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none pb-8 pt-4 md:pt-0 md:pb-0`}
+      >
+        {links.map((link) => {
+          return (
+            <li key={link.to} className="md:inline-block">
+              <Link
+                href={link.to}
+                className={`block px-4 py-2 text-sm  ${
+                  pathname === link.to
+                    ? "text-gray-950 font-semibold"
+                    : "text-gray-700 hover:text-gray-900"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
-}
+};
+
+export default NavLinks;

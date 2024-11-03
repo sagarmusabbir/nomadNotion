@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Breadcrumb, Button } from "flowbite-react";
 import Link from "next/link";
 
-import { MdArrowOutward, MdHome, MdOutlineChevronRight } from "react-icons/md";
+import { MdHome } from "react-icons/md";
 import { FC } from "react";
 import { AboutIcon, ArticleIcon, BrowseIcon } from "./icons";
 

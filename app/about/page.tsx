@@ -1,11 +1,14 @@
 import Image from "next/image";
 
 import BlockquoteTestimonial from "@/components/blockquote";
+import { MdHome } from "react-icons/md";
 
 import Myself from "@/components/musabbir";
-import DefaultHero from "@/components/Hero";
-import { AboutIcon, Logo } from "@/components/icons";
+
+import { AboutIcon, ArticleIcon, BrowseIcon, Cover } from "@/components/icons";
 import { Metadata } from "next";
+import { Breadcrumb } from "flowbite-react";
+import NewHero from "@/components/newhero";
 
 const title = "About";
 
@@ -71,8 +74,46 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="space-y-5  m-auto min-h-screen">
-        <DefaultHero Icon={AboutIcon} name="About" />
+      <div className="space-y-5  m-auto ">
+        {/* <DefaultHero Icon={AboutIcon} name="About" /> */}
+        <NewHero
+          Icon={AboutIcon}
+          iconSize="h-40 w-40"
+          title="About Musabbir"
+          subtitleStart="Entrepreneur &"
+          highlight="Cloud Infrastructure"
+          subtitleEnd="Developer"
+          actionArea={
+            <div className="flex w-fit items-center gap-5">
+              <Breadcrumb>
+                <Breadcrumb.Item
+                  theme={{
+                    href: {
+                      on: "flex items-center text-sm md:text-base xl:text-lg font-medium text-gray-700 hover:text-gray-900 ",
+                      off: "flex items-center text-sm md:text-base xl:text-lg font-medium text-gray-500 dark:text-gray-400",
+                    },
+
+                    icon: "h-4 w-4 md:h-5 md:w-5 xl:h-6 xl:w-6",
+                  }}
+                  href="/"
+                  icon={MdHome}
+                ></Breadcrumb.Item>
+                <Breadcrumb.Item
+                  theme={{
+                    href: {
+                      on: "flex items-center text-sm md:text-base xl:text-lg font-medium text-gray-700 hover:text-gray-900 ",
+                      off: "flex items-center text-sm md:text-base xl:text-lg font-medium text-gray-500 ",
+                    },
+                    chevron:
+                      "mr-1  h-4 w-4 md:h-5 md:w-5 xl:h-6 xl:w-6 text-gray-400 group-first:hidden md:mr-2 ",
+                  }}
+                >
+                  About
+                </Breadcrumb.Item>
+              </Breadcrumb>
+            </div>
+          }
+        />
 
         <div className="px-4  m-auto  max-w-screen-lg">
           <BlockquoteTestimonial />
