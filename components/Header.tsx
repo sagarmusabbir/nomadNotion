@@ -9,7 +9,7 @@ import NavLinks from "./Navlinks";
 
 const Header = () => {
   return (
-    <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 border-b border-gray-400 shadow-md  ">
+    <div className="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 shadow-md  ">
       <div className="max-w-5xl flex flex-row justify-between items-center m-auto px-4 py-2 ">
         {/* Logo */}
 
