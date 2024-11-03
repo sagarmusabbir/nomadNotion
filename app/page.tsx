@@ -28,7 +28,7 @@ const HomePage = async ({
     <main className="space-y-8 lg:space-y-12   m-auto ">
       <NewHero
         Icon={Cover}
-        title="Musabbir</br>Sagar"
+        title="Musabbir Sagar"
         subtitleStart="Top Rated"
         highlight="Next.Js"
         subtitleEnd="Developer"
