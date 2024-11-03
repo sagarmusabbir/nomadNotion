@@ -23,7 +23,7 @@ const NavLinks = () => {
       <ul
         className={`${
           isOpen ? "block" : "hidden"
-        } md:flex md:space-x-4 absolute md:relative top-full  backdrop-blur-lg left-0 z-50 right-0 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none border-t border-gray-600 md:border-none pb-8 pt-4 md:pt-0 md:pb-0`}
+        } md:flex md:space-x-4 absolute md:relative top-full  backdrop-blur-lg left-0 z-50 right-0 md:top-auto bg-white md:bg-transparent shadow-md md:shadow-none border-t border-gray-300 md:border-none pb-8 pt-4 md:pt-0 md:pb-0`}
       >
         {links.map((link) => {
           return (
