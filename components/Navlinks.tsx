@@ -17,7 +17,7 @@ const NavLinks = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
-        {isOpen ? <MdClose size={32} /> : <MdOutlineDragHandle size={32} />}
+        {isOpen ? <MdClose size={32} /> : <MdOutlineDragHandle size={36} />}
       </button>
 
       <ul
