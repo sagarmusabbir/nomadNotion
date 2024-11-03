@@ -23,13 +23,13 @@ const NewHero: FC<HeroProps> = ({
       <div className="relative z-10 mx-auto grid max-w-screen-lg px-4 py-8 lg:grid-cols-12 gap-4 lg:gap-8 lg:py-16 xl:gap-0 ">
         <div className="mr-auto place-self-center lg:col-span-7  py-8  ">
           <div className="mb-4 lg:mb-8  max-w-5xl">
-            <h1 className="text-5xl font-semibold  leading-none   xl:text-6xl text-gray-800 mb-2">
+            <h1 className="text-5xl font-bold  leading-none   xl:text-6xl text-gray-800 mb-2">
               {title}
             </h1>
 
-            <h2 className=" max-w-5xl text-lg font-extralight    md:text-xl xl:text-2xl text-gray-600 text-wrap items-center  tracking-tight">
+            <h2 className=" max-w-5xl text-lg font-light    md:text-xl xl:text-2xl text-gray-600 text-wrap items-center  tracking-tight">
               {subtitleStart} &nbsp;
-              <span className="border border-slate-200   px-0.5 text-base md:text-lg xl:text-xl rounded-md  uppercase">
+              <span className="bg-slate-500 text-white   px-0.5 text-base md:text-lg xl:text-xl rounded-md  uppercase">
                 {highlight}
               </span>
               &nbsp;{subtitleEnd}
