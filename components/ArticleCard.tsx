@@ -35,8 +35,8 @@ export default function ArticleCard({ article }: Props) {
               </span>
             )}
           </div>
-          <div className="relative w-full h-48 ">
-            <Image
+          <div className="relative w-full h-48 bg-gray-950">
+            {/* Hello World<Image
               unoptimized
               src={article.coverImage}
               alt={`Cover image for ${article.title}`}
@@ -47,6 +47,7 @@ export default function ArticleCard({ article }: Props) {
                 filter: "contrast(0.9)",
               }}
             />
+  */}
           </div>
         </div>
 
