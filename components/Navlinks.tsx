@@ -13,7 +13,7 @@ const NavLinks = () => {
   return (
     <nav>
       <button
-        className="md:hidden p-2"
+        className="md:hidden self-center place-self-center justify-self-center"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
@@ -32,8 +32,8 @@ const NavLinks = () => {
                 href={link.to}
                 className={`block px-4 py-2 text-sm  ${
                   pathname === link.to
-                    ? "text-gray-950 font-bold"
-                    : "text-gray-800 font-semibold hover:text-gray-900"
+                    ? "text-gray-900 font-semibold"
+                    : "text-gray-800 font-medium hover:text-gray-900"
                 }`}
                 onClick={() => setIsOpen(false)}
               >

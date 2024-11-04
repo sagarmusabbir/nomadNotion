@@ -26,7 +26,6 @@ const HomePage = async ({
 
   return (
     <main className="space-y-8 lg:space-y-12   m-auto ">
-      <hr />
       <NewHero
         Icon={Cover}
         title1="Musabbir"
@@ -45,11 +44,10 @@ const HomePage = async ({
           </div>
         }
       />
-      <hr />
 
       <div className="max-w-screen-lg m-auto  px-4   ">
         <div className="flex items-center justify-between  mb-4">
-          <h2 className="text-xl md:text-2xl xl:text-3xl font-medium text-gray-600  ">
+          <h2 className="text-2xl md:text-3xl xl:text-4xl font-medium text-gray-600  ">
             Latest articles
           </h2>
 
@@ -64,7 +62,7 @@ const HomePage = async ({
 
       <div className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4 ">
         <div className="flex items-center justify-between mb-4">
-          <div className="text-xl md:text-2xl xl:text-3xl font-medium text-gray-600 ">
+          <div className="text-2xl md:text-3xl xl:text-4xl font-medium text-gray-600 ">
             Latest Projects
           </div>
           <Link href="/articles/projects">
