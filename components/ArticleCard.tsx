@@ -27,7 +27,7 @@ export default function ArticleCard({ article }: Props) {
             {article?.tags?.map((tag) => (
               <div
                 key={tag}
-                className="relative shadow-slate-50 z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-medium  text-white border  border-gray-600 rounded left-3 top-3 p-4"
+                className="relative shadow-slate-50 z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-medium  text-white border  border-gray-600 rounded-md left-3 top-3 p-4"
               >
                 {tag}
               </div>
@@ -54,7 +54,7 @@ export default function ArticleCard({ article }: Props) {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between flex-1 p-4">
+        <div className="flex flex-col justify-between rounded-b-md flex-1 p-4">
           <div className="flex-1 ">
             <h3 className="text-xl font-semibold text-gray-800  line-clamp-2 justify-items-end">
               {article.title}
