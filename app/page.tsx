@@ -26,14 +26,16 @@ const HomePage = async ({
 
   return (
     <main className="space-y-8 lg:space-y-12   m-auto ">
+      <hr />
       <NewHero
         Icon={Cover}
-        title="Musabbir Sagar"
+        title1="Musabbir"
+        title2="Sagar"
         subtitleStart="Top Rated"
         highlight="Next.Js"
         subtitleEnd="Developer"
         actionArea={
-          <div className="flex w-fit items-center gap-5">
+          <div className="flex w-fit items-center gap-5 ">
             <LightButton href="/about" text="About Me" />
             <DarkButton
               href="https://www.upwork.com/workwith/smamusabbirs"
@@ -43,10 +45,11 @@ const HomePage = async ({
           </div>
         }
       />
+      <hr />
 
       <div className="max-w-screen-lg m-auto  px-4   ">
         <div className="flex items-center justify-between  mb-4">
-          <h2 className="text-lg md:text-xl xl:text-2xl font-medium text-gray-600  ">
+          <h2 className="text-xl md:text-2xl xl:text-3xl font-medium text-gray-600  ">
             Latest articles
           </h2>
 
@@ -58,9 +61,10 @@ const HomePage = async ({
         </div>
         <ArticleList articles={publishedPosts} />
       </div>
-      <div className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4   ">
+
+      <div className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4 ">
         <div className="flex items-center justify-between mb-4">
-          <div className="text-lg md:text-xl xl:text-2xl font-medium text-gray-600 ">
+          <div className="text-xl md:text-2xl xl:text-3xl font-medium text-gray-600 ">
             Latest Projects
           </div>
           <Link href="/articles/projects">

@@ -79,7 +79,8 @@ export default function AboutPage() {
         <NewHero
           Icon={AboutIcon}
           iconSize="h-40 w-40"
-          title="About Musabbir"
+          title1="About"
+          title2=" Musabbir"
           subtitleStart="Entrepreneur &"
           highlight="Cloud Infrastructure"
           subtitleEnd="Developer"

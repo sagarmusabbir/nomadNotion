@@ -34,7 +34,8 @@ const Articles = async () => {
       <NewHero
         Icon={BrowseIcon}
         iconSize="h-40 w-40"
-        title="Browse Articles"
+        title1="Browse"
+        title2=" Artcles"
         subtitleStart="From the"
         highlight="Terminal"
         subtitleEnd="of a Developer"

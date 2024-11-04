@@ -25,7 +25,8 @@ export default async function ProjectsPage() {
       <NewHero
         Icon={ProjectIcon}
         iconSize="h-40 w-40"
-        title="Recent Projects"
+        title1="Recent"
+        title2=" Projects"
         subtitleStart="Some of My"
         highlight="Important"
         subtitleEnd="Projects"

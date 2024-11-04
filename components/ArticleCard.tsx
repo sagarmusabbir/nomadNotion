@@ -18,13 +18,13 @@ export default function ArticleCard({ article }: Props) {
     <Link
       href={`/articles/${article.type.toLowerCase()}s/${slug}?id=${article.id}`}
     >
-      <div className="flex flex-col overflow-hidden cursor-pointer group h-full w-full bg-slate-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-5 drop-shadow-md transition-opacity hover:bg-opacity-10">
+      <div className="flex flex-col overflow-hidden cursor-pointer group h-full w-full bg-slate-400 rounded-lg bg-clip-padding backdrop-filter  bg-opacity-10 drop-shadow-md transition-opacity hover:bg-opacity-5">
         <div className="relative">
           <div className="absolute ">
             {article?.tags?.map((tag) => (
               <div
                 key={tag}
-                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-medium  text-white   bg-slate-400    rounded left-3 top-3 p-4"
+                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-medium  text-slate-300 border  border-gray-700    rounded left-3 top-3 p-4"
               >
                 {tag}
               </div>
@@ -35,7 +35,7 @@ export default function ArticleCard({ article }: Props) {
               </span>
             )} */}
           </div>
-          <div className="relative w-full h-48  bg-gray-700  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
+          <div className="relative w-full h-48    bg-[url('/cardbg.svg')] bg-cover bg-center bg-no-repeat ">
             {/* Hello World<Image
               unoptimized
               src={article.coverImage}
@@ -52,12 +52,12 @@ export default function ArticleCard({ article }: Props) {
         </div>
 
         <div className="flex flex-col justify-between flex-1    p-4">
-          <div className="flex-1">
-            <p className="text-xl font-semibold text-gray-800  line-clamp-2">
+          <div className="flex-1 ">
+            <h3 className="text-xl font-semibold text-gray-800  line-clamp-2 justify-items-end">
               {article.title}
-            </p>
-            <p className="mt-3 text-base text-gray-600 line-clamp-2"></p>
-            <p className="mt-3 text-base text-gray-600 line-clamp-2">
+            </h3>
+
+            <p className="mt-4 text-base text-gray-500 line-clamp-2 justify-items-end">
               {article.summary}
             </p>
           </div>
