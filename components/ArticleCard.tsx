@@ -18,24 +18,24 @@ export default function ArticleCard({ article }: Props) {
     <Link
       href={`/articles/${article.type.toLowerCase()}s/${slug}?id=${article.id}`}
     >
-      <div className="flex flex-col overflow-hidden cursor-pointer group h-full w-full bg-slate-300 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-5 drop-shadow-md transition-opacity hover:bg-opacity-10">
+      <div className="flex flex-col overflow-hidden cursor-pointer group h-full w-full bg-slate-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-5 drop-shadow-md transition-opacity hover:bg-opacity-10">
         <div className="relative">
-          <div className="absolute">
+          <div className="absolute ">
             {article?.tags?.map((tag) => (
               <div
                 key={tag}
-                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-gray-900  uppercase bg-slate-100 rounded left-3 top-3"
+                className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-medium  text-white   bg-slate-400    rounded left-3 top-3 p-4"
               >
                 {tag}
               </div>
             ))}
-            {article.type === "Project" && (
-              <span className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-semibold text-gray-900  uppercase bg-slate-100 rounded left-3 top-3">
+            {/* {article.type === "Project" && (
+              <span className="relative shadow z-[2] inline-flex items-center px-3 py-1.5 mb-2 mr-2 text-xs font-medium text-white   bg-gray-700 rounded left-3 top-3 p-4">
                 Project
               </span>
-            )}
+            )} */}
           </div>
-          <div className="relative w-full h-48 bg-gray-950">
+          <div className="relative w-full h-48  bg-slate-300  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
             {/* Hello World<Image
               unoptimized
               src={article.coverImage}
@@ -63,17 +63,16 @@ export default function ArticleCard({ article }: Props) {
           </div>
           <div className="flex items-center mt-4">
             <div className="flex mb-2 space-x-1 text-xs text-gray-700">
-              {article.tags.map((tag) => (
+              {/* {article.tags.map((tag) => (
                 <div key={tag}>
                   <span className="font-semibold text-gray-600 dark:text-gray-400">
                     {tag}{" "}
                   </span>
                   <span aria-hidden="true">&middot;</span>
                 </div>
-              ))}
+              ))} */}
               <time dateTime={formattedTime}>{formattedTime}</time>
             </div>
-            {/* <p className="text-sm font-medium text-gray-900">{article?.author?.name}</p> */}
           </div>
         </div>
       </div>
