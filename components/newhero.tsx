@@ -46,6 +46,7 @@ const NewHero: FC<HeroProps> = ({
           {Icon && <Icon className={`fill-gray-700 ${iconSize}`} />}
         </div>
       </div>
+<hr />
     </section>
   );
 };
