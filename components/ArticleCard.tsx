@@ -35,7 +35,7 @@ export default function ArticleCard({ article }: Props) {
               </span>
             )} */}
           </div>
-          <div className="relative w-full h-48  bg-slate-300  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
+          <div className="relative w-full h-48  bg-gray-700  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat bg-blend-soft-light">
             {/* Hello World<Image
               unoptimized
               src={article.coverImage}
