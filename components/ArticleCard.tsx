@@ -60,7 +60,7 @@ export default function ArticleCard({ article }: Props) {
               {article.title}
             </h3>
 
-            <p className="mt-4 text-sm text-gray-500 line-clamp-2 justify-items-end font-extralight">
+            <p className="mt-4 text-sm text-slate-400 line-clamp-2 justify-items-end font-normal">
               {article.summary}
             </p>
             <div className="text-xs text-gray-700 mt-4">
