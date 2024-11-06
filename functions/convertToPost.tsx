@@ -17,4 +17,10 @@ export const convertToPost = (item: any): Article => ({
 
   coverImage: item.properties?.coverImage?.files[0]?.file?.url,
   author: item.properties.author.created_by.name,
+  // type: item.properties.Type.select.name,
+  // icon: item.properties.icon?.rich_text[0]?.plain_text || undefined,
+  // icons:
+  //   item.properties.Icon.rich_text[0]?.plain_text
+  //     .split(",")
+  //     .map((icon: string) => icon.trim()) || [],
 });

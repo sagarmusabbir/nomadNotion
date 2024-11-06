@@ -32,6 +32,7 @@ export type Article = {
   coverImage: string;
   author: string;
   type: "Post" | "Project";
+  // icons: string[];
 };
 
 // export type Project = {

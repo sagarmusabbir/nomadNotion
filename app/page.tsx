@@ -47,13 +47,13 @@ const HomePage = async ({
 
       <div className="max-w-screen-lg m-auto  px-4   ">
         <div className="flex items-center justify-between  mb-4">
-          <h2 className="text-2xl md:text-3xl xl:text-4xl font-medium text-gray-600  ">
+          <h2 className="text-2xl md:text-3xl xl:text-4xl font-semibold text-gray-500  ">
             Latest articles
           </h2>
 
           <Link href="/articles">
             <span className="font-medium text-gray-800 dark:text-slate-300 hover:text-gray-700 text-xs md:text-sm xl:text-base  cursor-pointer">
-              More articles ➜
+              More articles <MdChevronRight className="inline-block" />
             </span>
           </Link>
         </div>
@@ -62,7 +62,7 @@ const HomePage = async ({
 
       <div className="max-w-screen-lg m-auto  min-h-screen  px-4 pb-4 ">
         <div className="flex items-center justify-between mb-4">
-          <div className="text-2xl md:text-3xl xl:text-4xl font-medium text-gray-600 ">
+          <div className="text-2xl md:text-3xl xl:text-4xl font-semibold text-gray-500 ">
             Latest Projects
           </div>
           <Link href="/articles/projects">
