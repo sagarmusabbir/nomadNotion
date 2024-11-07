@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-100   ">
       <div className="max-w-5xl m-auto  px-4 py-2 md:flex md:items-center md:justify-between ">
-        <div className="text-center text-xs text-gray-700 dark:text-slate-200 font-thin items-center mt-1 md:mt-0">
+        <div className="text-center text-xs text-gray-700 dark:text-slate-200 font-light items-center mt-1 md:mt-0">
           &copy; Musabbir Sagar
         </div>
         <div className="flex justify-center space-x-6">

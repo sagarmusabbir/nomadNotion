@@ -35,7 +35,7 @@ const Articles = async () => {
         Icon={BrowseIcon}
         iconSize="h-40 w-40"
         title1="Browse"
-        title2=" Artcles"
+        title2=" Articles"
         subtitleStart="From the"
         highlight="Terminal"
         subtitleEnd="of a Developer"

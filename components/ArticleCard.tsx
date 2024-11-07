@@ -123,7 +123,7 @@ export default function ArticleCard({ article }: Props) {
             ))}
           </div>
           <div
-            className="w-full h-44 bg-gray-900    bg-[url('/card.svg')] bg-cover bg-center bg-no-repeat bg-blend-luminosity  
+            className="w-full h-44 bg-gray-900    bg-[url('/card.svg')] bg-cover bg-center bg-no-repeat bg-blend-lighten 
           max-w-screen-xl 
           "
           >
