@@ -21,7 +21,7 @@ const NewHero: FC<HeroProps> = ({
   actionArea,
 }) => {
   return (
-    <section className="  bg-[url('/herobg.svg')] bg-cover bg-center bg-no-repeat ">
+    <section className="  bg-[url('/hero.svg')] bg-cover bg-center bg-no-repeat ">
       <hr />
       <div className="relative z-10 mx-auto grid max-w-screen-lg px-4 py-8 lg:grid-cols-12 gap-4 lg:gap-8 lg:py-16 xl:gap-0 ">
         <div className="mr-auto place-self-center lg:col-span-7  py-8  ">

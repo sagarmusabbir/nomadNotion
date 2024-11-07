@@ -5,6 +5,12 @@ import notion from "@/lib";
 import { convertToPost } from "@/functions/convertToPost";
 import Link from "next/link";
 import TopScrollButton from "../../../../components/TopScrollButton";
+import {
+  SiJavascript,
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+} from "react-icons/si";
 
 import Container from "@/components/Container";
 import ArticleList from "@/components/ArticleList";
@@ -167,22 +173,16 @@ export default async function Page({ searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="space-y-5 max-w-screen-lg m-auto ">
-        {/* <img
-        className="object-cover w-full h-52 aspect-video"
-        src={postDetails.coverImage}
-      /> */}
-        <Image
-          unoptimized
-          src={postDetails.coverImage}
-          alt="Picture of the author"
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "13rem",
-          }}
-          width={16}
-          height={9}
-        />
+        <div className="bg-[url('/p.svg')] bg-cover bg-gray-900/70 bg-center bg-no-repeat w-full h-52  bg-blend-overlay">
+          <div className="flex justify-center items-center p-4 min-h-full">
+            <div className="grid grid-cols-4 gap-1 text-gray-500 dark:text-gray-400">
+              <SiNextdotjs className="w-10 h-10 fill-white" />
+              <SiReact className="w-10 h-10 fill-white" />
+              <SiTypescript className="w-10 h-10 fill-white" />
+              <SiJavascript className="w-10 h-10 fill-white" />
+            </div>
+          </div>
+        </div>
 
         <div>
           <div className="text-center space-y-5 text-sm text-gray-800 dark:text-slate-300 mx-auto mt-3">

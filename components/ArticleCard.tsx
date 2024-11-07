@@ -110,35 +110,35 @@ export default function ArticleCard({ article }: Props) {
     <Link
       href={`/articles/${article.type.toLowerCase()}s/${slug}?id=${article.id}`}
     >
-      <div className="overflow-hidden cursor-pointer group h-full w-full bg-clip-padding from-slate-50 to-gray-50   rounded-md backdrop-filter bg-gradient-to-tr  drop-shadow-md transition-shadow  hover:drop-shadow-lg">
+      <div className="overflow-hidden cursor-pointer group h-full w-full  bg-slate-50   rounded-md  shadow-md backdrop-filter transition-opacity bg-opacity-0  hover:bg-opacity-50">
         <div className="relative">
           <div className="absolute ">
             {article?.tags?.map((tag) => (
               <div
                 key={tag}
-                className="relative shadow-slate-50 z-[2] inline-flex items-center px-2 py-1 mb-2 mr-2 text-xs font-medium text-slate-200 border     border-gray-700 rounded-md left-3 top-3 p-4"
+                className="relative shadow-slate-50 z-[2] inline-flex items-center px-2 py-1 mb-2 mr-2 text-xs font-medium text-slate-50 border     border-gray-700 rounded-md left-3 top-3 p-4"
               >
                 {tag}
               </div>
             ))}
           </div>
           <div
-            className="w-full h-44    bg-[url('/p.svg')] bg-cover bg-gray-900/70 bg-center bg-no-repeat  bg-blend-overlay 
+            className="w-full h-44 bg-gray-900    bg-[url('/card.svg')] bg-cover bg-center bg-no-repeat bg-blend-luminosity  
           max-w-screen-xl 
           "
           >
             <div className="flex justify-center items-end p-4 min-h-full">
               <div className="grid grid-cols-4 gap-1  ">
-                <SiNextdotjs className="w-10 h-10 fill-slate-200" />
-                <SiReact className="w-10 h-10 fill-slate-200" />
-                <SiTypescript className="w-10 h-10 fill-slate-200" />
-                <SiJavascript className="w-10 h-10 fill-slate-200" />
+                <SiNextdotjs className="w-10 h-10 fill-slate-50" />
+                <SiReact className="w-10 h-10 fill-slate-50" />
+                <SiTypescript className="w-10 h-10 fill-slate-50" />
+                <SiJavascript className="w-10 h-10 fill-slate-50" />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col justify-between  flex-1 p-4">
+        <div className="flex flex-col justify-between  flex-1 p-4 rounded-b-md">
           <div className="flex-1 space-y-3">
             <h3 className="text-2xl  font-bold text-gray-900  line-clamp-2 justify-items-center">
               {article.title}
@@ -151,18 +151,6 @@ export default function ArticleCard({ article }: Props) {
               <time dateTime={formattedTime}>{formattedTime}</time>
             </div>
           </div>
-          {/* <div className="flex items-center mt-4">
-            <div className="flex mb-2 space-x-1 text-xs text-gray-700">
-              {article.tags.map((tag) => (
-                <div key={tag}>
-                  <span className="font-semibold text-gray-600 dark:text-gray-400">
-                    {tag}{" "}
-                  </span>
-                  <span aria-hidden="true">&middot;</span>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
     </Link>
