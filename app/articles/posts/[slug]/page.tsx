@@ -14,9 +14,13 @@ import { getTagFilteredPosts } from "@/functions/articleFilteredPosts";
 import SocialshareButtons from "@/components/SocialshareButtons";
 import { getAllPosts } from "@/functions/getAllPosts";
 import { Metadata, ResolvingMetadata } from "next";
-import { title } from "process";
-import { url } from "inspector";
-import Image from "next/image";
+
+import {
+  SiJavascript,
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+} from "react-icons/si";
 
 type Props = {
   searchParams: { [key: string]: string };
@@ -161,10 +165,20 @@ export default async function Page({ searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="space-y-5 max-w-screen-lg m-auto  ">
-        <img
+        {/* <img
           className="object-cover w-full h-52 aspect-video"
           src={postDetails.coverImage}
-        />
+        /> */}
+        <div className="bg-[url('/p.svg')] bg-cover bg-gray-900/70 bg-center bg-no-repeat w-full h-52  bg-blend-overlay">
+          <div className="flex justify-center items-center p-4 min-h-full">
+            <div className="grid grid-cols-4 gap-1 text-gray-500 dark:text-gray-400">
+              <SiNextdotjs className="w-10 h-10 fill-white" />
+              <SiReact className="w-10 h-10 fill-white" />
+              <SiTypescript className="w-10 h-10 fill-white" />
+              <SiJavascript className="w-10 h-10 fill-white" />
+            </div>
+          </div>
+        </div>
 
         {/* <Image
           unoptimized
@@ -181,7 +195,7 @@ export default async function Page({ searchParams }: Props) {
 
         <div>
           <div className="text-center space-y-5 text-sm text-gray-800 dark:text-slate-300 mx-auto mt-3">
-            <div className="text-2xl px-px font-medium leading-none tracking-tight">
+            <div className="text-3xl md:text-4xl xl:text-5xl px-px font-bold leading-none tracking-tight text-gray-900">
               <h1>{postDetails.title}</h1>
             </div>
             <div className="text-md leading-8 sm:mt-4">

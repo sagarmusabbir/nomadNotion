@@ -33,7 +33,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/api/og/og.png"
+    "app/api/tw/og.png",
+    ".next/types/app/api/og2/route.tsx",
+    ".next/types/app/api/svg/route.tsx",
+    ".next/types/app/api/tw/route.tsx"
   ],
   "exclude": [
     "node_modules"

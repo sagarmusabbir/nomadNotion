@@ -23,11 +23,11 @@ const NavLinks = () => {
       <ul
         className={`${
           isOpen ? "block" : "hidden"
-        } md:flex md:space-x-4 absolute md:relative top-full  backdrop-blur-xl left-0 z-50 right-0 md:top-auto bg-slate-50  md:bg-transparent shadow-md md:shadow-none pb-8 pt-4 md:pt-0 md:pb-0`}
+        } md:flex md:space-x-4 absolute md:relative top-full  bg-slate-50 left-0 z-50 right-0 md:top-auto   md:bg-transparent shadow-md md:shadow-none pb-8 pt-4 md:pt-0 md:pb-0`}
       >
         {links.map((link) => {
           return (
-            <li key={link.to} className="md:inline-block">
+            <li key={link.to} className="md:inline-block ">
               <Link
                 href={link.to}
                 className={`block px-4 py-2 text-sm  ${
