@@ -173,7 +173,7 @@ export default async function Page({ searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="space-y-5 max-w-screen-lg m-auto ">
-        <div className="bg-[url('/p.svg')] bg-cover bg-gray-900/70 bg-center bg-no-repeat w-full h-52  bg-blend-overlay">
+        <div className="bg-[url('/card.svg')] bg-cover bg-gray-900 bg-center bg-no-repeat w-full h-52  ">
           <div className="flex justify-center items-center p-4 min-h-full">
             <div className="grid grid-cols-4 gap-1 text-gray-500 dark:text-gray-400">
               <SiNextdotjs className="w-10 h-10 fill-white" />
