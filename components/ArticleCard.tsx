@@ -2,13 +2,8 @@ import { Article } from "@/lib/types";
 import slugify from "slugify";
 import getLocalizedDate from "../app/utils/getLocalizedDate";
 import Link from "next/link";
-
-import {
-  SiJavascript,
-  SiNextdotjs,
-  SiReact,
-  SiTypescript,
-} from "react-icons/si";
+import { Icon } from "./Icon";
+import Image from "next/image";
 
 type Props = {
   article: Article;
@@ -35,20 +30,32 @@ export default function ArticleCard({ article }: Props) {
               </div>
             ))}
           </div>
-          <div
-            className="w-full h-44 bg-gray-900    bg-[url('/card.svg')] bg-cover bg-center bg-no-repeat bg-blend-lighten 
-          max-w-screen-xl 
-          "
-          >
-            <div className="flex justify-center items-end p-4 min-h-full">
-              <div className="grid grid-cols-4 gap-1  ">
-                <SiNextdotjs className="w-10 h-10 fill-slate-50" />
-                <SiReact className="w-10 h-10 fill-slate-50" />
-                <SiTypescript className="w-10 h-10 fill-slate-50" />
-                <SiJavascript className="w-10 h-10 fill-slate-50" />
+          {/* <div className="absolute bottom-0 left-0 right-0 ">
+            {article?.topics?.map((topic) => (
+              <div
+                key={topic}
+                className="relative left-0 bottom-0 inline-flex p-2"
+              >
+                <Icon topicName={topic} />
               </div>
+            ))}
+          </div> */}
+
+          <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+            <div className="flex flex-wrap justify-center gap-2 pb-3">
+              {article?.topics?.map((topic) => (
+                <div key={topic} className="relative left-0 inline-flex p-2">
+                  <Icon topicName={topic} />
+                </div>
+              ))}
             </div>
           </div>
+
+          <div
+            className="w-full h-44 bg-gray-900    bg-[url('/card.svg')] bg-cover bg-center bg-no-repeat bg-blend-lighten 
+          
+          "
+          ></div>
         </div>
 
         <div className="flex flex-col justify-between  flex-1 p-4 rounded-b-md">

@@ -21,6 +21,7 @@ import {
   SiReact,
   SiTypescript,
 } from "react-icons/si";
+import { Icon } from "@/components/Icon";
 
 type Props = {
   searchParams: { [key: string]: string };
@@ -165,17 +166,14 @@ export default async function Page({ searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="space-y-5 max-w-screen-lg m-auto  ">
-        {/* <img
-          className="object-cover w-full h-52 aspect-video"
-          src={postDetails.coverImage}
-        /> */}
         <div className="bg-[url('/card.svg')] bg-cover bg-gray-900 bg-center bg-no-repeat w-full h-52 ">
-          <div className="flex justify-center items-center p-4 min-h-full">
-            <div className="grid grid-cols-4 gap-1 text-gray-500 dark:text-gray-400">
-              <SiNextdotjs className="w-10 h-10 fill-white" />
-              <SiReact className="w-10 h-10 fill-white" />
-              <SiTypescript className="w-10 h-10 fill-white" />
-              <SiJavascript className="w-10 h-10 fill-white" />
+          <div className="flex justify-center items-center h-full">
+            <div className="flex flex-wrap justify-center gap-2 ">
+              {postDetails.topics?.map((topic) => (
+                <div key={topic} className=" inline-flex p-2">
+                  <Icon topicName={topic} />
+                </div>
+              ))}
             </div>
           </div>
         </div>

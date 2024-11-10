@@ -35,7 +35,7 @@ const NavLinks = () => {
             <li key={link.to} className="md:inline-block ">
               <Link
                 href={link.to}
-                className={`flex items-center px-4 py-4 md:py-0  border-t justify-between md:border-none text-base font-medium ${
+                className={`flex items-center px-4 py-4 md:py-0  border-t border-gray-200/30 justify-between md:border-none text-base  ${
                   pathname === link.to
                     ? "text-gray-900 "
                     : "text-gray-700  hover:text-gray-900"

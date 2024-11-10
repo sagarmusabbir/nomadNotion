@@ -11,16 +11,13 @@ export const convertToPost = (item: any): Article => ({
   tags: item.properties.tags.multi_select.map(
     (tag: { name: string }) => tag.name
   ),
+  topics: item.properties.topics.multi_select.map(
+    (topic: { name: string }) => topic.name
+  ),
   summary: item.properties.summary.rich_text.map(
     (textObj: { text: { content: string } }) => textObj.text.content
   ),
 
   coverImage: item.properties?.coverImage?.files[0]?.file?.url,
   author: item.properties.author.created_by.name,
-  // type: item.properties.Type.select.name,
-  // icon: item.properties.icon?.rich_text[0]?.plain_text || undefined,
-  // icons:
-  //   item.properties.Icon.rich_text[0]?.plain_text
-  //     .split(",")
-  //     .map((icon: string) => icon.trim()) || [],
 });

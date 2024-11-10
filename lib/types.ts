@@ -24,15 +24,15 @@ export type Article = {
   id: string;
   title: string;
   date: string;
-  // type: string;
+
   slug: string;
   status: string;
   tags: string[];
+  topics: string[];
   summary: string[];
   coverImage: string;
   author: string;
   type: "Post" | "Project";
-  // icons: string[];
 };
 
 // export type Project = {
